@@ -1,0 +1,78 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.post {
+    width: 18%;
+    height: max-content;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: rgb(240, 229, 229);
+    margin: 0 10px 10px 10px;
+  
+  
+}
+
+.postImg-Container {
+    height: max-content;
+  
+    position: relative;
+}
+
+
+
+.postImg {
+    width: 100%;
+    height: none;
+    border-radius: 5px;
+    z-index: -1;
+}
+.btns-container {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    display: flex;
+    position: absolute;
+    background-color: black;
+    margin: -100% 0 0 0;
+
+}
+
+.containerh {
+    padding:0px 12px 8px 14px ;
+}
+
+.Content {
+    font-size: 19px;
+}
+
+h2 {
+    font-size: 19px;
+}
+
+.reactions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 40px 0 0 0 ;
+}
+
+.reaction {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0 -4px 0px 5px;
+}
+
+.reactionsAcount {
+    width: max-content;
+    height: max-content;
+    border-radius: 10px;
+    background-color: rgb(255, 0, 0);
+    padding: 0 2px;
+
+}
+

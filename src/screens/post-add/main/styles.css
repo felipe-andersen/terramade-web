@@ -1,0 +1,134 @@
+.main {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 81px 0 0 0 ;
+    background-color: tomato;
+}
+
+.component-form {
+    width: 60%;
+
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: turquoise;
+
+}
+
+.post-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.imputUpload-container {
+    width: 320px;
+    height: 500px;
+    background-color: rgb(211, 211, 211);
+    margin: 0 16px 0 0;
+}
+
+.imputUpload {
+    width: max-content;
+    height: 100px;
+    background-color:none;
+    margin: 0 16px 0 0;
+}
+
+.TitleContent {
+    border: 1ps solid grey;
+    
+}
+
+
+
+.imputTitle-container {
+    background-color: white;
+    width: 450px;
+    height: 50px;
+    border-bottom: 2px solid grey;
+    margin: 50px 0 16px 0;
+
+}
+
+.imputTitle {
+    background-color: none;
+    width: 97%;
+    height: 98%;
+    border: none;
+    color: black;
+    font-size: 45px;
+    outline: none;
+    margin: 0px 0 0 8px;
+}
+
+
+.imputTitle::placeholder {
+ font-size: 45px;
+ font-weight: 700;
+}
+
+.imputTitle::placeholder:active {
+    color: rgb(184, 33, 33);
+}
+
+.inputContent-container {
+    background-color: white;
+    width: 450px;
+    height: 45px;
+    border-bottom: 2px solid grey;
+    margin: 50px 0 16px 0;
+}
+
+.inputContent {
+    background-color: none;
+    width: 97%;
+    height: 97%;
+    border: none;
+    color: black;
+    font-size: 18px;
+    outline: none;
+    margin: 0px 0 0 8px;
+}
+
+.inputContent::placeholder {
+    font-size: 18px;
+}
+
+.inputContent::placeholder:focus {
+    color: rgb(170, 170, 170);
+}
+
+.more-publish--btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more-button, .publish-button {
+    width: 100px;
+    height: 45px;
+    font-size: white;
+    background-color: rgb(54, 43, 43);
+    border-radius: 5px;
+    padding: 0 8px;
+    outline: none;
+    border: none;
+    margin: 8px;
+}
+
+.more-button:hover, .publish-button:hover {
+    background-color: rgb(183, 208, 255);
+}
+

@@ -1,0 +1,26 @@
+.profileImage-link {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.followers-userName-profileImage--molecule {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container-usernameFollowers {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0px 8px;
+}
+
+.userName {
+    font-size: 16px;
+    font-weight: 600;
+}
