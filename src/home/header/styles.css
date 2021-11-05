@@ -137,7 +137,7 @@ textarea::placeholder {
     overflow: hidden;
     border-radius: 50%;
     margin: 0 8px 0 0;
-    border: 3px solid rgb(53, 117, 253);
+    border:none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,8 +145,13 @@ textarea::placeholder {
 }
 
 .NotificationListModal:hover {
-    
     background-color: rgb(213, 233, 255);
+    border: 3px solid rgb(53, 117, 253);
+}
+
+.NotificationListModal:focus {
+    background-color: rgba(228, 228, 228, 1);
+    border: 3px solid rgb(53, 117, 253);
 }
 
 .msgBoxModal {

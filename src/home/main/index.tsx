@@ -1,7 +1,14 @@
 import React, { Context } from 'react';
-import { JsxExpression } from 'typescript';
+import { ThemeContext } from 'styled-components';
+
+
+import { themes } from '../../global/themes';
+//import { ThemeContext } from '../../global/themes';
 import { PostComponent, PostProps } from "../post";
 import "./styles.css";
+import { usePostList } from '../../global/postsContext.d';
+
+
 
 /* Adapter
 let props: props = {
@@ -14,98 +21,41 @@ let props: props = {
 };
 */
 
-interface MainComponentProps {
-
-};
-
-interface MainProps {
-  title?: string;
-  content?: string;
-  postImageURL?: string;
-  reactionsAcount?: string; 
-  postImageAlt?: string;
-};
-
-const context:Array<PostProps> = [
-  {
 
 
 
-    postImageAlt: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
-    postImageURL: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
-    reactionsAcount: "21",
-    title: "Lavagem de estofados",
-    content:"dicas simples que podem economizar",
-  },
-  {
-  
-  
-  
-    postImageAlt: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
-    postImageURL: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
-    reactionsAcount: "26",
-    title: "Pintura de casa",
-    content:"prepare a lata de tinta adicionando o reagente.."
-  },
-  {
-
-
-    postImageAlt: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
-    postImageURL: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
-    reactionsAcount: "35",
-    title: "Mesas ergonomicas",
-    content:"mesas ajustáveis e ergonomicas para todo o time"
-  },
-  {
- 
-
-
-    postImageAlt: "imagem de qualquer",
-    postImageURL:"https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
-    reactionsAcount: "78",
-    title: "Titulo de algima coisa",
-    content:"aguma coisa é aqui. deixe seu like"
-
-  }
-];
 
 
 // quando vc passa propiedades para um component você é obrigado atulaizar o estado dele
-export class MainComponent extends React.Component<MainComponentProps> {
-  obj: MainProps
-  constructor( props:MainComponentProps ) {
-    super( props )
-    this.obj = {
-      title:"fedfd",
-      content: "",
-      postImageURL: "",
-      reactionsAcount: "",
-      postImageAlt: "",
-    };
-    this.state = this.obj;
-  };
+// Components que não podem ter seu estado alterado, precisam tomar cuidado com renderização  dinamica
 
-  render():JSX.Element {
+//const PostProvider = import( "../../global/postsContext.d" ).then( posts => posts.PostProvider );
+
+export function MainComponent() {
+    
+    const { postList, setPost } = usePostList();
     return (
       <div className="GridFeed">
-        { 
-          context.map( p => { 
-            return (
-              <PostComponent post={ { title:"fedfd",
-              content: "",
-              postImageURL: "",
-              reactionsAcount: "",
-              postImageAlt: "",}}
-        
-              />
-            ) 
-          } ) 
-        }
-        <button onClick={ () => {} } className="add-post-button"><svg></svg></button>
-      </div>
+     
+          {
+            postList.map( post => { 
+              return (
+                <PostComponent 
+                  postImageAlt={ post.postImageAlt }
+                  postImageURL={ post.postImageURL }
+                  reactionsAcount={ post.reactionsAcount }
+                  title={ post.title }
+                  content={ post.content }
+                />
+              )
+            })
+          }
+       
+          <button onClick={ () => {} } className="add-post-button"><svg></svg></button>
+        </div>
     )
   }
-};
+;
 
 
 

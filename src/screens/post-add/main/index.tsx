@@ -1,18 +1,21 @@
-import React from "react";
+import * as React from "react";
 import "./styles.css";
 import { FollowersUserNameProfileImageMolecule } from "../../../componentsGlobal/molecules"
+import { KitTranslate } from "./languageConfig";
+import { PostProps } from "../../../global/postsContext.d";
 
-let props: Props = {
-  ariaLabelUpload: "Carregue um arquivo de imagem",
-  ariaLabelTitle: "Adicione um título",
-  ariaLabelUploadContent: "Adicione uma descrição",
+
+let props: MainProps = {
+  ariaLabelUpload: KitTranslate.ariaLabelUpload,
+  ariaLabelTitle: KitTranslate.ariaLabelTitle,
+  ariaLabelUploadContent: KitTranslate.ariaLabelUploadContent,
   moreButton: "...",
-  publishButton: "Publish",
-  dragAndDropInfo: "Araste e solte ou clique para carregar",
-  recommendationInfo: "Recomendação: use arquivos .jpg de alta qualidade com menos de 20MB",
+  publishButton: KitTranslate.publishButton,
+  dragAndDropInfo: KitTranslate.recommendationInfo,
+  recommendationInfo: KitTranslate.recommendationInfo,
 };
 
-interface Props {
+export interface MainProps {
   readonly ariaLabelUpload?: string;
   readonly ariaLabelTitle?: string;
   readonly ariaLabelUploadContent?: string;
@@ -30,36 +33,65 @@ interface PropsAny {
 
 };
 
-// A App precisa verificar se o usuário está conectada à internet
+const initialValuePost:PostProps = {
+    postImageAlt: "",
+    postImageURL:"",
+    reactionsAcount: "",
+    title: "",
+    content: "",
+};
 
+export class Main extends React.Component<MainProps> {
+  state = {
+   title:"",
+   content:"",
+   linkURL:""
+  };
 
-export class Main extends React.Component<Props, State, PropsAny> {
+  onChange( event: any ){
+    const { name, value } = event.target;
+    const obj = { [name]: value };
+    console.log( obj )
+  };
+
+  onSubmit( event: any ) {
+    event.preventDefault();
+    /*
+    axios.post('http://localhost:5000/promotions', values)
+      .then((response) => {
+        history.push('/');
+      });*/
+  };
+
   render(): JSX.Element {
     return  (
     <div className="main">
       <div className="component-form">
-        <div className="more-publish--btns">
-          <button className="more-button" title={ props.moreButton } onClick={ () => {} }>...</button>
-          <button className="publish-button" title={ props.publishButton } onClick={ () => {} }>{ props.publishButton }</button>
-        </div>
-        <div className="post-form">
+        <form className="form">
+          <div className="more-publish--btns">
+            <button className="more-button" title={ props.moreButton } onClick={ () => {} }>...</button>
+            <button type="submit" className="publish-button" title={ props.publishButton } onClick={ this.onSubmit }>{ props.publishButton }</button>
+          </div>
+          <div className="form-div">
           <div className="imputUpload-container">
             <input className="imputUpload" type="file" name="Image"  accept="image/png, image/jpeg, image/jpg"   aria-label={ props.ariaLabelUpload } multiple />
-            <svg></svg>
+            
             <span>{ props.dragAndDropInfo }</span>
-            <span> { props.recommendationInfo }</span>
+            <span>{ props.recommendationInfo }</span>
           </div>
           <div className="TitleContent">
             <FollowersUserNameProfileImageMolecule/>
             <div className="imputTitle-container">
-             <input className="imputTitle" name="Title" type="text" aria-label={ props.ariaLabelTitle } placeholder="Add a title"/>
+             <input className="imputTitle" id="imputTitle" name="Title" type="text" aria-label={ props.ariaLabelTitle } placeholder={ props.ariaLabelTitle } onChange={ this.onChange } required/>
             </div>
-            <div className="inputContent-container"><input className="inputContent" name="Content" type="text" aria-label={ props.ariaLabelUploadContent } placeholder="Add a description"/></div>
-            <div className="inputContent-container"><input className="inputContent" name="Content" type="text" aria-label={ props.ariaLabelUploadContent } placeholder="Adicione um link de destino"/></div>
+            <div className="inputContent-container"><input className="inputContent" name="Content" type="text" aria-label={ props.ariaLabelUploadContent } placeholder={ props.ariaLabelUploadContent } onChange={ this.onChange }/></div>
+            <div className="inputLink-container"><input className="inputContent" name="Content" type="text" aria-label={ props.ariaLabelUploadContent } placeholder={ props.ariaLabelUploadContent } onChange={ this.onChange }/></div>
           </div>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
     )
   }
 }
+

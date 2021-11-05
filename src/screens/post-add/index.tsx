@@ -1,16 +1,16 @@
 import React from "react";
 
-import { HeaderComponent }from '../../home/header/index';
-import { Main } from "./main"
+import { HeaderComponent } from '../../home/header/index';
+import { Main } from "./main";
 
 interface PostAddProps {};
 
 interface PostAddState {};
 
-interface AnyProps {};
 
 
-export class PostAdd extends React.Component<PostAddProps, PostAddState, AnyProps> {
+
+export class PostAdd extends React.Component<PostAddProps, PostAddState> {
   render():JSX.Element {
     return  (
       <div>

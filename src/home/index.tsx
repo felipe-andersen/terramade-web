@@ -25,8 +25,8 @@ interface State1 {
 
 }
 /*
-const MainComponen = import("./main").then(main => {
-  main.default
+const MainComponent = import("./main").then(main => {
+  main.MainComponent
 });
 */
 

@@ -2,7 +2,7 @@
 // Dependenses
 import * as React from 'react';
 import "./styles.css";
-// import { User } from "./users";
+
 // import { userName, profileImageID, followersNumber } from "./languageOptions";
 
 import { FollowersUserNameProfileImageMolecule } from "./../../componentsGlobal/molecules";
@@ -11,15 +11,14 @@ import { FollowersUserNameProfileImageMolecule } from "./../../componentsGlobal/
 // Adapter
 let Adapter = {};
 
-export interface PostComponentProps {
-  post : { postImageAlt: string,
+export interface PostProps {
+  postImageAlt: string,
   postImageURL: string,
   reactionsAcount: string,
   title: string,
-  content: string, }
+  content: string,
 };
-
-export interface PostProps {
+interface PostState {
   postImageAlt: string,
   postImageURL: string,
   reactionsAcount: string,
@@ -29,39 +28,13 @@ export interface PostProps {
 
 const FollowersUserNameProfileImageMolecul = import("./../../componentsGlobal/molecules").then( molecule => molecule.FollowersUserNameProfileImageMolecule);
 
-export class PostComponent extends React.Component<PostComponentProps> {
-  post;
-
-  constructor( props:PostComponentProps ) {
-    super( props )
-    this.post = { 
-      postImageAlt: "gf",
-      postImageURL: "string",
-      reactionsAcount: "string",
-      title: "string",
-      content: "string",
-      };
-      // this.state = this.post;
-     
-      this.state = { 
-      postImageAlt: "gf",
-      postImageURL: "string",
-      reactionsAcount: "string",
-      title: "string",
-      content: "string",
-      };
-        
-  };
-
-  componentDidMount(){}
-  componentWillUnmount(){}
-  componentDidUpdate(){}
-
+export class PostComponent extends React.Component<PostProps, PostState> {
+  
   render():JSX.Element {
     return (
         <div className="post">
           <div className="postImg-Container">
-            <a href="" className="postImg--link" ><img className="postImg" alt={ this.post.postImageAlt } src={this.post.postImageURL }/></a>
+            <a href="" className="postImg--link" ><img className="postImg" alt={ this.props.postImageAlt } src={this.props.postImageURL }/></a>
             <a className="btns-container">
               <div className="btns"><a href=""><svg></svg></a><a href=""><svg></svg></a><a href=""><svg></svg></a></div>
               <div className="btns"><a href=""><svg></svg></a><a href=""><svg></svg></a><a href=""><svg></svg></a></div>
@@ -69,13 +42,13 @@ export class PostComponent extends React.Component<PostComponentProps> {
           </div>
           <div className="containerh">
             {/*<button onClick={ () => {} } className="optionsReticence">...</button>*/}
-            <a href=""><h2 className="Title">{ this.post.title }</h2></a>
-            <a href=""><p className="Content">{this.post.content }</p></a>
+            <a href=""><h2 className="Title">{ this.props.title }</h2></a>
+            <a href=""><p className="Content">{this.props.content }</p></a>
             <FollowersUserNameProfileImageMolecule/>
             <div className="reactions">
-              <button className="reaction" onClick={ () => {} }><svg></svg></button><p className="reactionsAcount">{ this.post.reactionsAcount }</p>
-              <button className="reaction" onClick={ () => {} }><svg></svg></button><p className="reactionsAcount">{  this.post.reactionsAcount }</p>
-              <button className="reaction" onClick={ () => {} }><svg></svg></button><p className="reactionsAcount">{ this.post.reactionsAcount }</p>
+              <button className="reaction" onClick={ () => {} }><svg></svg></button><p className="reactionsAcount">{ this.props.reactionsAcount }</p>
+              <button className="reaction" onClick={ () => {} }><svg></svg></button><p className="reactionsAcount">{ this.props.reactionsAcount }</p>
+              <button className="reaction" onClick={ () => {} }><svg></svg></button><p className="reactionsAcount">{ this.props.reactionsAcount }</p>
             </div>
           </div>
         </div>
@@ -90,28 +63,4 @@ export class PostComponent extends React.Component<PostComponentProps> {
     )
   }
 };
-/*
-let DataUser = {
-  post: {},
-  config: {},
-  followersNumber: "65",
-  userName: "Felipe",
-  profileImageID:"dyhjhj",
-  language:"ptBR"
-};
-
-let user = new User( DataUser )
-
-console.log( user )
-*/
-
-
-
-
-/*
-
-createInterface;
- React.createFactory
- 
-*/
 

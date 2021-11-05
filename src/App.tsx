@@ -6,7 +6,7 @@ import { PostAdd } from "./screens/post-add/index"
 function App() {
   return (
   
-    <Home />
+    <PostAdd />
   );
 }
 

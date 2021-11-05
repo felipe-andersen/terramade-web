@@ -10,6 +10,16 @@ interface UserProps {
   date?: Date
 }; 
 
+interface UserProps {
+  post?: object;
+  config?: object;
+  followersNumber?: string;
+  userName?: string;
+  profileImageID?: string;
+  language?: string;
+  date?: Date
+}; 
+
 interface UserState {
   post: object;
   config: object;
@@ -21,7 +31,7 @@ interface UserState {
 
 // Sempre transmitir objetos, nada de dados soltos
 // Componente de classe do React: React.Component<p = {}, s = {}, ss = any> 
-export class User extends React.Component<UserProps, UserState> {
+ class User extends React.Component<UserProps, UserState> {
   post
   followersNumber
   userName

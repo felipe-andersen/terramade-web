@@ -7,12 +7,12 @@ import { ChevronIcon } from "../../svgComponent/chevron-icon";
 import { NotificationIcon } from "../../svgComponent/notification-icon";
 import { MessageIcon } from "../../svgComponent/message-icon";
 
-let props: Props = {
-  placeholderSelectedLanguage: "Faça uma busca",
+let props: HeaderComponentProps = {
+  placeholderSelectedLanguage: placeholderSelectedLanguage,
   userPicture: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg"
-}
+};
 
-interface Props {
+interface HeaderComponentProps {
   placeholderSelectedLanguage?: string;
   userPicture?: string;
 };
@@ -20,7 +20,7 @@ interface Props {
 interface State {
 };
 
-export class HeaderComponent extends React.Component<Props, State> {
+export class HeaderComponent extends React.Component<HeaderComponentProps, State> {
  
   render() {
     return (

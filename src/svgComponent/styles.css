@@ -1,0 +1,18 @@
+title {
+    color: tomato;
+}
+
+.notification-icon[title]:hover::after {
+    content:attr(title);
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    height: 35px;
+    padding: 0 12px;
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 19px 0 0 -46px;
+
+}
