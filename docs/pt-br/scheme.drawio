@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e">
+    <diagram id="arYlJl7g9aJztNDFKi4R" name="Página-1">
+        <mxGraphModel dx="890" dy="478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="220" width="610" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="FACTORY | FABRICA" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="230" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Car" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="230" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="SETOR PRINCIPAL" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="105" y="320" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="DEPART PROTOTIPAÇÃO" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="115" y="290" width="160" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="DEPART PRODUÇÃO" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="290" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="DEPART VENDAS" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="540" y="290" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="SETOR FERRAMENTA" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="420" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="SETOR EQUIPAMENTO" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="105" y="370" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Car" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="155" y="340" width="30" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
