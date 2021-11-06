@@ -1,5 +1,5 @@
 import React from "react";
-import { language } from "../../global/language";
+import { language } from "../../../globalContext/language";
 
 let translate = "ptBR_default"; // let translate:HeaderProps = {};
 

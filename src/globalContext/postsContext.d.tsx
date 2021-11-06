@@ -48,11 +48,19 @@ export interface PostProps {
   content: string;
 };
 
+type PostListProp = Array<PostProps>;
+
+interface PostListProps {
+  postList?: PostListProp;  // array
+  setPost?: React.Dispatch<React.SetStateAction<PostListProp>>;  // React function state controll
+};
+
 export class NewPost extends React.Component<PostProps> {
   myPost: PostProps
   constructor(props: PostProps){
     super(props);
     this.myPost = {
+      key: this.props.key,
       postImageAlt: this.props.postImageAlt,
       postImageURL: this.props.postImageURL,
       reactionsAcount: this.props.reactionsAcount,
@@ -63,27 +71,13 @@ export class NewPost extends React.Component<PostProps> {
 };
 
 
-
-type PostListProp = Array<PostProps>;
-
-interface PostListProps {
-  postList?: PostListProp;
-  setPost?: React.Dispatch<React.SetStateAction<PostListProp>>;
-};
-
 /*
-
 interface PostProviderProps {
   children: React.ReactNode;
 };
-
-
   //const [ postList , setPost ] = useState<PostListProp>( posts );
   //export const PostContext = createContext<PostListProp>( posts );
 
-
-
-/*
 export default function PostProvider( { children }: PostProviderProps ) {
 
  const { postList, setPost } = Context().Provider
@@ -95,9 +89,6 @@ export default function PostProvider( { children }: PostProviderProps ) {
  
 };
 
-*/
-
-/*
 export function usePostList() {
   const context = useContext( PostContext );
   if (!context) throw new Error( "usePosts must be used within a PostProvider" );
@@ -112,5 +103,5 @@ export function usePostList() {
     setState(posts);
     return aPromise.finally(() => setState( posts ));
   };*/
-  return { postList, setPost }; // infers [boolean, typeof load] instead of (boolean | typeof load)[]
+  return { postList, setPost }; 
 };

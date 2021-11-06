@@ -1,8 +1,8 @@
 import * as React from "react";
-import { NewPost } from "../../../global/postsContext.d";
+import { NewPost } from "../../../globalContext/postsContext.d";
 import { Main, MainProps } from "./index";
-import { PostProps } from "../../../global/postsContext.d"
-import { language } from "../../../global/language"
+import { PostProps } from "../../../globalContext/postsContext.d"
+import { language } from "../../../globalContext/language"
 
 
 let translate:MainProps = {
@@ -57,6 +57,7 @@ switch ( language ) {
 export let KitTranslate = translate;
 
 const initialValuePost:PostProps = {
+  key: "",
     postImageAlt: "",
     postImageURL:"",
     reactionsAcount: "",

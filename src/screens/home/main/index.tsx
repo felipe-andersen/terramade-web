@@ -2,11 +2,11 @@ import React, { Context } from 'react';
 import { ThemeContext } from 'styled-components';
 
 
-import { themes } from '../../global/themes';
+import { themes } from '../../../globalContext/themes';
 //import { ThemeContext } from '../../global/themes';
 import { PostComponent, PostProps } from "../post";
 import "./styles.css";
-import { usePostList } from '../../global/postsContext.d';
+import { usePostList } from '../../../globalContext/postsContext.d';
 
 
 
@@ -46,6 +46,7 @@ export function MainComponent() {
                   reactionsAcount={ post.reactionsAcount }
                   title={ post.title }
                   content={ post.content }
+                  key={ post.key }
                 />
               )
             })

@@ -1,7 +1,7 @@
 import * as React from "react";
-import { posts } from "../../../global/postsContext.d";
+import { posts } from "../../../globalContext/postsContext.d";
 import { FollowersUserNameProfileImageMolecule } from "../../../componentsGlobal/molecules";
-import { usePostList } from "../../../global/postsContext.d";
+import { usePostList } from "../../../globalContext/postsContext.d";
 import { PostProps } from "../../../home/post";
 
 let { postList, setPost } = usePostList();

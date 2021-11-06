@@ -2,7 +2,7 @@ import * as React from "react";
 import "./styles.css";
 import { FollowersUserNameProfileImageMolecule } from "../../../componentsGlobal/molecules"
 import { KitTranslate } from "./languageConfig";
-import { PostProps } from "../../../global/postsContext.d";
+import { PostProps } from "../../../globalContext/postsContext.d";
 
 
 let props: MainProps = {
@@ -34,18 +34,20 @@ interface PropsAny {
 };
 
 const initialValuePost:PostProps = {
-    postImageAlt: "",
-    postImageURL:"",
-    reactionsAcount: "",
-    title: "",
-    content: "",
+  key: "",
+  postImageAlt: "",
+  postImageURL:"",
+  reactionsAcount: "",
+  title: "",
+  content: "",
 };
+
+// www.wehome.com/ptbr/posts
 
 export class Main extends React.Component<MainProps> {
   state = {
-   title:"",
-   content:"",
-   linkURL:""
+   name:"",
+ 
   };
 
   onChange( event: any ){
@@ -95,3 +97,9 @@ export class Main extends React.Component<MainProps> {
   }
 }
 
+/*
+alterar o objeto no front depois setar o objeto
+requisitos de entrada
+Personalizar o placeholder
+personalizar o erro 
+*/ 

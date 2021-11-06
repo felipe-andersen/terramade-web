@@ -1,6 +1,6 @@
 import React from "react";
-
-import { HeaderComponent } from '../../home/header/index';
+// www.terramadeproject.com/{ lang=local_ptBR }/post_add
+import { HeaderComponent } from '../../screens/home/header/index';
 import { Main } from "./main";
 
 interface PostAddProps {};

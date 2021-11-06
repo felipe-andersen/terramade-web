@@ -5,20 +5,23 @@ import "./styles.css";
 
 // import { userName, profileImageID, followersNumber } from "./languageOptions";
 
-import { FollowersUserNameProfileImageMolecule } from "./../../componentsGlobal/molecules";
+import { FollowersUserNameProfileImageMolecule } from "../../../componentsGlobal/molecules";
 
 
 // Adapter
 let Adapter = {};
 
 export interface PostProps {
+  key: string;
   postImageAlt: string,
   postImageURL: string,
   reactionsAcount: string,
   title: string,
   content: string,
 };
+
 interface PostState {
+  key: string;
   postImageAlt: string,
   postImageURL: string,
   reactionsAcount: string,
@@ -26,10 +29,18 @@ interface PostState {
   content: string,
 };
 
-const FollowersUserNameProfileImageMolecul = import("./../../componentsGlobal/molecules").then( molecule => molecule.FollowersUserNameProfileImageMolecule);
+const FollowersUserNameProfileImageMolecul = import("../../../componentsGlobal/molecules").then( molecule => molecule.FollowersUserNameProfileImageMolecule);
 
-export class PostComponent extends React.Component<PostProps, PostState> {
-  
+export class PostComponent extends React.Component<PostProps> {
+  state={
+    postImageAlt: this.props.postImageAlt,
+    postImageURL: this.props.postImageURL,
+    reactionsAcount: this.props.reactionsAcount,
+    title: this.props.title,
+    content: this.props.content,
+    key: this.props.key
+  };
+
   render():JSX.Element {
     return (
         <div className="post">
@@ -49,6 +60,7 @@ export class PostComponent extends React.Component<PostProps, PostState> {
               <button className="reaction" onClick={ () => {} }><svg></svg></button><p className="reactionsAcount">{ this.props.reactionsAcount }</p>
               <button className="reaction" onClick={ () => {} }><svg></svg></button><p className="reactionsAcount">{ this.props.reactionsAcount }</p>
               <button className="reaction" onClick={ () => {} }><svg></svg></button><p className="reactionsAcount">{ this.props.reactionsAcount }</p>
+              <button className="handleView" onClick={ () => {} }><svg></svg></button>
             </div>
           </div>
         </div>
