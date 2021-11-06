@@ -6,7 +6,7 @@
 
 <p align="right">Portuguese, Brazil | <a href="https://github.com/felipe-pazam/Projeto-Terramade/edit/main/Readme.md">English</a></p>
 
-# Terramade - Mobile
+# Terramade - Web
 
 ## Sobre
 
