@@ -1,6 +1,6 @@
-import React from "react";
+import * as React from "react";
 import "./styles.css";
-const FrameworkMyComponent = React.Component;
+
 
 interface context {
   languageSelected : string;

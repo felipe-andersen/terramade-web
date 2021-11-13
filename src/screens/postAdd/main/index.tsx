@@ -1,10 +1,32 @@
 import * as React from "react";
 import "./styles.css";
-import { FollowersUserNameProfileImageMolecule } from "../../../componentsGlobal/molecules"
 import { KitTranslate } from "./languageConfig";
 import { PostProps } from "../../../globalContext/postsContext.d";
+import { PostCreate } from "../../../globalContext/postsContext.d";
+import { usePostList } from "../../../globalContext/postsContext.d";
+import { FollowersUserNameProfileImageMolecule  } from "../../../components-global/username-pic-follow--molecule";
 
+function PostPush( newPost:PostProps ) {
+  const { postList, setPost } = usePostList();
 
+  
+  setPost([...postList, newPost ])
+  return  (
+    <div></div>
+  )
+};
+/*
+
+let numeros = [1, 2, 3];
+numeros.push(4);
+
+console.log(numeros); // [1, 2, 3, 4]
+
+numeros.push(5, 6, 7);
+
+console.log(numeros);
+
+*/
 let props: MainProps = {
   ariaLabelUpload: KitTranslate.ariaLabelUpload,
   ariaLabelTitle: KitTranslate.ariaLabelTitle,
@@ -33,23 +55,29 @@ interface PropsAny {
 
 };
 
-const initialValuePost:PostProps = {
+const initialValuePost /*:PostProps*/ = {
   key: "",
   postImageAlt: "",
   postImageURL:"",
   reactionsAcount: "",
   title: "",
   content: "",
+  hasEdited: false
 };
 
-// www.wehome.com/ptbr/posts
+
 
 export class Main extends React.Component<MainProps> {
   state = {
-   name:"",
- 
+    key: "fdfg",
+    postImageAlt: "dfg",
+    postImageURL: "dfg",
+    reactionsAcount: "dfg",
+    title: "dfg",
+    content: "df",
+    hasEdited: false
   };
-
+ 
   onChange( event: any ){
     const { name, value } = event.target;
     const obj = { [name]: value };
@@ -58,12 +86,35 @@ export class Main extends React.Component<MainProps> {
 
   onSubmit( event: any ) {
     event.preventDefault();
+    
+    const myPost = {
+      key: "gksdjkrrfg",
+      postImageAlt: "qualquer imagem",
+      postImageURL: "",
+      reactionsAcount: "55",
+      title: "Meu post criado",
+      content: "Meu conteudo perfeito",
+      hasEdited: false
+    };
+
+  
+ 
+  };
+
+ 
+
+
+    
+
+
+
+
     /*
     axios.post('http://localhost:5000/promotions', values)
       .then((response) => {
         history.push('/');
       });*/
-  };
+
 
   render(): JSX.Element {
     return  (
@@ -91,6 +142,7 @@ export class Main extends React.Component<MainProps> {
           </div>
           </div>
         </form>
+         <button className="more-button"  onClick={ this.onSubmit }>criar</button>
       </div>
     </div>
     )

@@ -14,7 +14,7 @@ type PropsAny  = {
 
 };
 
-export class SearchIcon extends React.Component<Props, State, PropsAny> {
+export class SearchIcon extends React.Component<Props> {
   render() {
     return (
     

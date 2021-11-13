@@ -19,9 +19,7 @@ Fornecer ferramentas para o usuário planejar a compra de imóveis, administrar 
   
 ## Tópicos 
   
-  * <a href=""> Regras de negócio </a>
-  
-  * <a href=""> Contribuindo com o projeto </a>
+  * <a href="https://github.com/felipe-andersen/terramade-react/docs/pt-br/contributing.md"> Contribuindo com o projeto </a>
 
   
   Feito com :heart:

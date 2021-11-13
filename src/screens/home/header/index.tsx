@@ -2,10 +2,11 @@ import * as React from "react";
 import { userPicture } from "./featureConfig";
 import { placeholderSelectedLanguage } from "./languageOptions";
 import "./styles.css";
-import { SearchIcon } from "../../svgComponent/search-icon";
-import { ChevronIcon } from "../../svgComponent/chevron-icon";
-import { NotificationIcon } from "../../svgComponent/notification-icon";
-import { MessageIcon } from "../../svgComponent/message-icon";
+import { SearchIcon } from "../../../iconComponents/searchIcon";
+import { ChevronIcon } from "../../../iconComponents/chevronIcon";
+import { NotificationIcon } from "../../../iconComponents/notificationIcon";
+import { MessageIcon } from "../../../iconComponents/messageIcon";
+import * as IconComponents from "../../../iconComponents";
 
 let props: HeaderComponentProps = {
   placeholderSelectedLanguage: placeholderSelectedLanguage,

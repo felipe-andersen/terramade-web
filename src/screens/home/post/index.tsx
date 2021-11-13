@@ -5,7 +5,7 @@ import "./styles.css";
 
 // import { userName, profileImageID, followersNumber } from "./languageOptions";
 
-import { FollowersUserNameProfileImageMolecule } from "../../../componentsGlobal/molecules";
+import { FollowersUserNameProfileImageMolecule } from "../../../components-global/molecules";
 
 
 // Adapter
@@ -18,6 +18,7 @@ export interface PostProps {
   reactionsAcount: string,
   title: string,
   content: string,
+  hasEdited: boolean
 };
 
 interface PostState {
@@ -27,9 +28,10 @@ interface PostState {
   reactionsAcount: string,
   title: string,
   content: string,
+  hasEdited: boolean,
 };
 
-const FollowersUserNameProfileImageMolecul = import("../../../componentsGlobal/molecules").then( molecule => molecule.FollowersUserNameProfileImageMolecule);
+const FollowersUserNameProfileImageMolecul = import("../../../components-global/molecules").then( molecule => molecule.FollowersUserNameProfileImageMolecule);
 
 export class PostComponent extends React.Component<PostProps> {
   state={
@@ -38,7 +40,8 @@ export class PostComponent extends React.Component<PostProps> {
     reactionsAcount: this.props.reactionsAcount,
     title: this.props.title,
     content: this.props.content,
-    key: this.props.key
+    key: this.props.key,
+    hasEdited: this.props.hasEdited
   };
 
   render():JSX.Element {
@@ -52,7 +55,7 @@ export class PostComponent extends React.Component<PostProps> {
             </a>
           </div>
           <div className="containerh">
-            {/*<button onClick={ () => {} } className="optionsReticence">...</button>*/}
+           <p>{ this.props.hasEdited }</p>
             <a href=""><h2 className="Title">{ this.props.title }</h2></a>
             <a href=""><p className="Content">{this.props.content }</p></a>
             <FollowersUserNameProfileImageMolecule/>

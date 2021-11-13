@@ -1,76 +1,95 @@
 import * as React from "react";
 import { posts } from "../../../globalContext/postsContext.d";
-import { FollowersUserNameProfileImageMolecule } from "../../../componentsGlobal/molecules";
+import { FollowersUserNameProfileImageMolecule } from "../../../components-global/molecules";
 import { usePostList } from "../../../globalContext/postsContext.d";
-import { PostProps } from "../../../home/post";
+import { PostProps } from "../../home/post";
 
+import "./styles.css";
+/*
 let { postList, setPost } = usePostList();
 
 let noFound = "Desculpe! Não consegui buscar.";
 console.log( noFound )
 
- //postList.map( p => p /*.key === "key"? true : noFound*/ );
+ //postList.map( p => p .key === "key"? true : noFound );
 
 let adapter: MainPostViewProps = {
   setPost: setPost,
-  post: postList.map( p => p /*.key === "key"? true : noFound*/ )
+  post: postList.map( p => p .key === "key"? true : noFound )
 
 };
-
+*/
 interface MainPostViewProps {
   setPost: React.Dispatch<React.SetStateAction<PostProps[]>>;
   post: object;
 };
 
-class MainPostView extends React.Component {
-    state = {
-     post: adapter.post
+export class MainPostView extends React.Component {
+  state = {
+    post: {
+      title: "Travel Home",
+      content: "I had every intention to have the launch of Travel Home go live on last Tuesday but, as often happens, life got crazy around here with the release. I wanted to have a chance to thank everyone who bought the book, wrote me kind messages, and/or showed up to the launch party we had here... Read more »",
+      reactions: "35",
+      link: "www.google.com.br",
+      dateTime: "Há 15 min Editado",
+
+    }
    
-    };
+  };
   
-    onChange( event: any ){
-      const { name, value } = event.target;
-      const obj = { [name]: value };
-      console.log( obj )
-    };
+  onChange( event: any ){
+    const { name, value } = event.target;
+    const obj = { [name]: value };
+    console.log( obj )
+  };
   
-    onSubmit( event: any ) {
-      event.preventDefault();
+  onSubmit( event: any ) {
+    event.preventDefault();
       /*
       axios.post('http://localhost:5000/promotions', values)
         .then((response) => {
           history.push('/');
         });*/
-    };
+  };
     
-    render(): JSX.Element {
-      return  (
+  render(): JSX.Element {
+    return  (
+      <div>
       <div className="main">
-        <div className="component-form">
-          <form className="form">
-            <div className="more-publish--btns">
-              <button className="more-button" title={ "this.state.post" } onClick={ () => {} }>...</button>
-              <button type="submit" className="publish-button" title={ "this.state.post" } onClick={ this.onSubmit }>{ "this.state.post" }</button>
-            </div>
-            <div className="form-div">
-            <div className="imputUpload-container">
-              <input className="imputUpload" type="file" name="Image"  accept="image/png, image/jpeg, image/jpg"   aria-label={ "this.state.post" } multiple />
-              
-              <span>{ "this.state.post" }</span>
-              <span>{ "this.state.post" }</span>
-            </div>
-            <div className="TitleContent">
-              <FollowersUserNameProfileImageMolecule/>
-              <div className="imputTitle-container">
-               <input className="imputTitle" id="imputTitle" name="Title" type="text" aria-label={ "this.state.post" } placeholder={"this.state.post"} onChange={ this.onChange } required/>
+           
+        <div className="post-container">
+       
+        <a className="img-container" title="imagem do post" href="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg"><img className="imgPost" src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg"/></a>
+        <section className="postReadme">
+          <div className="reactionsBtns-modal--container">
+            <button title="optiosPostModal" className="optiosModal" id="" onClick={ () => {} }>molecule reactiosn</button>
+            <button title="optiosPostModal" className="optiosPostModal" id="" onClick={ () => {} }>optiosModal</button>
+          </div>
+         
+          <div className="molecule-followBtn--container">
+            <FollowersUserNameProfileImageMolecule/>
+            <button title="" className="" id="" onClick={ () => {} }>seguir</button>
+          </div>
+         
+          <p>{this.state.post.dateTime}</p>
+    
+          <article className="post-article">
+            <img/>
+            <div className="readme">
+              <h3>{this.state.post.title}</h3>
+              <p>{this.state.post.content}</p>
+              <div className="link-readMoreBtn-container">
+                <a href="" title="">{ this.state.post.link }</a>
+                {/*<button title="" className="" id="" onClick={ () => {} }>read more</button>*/}
               </div>
-              <div className="inputContent-container"><input className="inputContent" name="Content" type="text" aria-label={ "this.state.post" } value={ "adapter.post"} placeholder={ "this.state.post" } onChange={ this.onChange }/></div>
-              <div className="inputLink-container"><input className="inputContent" name="Content" type="text" aria-label={ "this.state.post" } placeholder={ "this.state.post" } onChange={ this.onChange }/></div>
             </div>
-            </div>
-          </form>
+          </article>
+        </section> 
         </div>
       </div>
-      )
-    }
+      </div>
+    )
   }
+}
+
+// verificar qual tipo de de dispositivo e OS e personalizar experiencias nativas

@@ -2,12 +2,12 @@ import React, { Context } from 'react';
 import { ThemeContext } from 'styled-components';
 
 
-import { themes } from '../../../globalContext/themes';
+import { themes } from '../../../globalContext/theme';
 //import { ThemeContext } from '../../global/themes';
 import { PostComponent, PostProps } from "../post";
 import "./styles.css";
 import { usePostList } from '../../../globalContext/postsContext.d';
-
+import * as Icons from "../../../iconComponents";
 
 
 /* Adapter
@@ -20,6 +20,8 @@ let props: props = {
   postImageAlt: "alt de  alguma coisa"
 };
 */
+
+
 
 
 
@@ -47,6 +49,7 @@ export function MainComponent() {
                   title={ post.title }
                   content={ post.content }
                   key={ post.key }
+                  hasEdited={ post.hasEdited }
                 />
               )
             })

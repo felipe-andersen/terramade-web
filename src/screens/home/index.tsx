@@ -31,7 +31,7 @@ const MainComponent = import("./main").then(main => {
 */
 
 
-export class Home extends React.Component<Props, State, PropsAny> {
+export class HomeComponent extends React.Component<Props, State, PropsAny> {
 
   
   render(){

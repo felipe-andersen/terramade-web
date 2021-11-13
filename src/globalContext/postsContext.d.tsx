@@ -12,6 +12,7 @@ export const posts:PostListProp = [
     reactionsAcount: "21",
     title: "Lavagem de estofados",
     content:"dicas simples que podem economizar",
+    hasEdited: false
   },
   {
     key: "546385g5gf6gf54gf4565465746",
@@ -19,7 +20,8 @@ export const posts:PostListProp = [
     postImageURL: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
     reactionsAcount: "26",
     title: "Pintura de casa",
-    content:"prepare a lata de tinta adicionando o reagente.."
+    content:"prepare a lata de tinta adicionando o reagente..",
+    hasEdited: false
   },
   {
     key: "546385g5gf6gf54gf4565465746",
@@ -27,7 +29,8 @@ export const posts:PostListProp = [
     postImageURL: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
     reactionsAcount: "35",
     title: "Mesas ergonomicas",
-    content:"mesas ajustáveis e ergonomicas para todo o time"
+    content:"mesas ajustáveis e ergonomicas para todo o time",
+    hasEdited: false
   },
   {
   key: "546385g5gf6gf54gf4565465746",
@@ -35,17 +38,29 @@ export const posts:PostListProp = [
   postImageURL:"https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
   reactionsAcount: "78",
   title: "Titulo de algima coisa",
-  content:"aguma coisa é aqui. deixe seu like"
-  }
+  content:"aguma coisa é aqui. deixe seu like",
+  hasEdited: false
+  },
+  {
+    key: "546385g5gf6gf54gf4565465746",
+    postImageAlt: "imagem de qualquer",
+    postImageURL:"https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
+    reactionsAcount: "78",
+    title: "Titulo de algima coisa",
+    content:"aguma coisa é aqui. deixe seu like",
+    hasEdited: true
+    }
 ];
 
 export interface PostProps {
   key: string;
   postImageAlt: string;
   postImageURL:string;
-  reactionsAcount: string;
+  reactionsAcount: string; // { reactions1: number,  reactions2: number,  reactions3: number,  reactions4: number,  reactions5: number, }
   title: string;
   content: string;
+  hasEdited: boolean
+  id?: string
 };
 
 type PostListProp = Array<PostProps>;
@@ -55,7 +70,7 @@ interface PostListProps {
   setPost?: React.Dispatch<React.SetStateAction<PostListProp>>;  // React function state controll
 };
 
-export class NewPost extends React.Component<PostProps> {
+export class PostCreate extends React.Component<PostProps> {
   myPost: PostProps
   constructor(props: PostProps){
     super(props);
@@ -66,9 +81,12 @@ export class NewPost extends React.Component<PostProps> {
       reactionsAcount: this.props.reactionsAcount,
       title: this.props.title,
       content: this.props.content,
+      hasEdited: this.props.hasEdited
     };
   };
 };
+
+
 
 
 /*

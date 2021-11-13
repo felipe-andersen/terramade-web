@@ -12,6 +12,7 @@ a {
     background-color: rgb(240, 229, 229);
     margin: 0 10px 10px 10px;
   
+    padding: 0;
   
 }
 
@@ -74,5 +75,13 @@ h2 {
     background-color: rgb(255, 0, 0);
     padding: 0 2px;
 
+}
+
+.handleView {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(47, 45, 73);
+    margin: 0 -4px 0px 5px;
 }
 
