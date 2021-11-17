@@ -16,3 +16,23 @@ title {
     margin: 19px 0 0 -46px;
 
 }
+
+.notificationIcon--e {
+  
+    fill: grey;
+   
+
+}
+
+
+.notificationIcon--e:hover {
+  
+    fill: #3755ff;
+  
+}
+
+.notificationIcon--e:focus {
+  
+    fill: rgb(71, 53, 53);
+  
+}

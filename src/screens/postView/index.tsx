@@ -8,7 +8,7 @@ export class PostView extends FrameworkComponent {
   render(){
     return (
       <div>
-          <HeaderComponent/>
+        <HeaderComponent/>
         <MainPostView></MainPostView>
         <MainComponent />
       </div>

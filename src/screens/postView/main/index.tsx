@@ -3,6 +3,7 @@ import { posts } from "../../../globalContext/postsContext.d";
 import { FollowersUserNameProfileImageMolecule } from "../../../components-global/molecules";
 import { usePostList } from "../../../globalContext/postsContext.d";
 import { PostProps } from "../../home/post";
+import * as Router from "react-router-dom";
 
 import "./styles.css";
 /*
@@ -30,7 +31,7 @@ export class MainPostView extends React.Component {
       title: "Travel Home",
       content: "I had every intention to have the launch of Travel Home go live on last Tuesday but, as often happens, life got crazy around here with the release. I wanted to have a chance to thank everyone who bought the book, wrote me kind messages, and/or showed up to the launch party we had here... Read more »",
       reactions: "35",
-      link: "www.google.com.br",
+      link: "www.mask.link",
       dateTime: "Há 15 min Editado",
 
     }
@@ -63,7 +64,7 @@ export class MainPostView extends React.Component {
         <section className="postReadme">
           <div className="reactionsBtns-modal--container">
             <button title="optiosPostModal" className="optiosModal" id="" onClick={ () => {} }>molecule reactiosn</button>
-            <button title="optiosPostModal" className="optiosPostModal" id="" onClick={ () => {} }>optiosModal</button>
+            <button title="optiosPostModal" className="optiosPostModal" id="" onClick={ () => {} }>optiosModal</button><Router.Link to="/postedit">editar</Router.Link>
           </div>
          
           <div className="molecule-followBtn--container">

@@ -9,3 +9,8 @@ Feed de publicações
 Methods: POST
 https://www.${ language }terramade.com/
 */
+
+
+type User =  {
+
+}

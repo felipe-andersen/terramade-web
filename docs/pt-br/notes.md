@@ -1,28 +1,30 @@
 
-Declaração de nomes
 
-* modulos
 
-* namespace
+// galerias
+// comentários
+// curtidas
+//
 
-* variáveis
+...modal
 
-* interfaces
+denúnciar
+ver menos do autor 
+ver menos publicações como essa
 
-* variáveis
+compartilhar 
 
-* classes
+copiar link
 
-* funções
+email
 
-* componentes
+twitere
+facebook 
+whatsapp
+outros
 
-* testes
 
-* id
-
-* classes (tributos HTML)
-
-* id (tributos HTML)
-
-* input (tributos HTML)
+crie uma publicação
+obter ajuda
+suporte
+renderizaão infinita

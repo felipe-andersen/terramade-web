@@ -2,6 +2,7 @@
 // Dependenses
 import * as React from 'react';
 import "./styles.css";
+import * as Router from "react-router-dom";
 
 // import { userName, profileImageID, followersNumber } from "./languageOptions";
 
@@ -46,9 +47,9 @@ export class PostComponent extends React.Component<PostProps> {
 
   render():JSX.Element {
     return (
-        <div className="post">
+        <div className="post-q">
           <div className="postImg-Container">
-            <a href="" className="postImg--link" ><img className="postImg" alt={ this.props.postImageAlt } src={this.props.postImageURL }/></a>
+            <Router.Link to="/nome-do-post" className="postImg--link" ><img className="postImg" alt={ this.props.postImageAlt } src={this.props.postImageURL }/></Router.Link>
             <a className="btns-container">
               <div className="btns"><a href=""><svg></svg></a><a href=""><svg></svg></a><a href=""><svg></svg></a></div>
               <div className="btns"><a href=""><svg></svg></a><a href=""><svg></svg></a><a href=""><svg></svg></a></div>

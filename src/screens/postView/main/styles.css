@@ -39,13 +39,17 @@
     padding: 0  25px 25px 25px;
 }
 
+postReadme > p {
+    font-size: 16px;
+}
+
 
 .readme > h3 {
     font-size: 45px;
 }
 
 .readme > p {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .readme > a {
@@ -70,6 +74,10 @@
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
+}
+
+.post-article{
+  margin: -50px 0 0 0;
 }
 
 .link-readMoreBtn-container{

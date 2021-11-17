@@ -5,9 +5,14 @@ import { PostProps } from "../../../globalContext/postsContext.d";
 import { PostCreate } from "../../../globalContext/postsContext.d";
 import { usePostList } from "../../../globalContext/postsContext.d";
 import { FollowersUserNameProfileImageMolecule  } from "../../../components-global/username-pic-follow--molecule";
+import { ChevronIcon } from "../../../iconComponents/chevronIcon";
+import * as Router from "react-router-dom";
+
+
 
 function PostPush( newPost:PostProps ) {
   const { postList, setPost } = usePostList();
+
 
   
   setPost([...postList, newPost ])
@@ -33,7 +38,7 @@ let props: MainProps = {
   ariaLabelUploadContent: KitTranslate.ariaLabelUploadContent,
   moreButton: "...",
   publishButton: KitTranslate.publishButton,
-  dragAndDropInfo: KitTranslate.recommendationInfo,
+  dragAndDropInfo: KitTranslate.dragAndDropInfo,
   recommendationInfo: KitTranslate.recommendationInfo,
 };
 
@@ -66,7 +71,7 @@ const initialValuePost /*:PostProps*/ = {
 };
 
 
-
+let link = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU";
 export class Main extends React.Component<MainProps> {
   state = {
     key: "fdfg",
@@ -103,46 +108,58 @@ export class Main extends React.Component<MainProps> {
 
  
 
-
-    
-
-
-
-
-    /*
-    axios.post('http://localhost:5000/promotions', values)
-      .then((response) => {
-        history.push('/');
-      });*/
-
-
-  render(): JSX.Element {
+  public render(): JSX.Element {
     return  (
     <div className="main">
       <div className="component-form">
         <form className="form">
-          <div className="more-publish--btns">
+       
+          <div className="uploads-publish--group">
+            <div className="uploadCards">
+            <div key={1} className="pic--container">
+              <img className="postImgUploaded" id="postImgUploaded" src={ link }/>
+              <input id="discardImage" type="button" onClick={ () => {} }/>
+            </div>
+
+            <label className="stylizedLblIptDiscardImg" htmlFor="discardImage">
+              <ChevronIcon/>
+            </label>
+
+            <div key={2} className="pic--container">
+              <img className="postImgUploaded" id="postImgUploaded" src={ link }/>
+              <input id="discardImage" type="button" onClick={ () => {} }/>
+            </div>
+
+            <label className="stylizedLblIptDiscardImg" htmlFor="discardImage">
+              <ChevronIcon/>
+            </label>
+            </div>
+            {/*
             <button className="more-button" title={ props.moreButton } onClick={ () => {} }>...</button>
             <button type="submit" className="publish-button" title={ props.publishButton } onClick={ this.onSubmit }>{ props.publishButton }</button>
+            */}
+            <div className="imputUpload-container">
+              <label className="inputLabelStyleImg" htmlFor="imputUpload" ></label>
+              <input className="imputUpload" id="imputUpload" type="file" name="Image"  accept="image/png, image/jpeg, image/jpg"   aria-label={ props.ariaLabelUpload } multiple />
+              <span className="dragAndDropInfo">{ props.dragAndDropInfo }</span>
+              {/*<span className="recommendationInfo">{ props.recommendationInfo }</span>*/}
+            </div>
+            <button className="publicPost"  onClick={ this.onSubmit }>Publicar</button>
           </div>
+          <div className="line"></div>
           <div className="form-div">
-          <div className="imputUpload-container">
-            <input className="imputUpload" type="file" name="Image"  accept="image/png, image/jpeg, image/jpg"   aria-label={ props.ariaLabelUpload } multiple />
-            
-            <span>{ props.dragAndDropInfo }</span>
-            <span>{ props.recommendationInfo }</span>
-          </div>
+            <div className="tools"></div>
           <div className="TitleContent">
-            <FollowersUserNameProfileImageMolecule/>
+        
             <div className="imputTitle-container">
              <input className="imputTitle" id="imputTitle" name="Title" type="text" aria-label={ props.ariaLabelTitle } placeholder={ props.ariaLabelTitle } onChange={ this.onChange } required/>
             </div>
-            <div className="inputContent-container"><input className="inputContent" name="Content" type="text" aria-label={ props.ariaLabelUploadContent } placeholder={ props.ariaLabelUploadContent } onChange={ this.onChange }/></div>
+            <div className="inputContent-container"><textarea className="inputContent" name="Content" aria-label={ props.ariaLabelUploadContent } placeholder={ props.ariaLabelUploadContent } onChange={ this.onChange }  rows={5} cols={33}/></div>
             <div className="inputLink-container"><input className="inputContent" name="Content" type="text" aria-label={ props.ariaLabelUploadContent } placeholder={ props.ariaLabelUploadContent } onChange={ this.onChange }/></div>
           </div>
           </div>
         </form>
-         <button className="more-button"  onClick={ this.onSubmit }>criar</button>
+        <Router.Link to="/createpost">Post Create</Router.Link>
       </div>
     </div>
     )
@@ -155,3 +172,4 @@ requisitos de entrada
 Personalizar o placeholder
 personalizar o erro 
 */ 
+

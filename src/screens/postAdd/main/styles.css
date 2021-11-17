@@ -1,3 +1,11 @@
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("../../../fonts/Montserrat/Montserrat-Regular.ttf") format(truetype);
+}
+
+
+
 .main {
     width: 100%;
     height: max-content;
@@ -10,6 +18,14 @@
     margin: 81px 0 0 0 ;
     background-color:transparent;
    
+}
+
+.tools {
+    width: 250px;
+    height: 30vw;
+    background-color: transparent;
+    margin: 25px 0 0 0 ;
+    border-right: 1px solid #eeeeee;
 }
 
 .component-form {
@@ -30,6 +46,8 @@
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+padding: 0;
+
 }
 
 .form-div {
@@ -37,32 +55,57 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    background-color: transparent;
+    padding: 0;
 }
 
 .imputUpload-container {
-    padding: 15px;
+    width: 130px;
     display: flex;
-    flex-direction: column;
+    flex-direction: inline-block;
     justify-content: center;
     align-items: center;
-    width: 320px;
-    height: 500px;
-    background-color: rgba(238, 238, 238, 1);
-    margin: 0 0px 0 0;
+
+    height: 100%;
+    background-color: rgb(255, 217, 217);
+    margin:  0 0 0 8px;
+  
+}
+
+.inputLabelStyleImg {
+    width: 35px;
+    height: 35px;
+    background-color: tomato;
+    cursor: pointer;
 }
 
 .imputUpload {
-    width: max-content;
-    height: 100px;
-    background-color:none;
-    margin: 0 16px 0 0;
+    display: none;
+   
+    background-color:yellow;
+    margin: 0 0px 0 0;
     
+}
+
+
+
+.dragAndDropInfo {
+    font-size: 11px;
+    text-align: center;
+    color: rgb(26, 23, 23);
+  
+}
+
+.recommendationInfo {
+    text-align: center;
+    color: rgb(26, 23, 23);
 }
 
 .TitleContent {
     width: 60%;
     height: 30vw;
     background-color: transparent;
+    padding: 20px;
 
     
 }
@@ -87,6 +130,7 @@
     font-size: 45px;
     outline: none;
     margin: 0px 0 0 8px;
+    font-family: Opens;
 }
 
 
@@ -109,22 +153,22 @@
 }
 
 .inputContent {
-    
     background-color: transparent;
     width: 100%;
     min-height: 50px;
     border: none;
     color: black;
-    font-size: 18px;
+    font-size: 16px;
     outline: none;
     margin: 0px 0 0 0px;
-  
+    
 }
 
 .inputContent::placeholder {
-    margin: 15px 0 0 8px;
-    font-size: 18px;
-    position: absolute;
+
+    font-size: 16px;
+  
+    color: rgb(85, 85, 85);
 }
 
 
@@ -141,18 +185,58 @@
     margin: 0px 0 16px 0;
 }
 
-.more-publish--btns {
+.uploads-publish--group {
     width: 100%;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+  
+    margin: 40px 0 16px 0;
+    
 }
+
+.line {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.uploadCards {
+    display: flex;
+}
+
+.pic--container {
+    width: 45px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: blue;
+    margin: 0 0 0 8px;
+    overflow: hidden;
+
+}
+
+.stylizedLblIptDiscardImg {
+    width: 45px;
+    height: 70px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7) ;
+    margin: 0 0 0 -45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.discardImage {
+    display: none;
+}
+
 
 .more-button, .publish-button {
     width: 100px;
-    height: 45px;
-    font-size: white;
-    background-color: rgba(240, 229, 229);
+    height: 40px;
+  
+    background-color: rgb(66, 58, 58);
     border-radius: 5px;
     padding: 0 8px;
     outline: none;
@@ -171,3 +255,18 @@
 }
 
 
+.publicPost {
+    padding: 0 8px;
+    height: 40px;
+    background-color: rgb(97, 71, 71);
+  font-family: "Montserrat Regular";
+   border-radius: 9px;
+   border: none;
+
+   font-size: 16px;
+   color: white;
+   font-weight: 600;
+
+
+   
+}

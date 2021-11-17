@@ -66,6 +66,7 @@ let props: FollowersUserNameProfileImageProps = {
   userName: Context.userName,
   profileImageID: Context.profileImageID,
   followersNumber: Context.followersNumber,
+  cityState: "Rio de janeiro, RJ"
   //alt: Context.userNameProfilePicture // translation from: userName profile picture
 };
 
@@ -73,21 +74,13 @@ interface FollowersUserNameProfileImageProps {
   readonly userName?: string;
   readonly profileImageID?: string;
   readonly followersNumber?: string;
+  readonly cityState?: string;
   //readonly alt?: () => string | undefined
 };
 
-interface state {
-  userName?: string;
-  profileImageID?: string;
-  followersNumber?: number;
-  alt?: string;
-};
 
-type propsAny = {
-  
-};
 
-export class FollowersUserNameProfileImageMolecule extends React.Component<FollowersUserNameProfileImageProps, state, propsAny> {
+export class FollowersUserNameProfileImageMolecule extends React.Component<FollowersUserNameProfileImageProps> {
 
   render():JSX.Element {
     return (
@@ -95,7 +88,8 @@ export class FollowersUserNameProfileImageMolecule extends React.Component<Follo
         <a href="" className="profileImage-link"><img alt="" className="profileImage" src={ props.profileImageID }></img></a>
         <div className="container-usernameFollowers">
           <a href="" className="userName">{ props.userName }</a>
-          <a href="" className="followers">{ props.followersNumber } seguidores</a>
+          {/*<a href="" className="followers">{ props.followersNumber } seguidores</a>*/}
+          <a href="" className="followers cityState">{ props.cityState }</a>
         </div>
       </div>
     )

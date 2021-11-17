@@ -1,6 +1,6 @@
 .profileImage-link {
-    width: 42px;
-    height: 42px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -8,6 +8,10 @@
     overflow: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
 .followers-userName-profileImage--molecule {
     display: flex;
     justify-content: flex-start;

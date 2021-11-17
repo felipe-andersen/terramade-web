@@ -1,15 +1,36 @@
-.headerComponent {
+import * as React from "react";
+import styled from "styled-components";
+
+
+
+
+export const HeaderStyledComponent = styled.div`
+
     width: 100%;
-    height: 80px;
+    height: 70px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border: none;
     margin: -81px 0 0 0;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
 
     position: fixed;
     z-index: 99;
+
+    /*.headerComponent {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    margin: -81px 0 0 0;
+    background-color: white;
+
+    position: fixed;
+    z-index: 99;*/
+    
 }   
 
 .svgLogo {
@@ -59,7 +80,7 @@
 
 .moreAcountModal:hover {
    
-    background-color: rgb(202, 223, 255);
+    background-color: rgb(222, 228, 236);
    
    
     
@@ -67,8 +88,9 @@
 
 .searchcInput {
     width: 30%;
-    height: 50px;
-    background-color: rgb(240, 229, 229);
+    height: 40px;
+ 
+    background-color: rgb(233, 233, 233);
     outline: none;
     border: none;
     border-radius: 5px;
@@ -83,7 +105,7 @@
 #searchInput {
     width: 95%;
     height: 95%;
-    font-size: 18px;
+    font-size: 16px;
     outline: none;
     border: none;
    
@@ -98,20 +120,22 @@
     justify-content: center;
 }
 
-#searchcInput::placeholder {
-    font-size: 18px;
-    color: red;
+#searchInput::placeholder {
+    font-size: 16px;
+    color: grey;
 }
 
-#searchcInput:focus{
+#searchInput:focus{
    border: 1px solid blue;
 }
 
 #searchcInput::-webkit-input-placeholder {
+    font-size: 16px;
     color: red;
 }
  
  :-moz-placeholder { /* Firefox 18- */
+    font-size: 16px;
     color: red;  
 }
  
@@ -132,8 +156,8 @@ textarea::placeholder {
 }
 
 .NotificationListModal {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     overflow: hidden;
     border-radius: 50%;
     margin: 0 8px 0 0;
@@ -150,13 +174,20 @@ textarea::placeholder {
 }
 
 .NotificationListModal:focus {
-    background-color: rgba(228, 228, 228, 1);
-    border: 3px solid rgb(53, 117, 253);
+    background-color: rgb(97, 71, 71);
+    border: 3px solid rgb(97, 71, 71);
+    
+}
+
+.NotificationListModal:focus {
+  
+    border: 1px solid white;
+    
 }
 
 .msgBoxModal {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     overflow: hidden;
     border-radius: 50%;
     border: none;
@@ -169,3 +200,5 @@ textarea::placeholder {
 .msgBoxModal:hover {
     background-color: rgb(213, 233, 255);
 }
+
+`;

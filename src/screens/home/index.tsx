@@ -3,7 +3,7 @@ import { HeaderComponent } from './header';
 import { MainComponent } from "./main";
 // import loadable from '@loadable/component' => SSR
 // www.terramadeproject.com/{ lang=local_ptBR }
-
+import * as Router from "react-router-dom";
 
 interface Props {
 
@@ -41,6 +41,7 @@ export class HomeComponent extends React.Component<Props, State, PropsAny> {
 
   
         <MainComponent/>
+        <Router.Link to="/createpost">Post Create</Router.Link>
       </div>
     )
   }

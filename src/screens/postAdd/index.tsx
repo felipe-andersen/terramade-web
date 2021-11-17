@@ -1,5 +1,5 @@
 import React from "react";
-// www.terramadeproject.com/{ lang=local_ptBR }/post_add
+// br.terramadeproject.com/create-post
 import { HeaderComponent } from '../../screens/home/header/index';
 import { Main } from "./main";
 

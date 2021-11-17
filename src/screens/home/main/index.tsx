@@ -1,5 +1,5 @@
-import React, { Context } from 'react';
-import { ThemeContext } from 'styled-components';
+import React from 'react';
+
 
 
 import { themes } from '../../../globalContext/theme';
