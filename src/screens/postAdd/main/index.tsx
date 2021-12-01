@@ -1,37 +1,15 @@
 import * as React from "react";
 import "./styles.css";
 import { KitTranslate } from "./languageConfig";
-import { PostProps } from "../../../globalContext/postsContext.d";
-import { PostCreate } from "../../../globalContext/postsContext.d";
-import { usePostList } from "../../../globalContext/postsContext.d";
-import { FollowersUserNameProfileImageMolecule  } from "../../../components-global/username-pic-follow--molecule";
-import { ChevronIcon } from "../../../iconComponents/chevronIcon";
+import { PostCreate } from "../../../globalContext/post";
+import { usePostList } from "../../../globalContext/post";
+import { FollowersUserNameProfileImageMolecule  } from "../../../componentLibrary/username-pic-follow--molecule";
+import { ChevronIcon } from "../../../iconLibrary/chevronIcon";
 import * as Router from "react-router-dom";
 
 
 
-function PostPush( newPost:PostProps ) {
-  const { postList, setPost } = usePostList();
 
-
-  
-  setPost([...postList, newPost ])
-  return  (
-    <div></div>
-  )
-};
-/*
-
-let numeros = [1, 2, 3];
-numeros.push(4);
-
-console.log(numeros); // [1, 2, 3, 4]
-
-numeros.push(5, 6, 7);
-
-console.log(numeros);
-
-*/
 let props: MainProps = {
   ariaLabelUpload: KitTranslate.ariaLabelUpload,
   ariaLabelTitle: KitTranslate.ariaLabelTitle,
@@ -52,47 +30,37 @@ export interface MainProps {
   readonly recommendationInfo?: string;
 };
 
-interface State {
-
-};
-
-interface PropsAny {
-
-};
-
-const initialValuePost /*:PostProps*/ = {
-  key: "",
-  postImageAlt: "",
-  postImageURL:"",
-  reactionsAcount: "",
-  title: "",
-  content: "",
-  hasEdited: false
-};
-
-
 let link = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU";
-export class Main extends React.Component<MainProps> {
-  state = {
-    key: "fdfg",
-    postImageAlt: "dfg",
-    postImageURL: "dfg",
-    reactionsAcount: "dfg",
-    title: "dfg",
-    content: "df",
-    hasEdited: false
-  };
- 
-  onChange( event: any ){
+
+export function Main():JSX.Element {
+
+const initialValuePost = {
+key: "My key",
+postImageAlt: "post image ",
+postImageURL: "www.terramadeproject.com",
+reactionsAcount: "10",
+title: "Post title ",
+content: "My fist content",
+hasEdited: false
+};
+
+
+const [myPost, setMyPost] = React.useState(initialValuePost)
+
+  function onChange( event: any ){
     const { name, value } = event.target;
     const obj = { [name]: value };
-    console.log( obj )
+    if(event.target.getAttribute("name") == "Title"){
+      setMyPost( {...myPost,
+    
+        title: value,
+
+      })
+    }
   };
 
-  onSubmit( event: any ) {
-    event.preventDefault();
-    
-    const myPost = {
+  function create(){
+    const post = new PostCreate( {
       key: "gksdjkrrfg",
       postImageAlt: "qualquer imagem",
       postImageURL: "",
@@ -100,16 +68,25 @@ export class Main extends React.Component<MainProps> {
       title: "Meu post criado",
       content: "Meu conteudo perfeito",
       hasEdited: false
-    };
-
-  
- 
+    })
   };
 
- 
+  const { postList, setPost } = usePostList();
 
-  public render(): JSX.Element {
-    return  (
+  function OnSubmit( event: any ) {
+    event.preventDefault();
+    console.log("Submited ...")
+
+ 
+    console.log("Saved !!!");
+
+    postList.map(post => {
+      console.log(post.title)
+  
+    })
+  };
+
+  return  (
     <div className="main">
       <div className="component-form">
         <form className="form">
@@ -144,26 +121,34 @@ export class Main extends React.Component<MainProps> {
               <span className="dragAndDropInfo">{ props.dragAndDropInfo }</span>
               {/*<span className="recommendationInfo">{ props.recommendationInfo }</span>*/}
             </div>
-            <button className="publicPost"  onClick={ this.onSubmit }>Publicar</button>
+            <button className="publicPost"  onClick={ OnSubmit }>Publicar</button>
           </div>
           <div className="line"></div>
           <div className="form-div">
-            <div className="tools"></div>
-          <div className="TitleContent">
+           
+            <div className="TitleContent">
         
-            <div className="imputTitle-container">
-             <input className="imputTitle" id="imputTitle" name="Title" type="text" aria-label={ props.ariaLabelTitle } placeholder={ props.ariaLabelTitle } onChange={ this.onChange } required/>
+              <div className="imputTitle-container">
+                <input className="imputTitle" id="imputTitle" name="Title" type="text" aria-label={ props.ariaLabelTitle } placeholder={ props.ariaLabelTitle } onChange={ onChange } required/>
+              </div>
+              <div className="inputContent-container"><textarea className="inputContent" name="Content" aria-label={ props.ariaLabelUploadContent } placeholder={ props.ariaLabelUploadContent } onChange={ onChange }  rows={5} cols={33}/></div>
+              <div className="inputLink-container"><input className="inputContent" name="Content" type="text" aria-label={ props.ariaLabelUploadContent } placeholder={ props.ariaLabelUploadContent } onChange={ onChange}/></div>
             </div>
-            <div className="inputContent-container"><textarea className="inputContent" name="Content" aria-label={ props.ariaLabelUploadContent } placeholder={ props.ariaLabelUploadContent } onChange={ this.onChange }  rows={5} cols={33}/></div>
-            <div className="inputLink-container"><input className="inputContent" name="Content" type="text" aria-label={ props.ariaLabelUploadContent } placeholder={ props.ariaLabelUploadContent } onChange={ this.onChange }/></div>
           </div>
+          <div className="btnsPost-container">
+            <label htmlFor="">foto/video</label><input type="image"/>
+            <label htmlFor="">emojis</label><input type="image"/>
+            <label htmlFor="">Check-in/label</label><input type="image"/>
+            <label htmlFor="">Check-in/label</label><input type="image"/>
           </div>
         </form>
-        <Router.Link to="/createpost">Post Create</Router.Link>
+   
+  
+
+
       </div>
     </div>
-    )
-  }
+  )
 }
 
 /*

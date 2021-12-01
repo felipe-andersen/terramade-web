@@ -1,0 +1,11 @@
+import * as React from "react";
+import { EyeIcon } from "../../iconLibrary/eye";
+
+export function AuthenticationTemplate():JSX.Element {
+  return(
+      <div>
+       <EyeIcon/>
+
+      </div>
+  )
+};

@@ -1,24 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { HomeComponent } from "./screens/home";
-import { PostAdd } from "./screens/postAdd/index";
-import { PostView } from "./screens/postView/index";
-import { Routes, Route} from "react-router-dom";
-
+import { MyRoutes } from "./routes/public";
+import { GlobalStyle } from "./styles";
+import * as Styled from "styled-components";
+import { usePersistedState } from "./hooks/usePersitedState";
+import { GlobalPropertiesAndStylesProvider, useGlobalPropertiesAndStyles }  from "./globalContext/globalTheme";
 
 
 function App() {
+
+ const { globalPropertiesAndStyles, setGlobalPropertiesAndStyles } = useGlobalPropertiesAndStyles()
+
+ 
+ console.log("globalPropertiesAndStyles.homeScreen.headerPropertiesAndStyles.resetInputLabel")
   return (
-  <Routes>
-    <Route path="/" element={<HomeComponent />} />
-    <Route path="/createpost" element={<PostAdd />} />
-    <Route path="/nome-do-post" element={<PostView />} />
-    <Route path="/postedit" element={<PostAdd />} />
-    <Route path="/createpost" element={<PostAdd />} />
-  </Routes>
+    <GlobalPropertiesAndStylesProvider>
+
+      <Styled.ThemeProvider theme={{ globalPropertiesAndStyles  }}>
+
+        <GlobalStyle/>
+
+        <MyRoutes/>
+
+      </Styled.ThemeProvider>
+
+    </GlobalPropertiesAndStylesProvider>
   );
-}
+};
+
 
 export default App;
- /*  <PostAdd />      <Home /> */

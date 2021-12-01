@@ -1,7 +1,7 @@
 import * as React from "react";
-import { posts } from "../../../globalContext/postsContext.d";
-import { FollowersUserNameProfileImageMolecule } from "../../../components-global/molecules";
-import { usePostList } from "../../../globalContext/postsContext.d";
+
+import { FollowersUserNameProfileImageMolecule } from "../../../componentLibrary/molecules";
+
 import { PostProps } from "../../home/post";
 import * as Router from "react-router-dom";
 
@@ -52,6 +52,14 @@ export class MainPostView extends React.Component {
           history.push('/');
         });*/
   };
+  
+  animationHeader(){
+    window.addEventListener("scroll", function(){
+      console.log("ok")
+    }
+    )
+  }
+
     
   render(): JSX.Element {
     return  (
@@ -83,6 +91,9 @@ export class MainPostView extends React.Component {
                 <a href="" title="">{ this.state.post.link }</a>
                 {/*<button title="" className="" id="" onClick={ () => {} }>read more</button>*/}
               </div>
+            </div>
+            <div className="div">
+     
             </div>
           </article>
         </section> 

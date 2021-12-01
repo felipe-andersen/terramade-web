@@ -1,14 +1,14 @@
 import React from "react";
 import { MainPostView } from "./main";
 import { MainComponent } from "../../screens/home/main"
-import { HeaderComponent } from "../home/header";
+import { HeaderComponentFn } from "../home/header";
 const FrameworkComponent = React.Component;
 
 export class PostView extends FrameworkComponent {
   render(){
     return (
       <div>
-        <HeaderComponent/>
+        <HeaderComponentFn/>
         <MainPostView></MainPostView>
         <MainComponent />
       </div>

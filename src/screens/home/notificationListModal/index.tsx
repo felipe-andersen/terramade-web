@@ -1,16 +1,25 @@
-import React from "react";
+import * as React from "react";
+import styled from "styled-components";
+import { NotificationListModalStyled } from "./styles"; 
+
+
 
 
 interface NotificationListModalProps {
 
 };
 
-export class notificationListModal extends React.Component implements NotificationListModalProps {
-  render() {
-    return (
-      <>
-      <div className=""></div>
-      </>
+export function NotificationListModal():JSX.Element {
+  return (
+   
+      <NotificationListModalStyled></NotificationListModalStyled>
+     
+
+
+
+
+      
+  
     )
-  }
+  
 };

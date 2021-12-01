@@ -1,28 +1,11 @@
-import React from 'react';
-
-
-
+import * as React from 'react';
+import { UserList } from "../../../db/users";
+import { usePostList  } from '../../../globalContext/post';
 import { themes } from '../../../globalContext/theme';
-//import { ThemeContext } from '../../global/themes';
 import { PostComponent, PostProps } from "../post";
-import "./styles.css";
-import { usePostList } from '../../../globalContext/postsContext.d';
-import * as Icons from "../../../iconComponents";
-
-
-/* Adapter
-let props: props = {
-  followersNumber: "52",
-  title: "Como colocar a cortina na janela com a fac...",
-  content: "Você já deve ter sentido o desconforto do excesso de...",
-  postImageURL: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
-  reactionsAcount: "65",
-  postImageAlt: "alt de  alguma coisa"
-};
-*/
-
-
-
+import { NotificationListModal } from "../notificationListModal"; 
+import styled from "styled-components";
+import { MainComponentStyled } from "./styles";
 
 
 
@@ -31,32 +14,136 @@ let props: props = {
 // quando vc passa propiedades para um component você é obrigado atulaizar o estado dele
 // Components que não podem ter seu estado alterado, precisam tomar cuidado com renderização  dinamica
 
-//const PostProvider = import( "../../global/postsContext.d" ).then( posts => posts.PostProvider );
+export function MainComponent():JSX.Element {
+  const { postList, setPost } = usePostList();
+  const FeedDependency =  [ postList, setPost ];
+  return (
+    <MainComponentStyled>
 
-export function MainComponent() {
-    
-    const { postList, setPost } = usePostList();
-    return (
-      <div className="GridFeed">
-     
-          {
-            postList.map( post => { 
-              return (
-                <PostComponent 
-                  postImageAlt={ post.postImageAlt }
-                  postImageURL={ post.postImageURL }
-                  reactionsAcount={ post.reactionsAcount }
-                  title={ post.title }
-                  content={ post.content }
-                  key={ post.key }
-                  hasEdited={ post.hasEdited }
-                />
-              )
-            })
-          }
-       
-          <button onClick={ () => {} } className="add-post-button"><svg></svg></button>
+      <div className="hightlight">
+
+        <div className="short">
+
+          <div className="storiePic--container">
+
+            <a className="storiePic container" href="">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            </a>
+          </div>
+
+          <div className="picNameProfession-container">
+
+            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            <div className="nameProfession--container">
+              <a href="" className="name">Daniel Sharezaed</a>
+              <a href="" className="">Design de Interiores</a>
+            </div>
+          </div>
         </div>
+
+        <div className="short">
+
+          <div className="storiePic--container">
+
+            <a className="storiePic container" href="">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            </a>
+          </div>
+          <div className="picNameProfession-container">
+
+            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            <div className="nameProfession--container">
+              <a href="" className="name">Daniel Sharezaed</a>
+              <a href="" className="">Design de Interiores</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="short">
+          <div className="storiePic--container">
+            <a className="storiePic container" href="">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            </a>
+          </div>
+          <div className="picNameProfession-container">
+            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            <div className="nameProfession--container">
+              <a href="" className="name">Daniel Sharezaed</a>
+              <a href="" className="">Design de Interiores</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="short">
+          <div className="storiePic--container">
+            <a className="storiePic container" href="">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            </a>
+          </div>
+          <div className="picNameProfession-container">
+            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            <div className="nameProfession--container">
+              <a href="" className="name">Daniel Sharezaed</a>
+              <a href="" className="">Design de Interiores</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="short">
+          <div className="storiePic--container">
+            <a className="storiePic container" href="">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            </a>
+          </div>
+          <div className="picNameProfession-container">
+            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            <div className="nameProfession--container">
+              <a href="" className="name">Daniel Sharezaed</a>
+              <a href="" className="">Design de Interiores</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="short">
+          <div className="storiePic--container">
+            <a className="storiePic container" href="">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            </a>
+          </div>
+          <div className="picNameProfession-container">
+            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+            <div className="nameProfession--container">
+              <a href="" className="name">Daniel Sharezaed</a>
+              <a href="" className="">Design de Interiores</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="gridFeed">
+      {
+        postList.map( post => {
+          return (
+            <PostComponent 
+              postImageAlt={post.postImageAlt}
+              postImageURL={ post.postImageURL }
+              reactionsAcount={ post.reactionsAcount }
+              title={ post.title }
+              content={ post.content}
+              key={ post.key }
+              hasEdited={ post.hasEdited }
+               
+              userName={ "João Neto"}
+              profileImageID={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"}
+              followersAcount={5}
+              state={"SP"}
+              city={"São Paulo"}
+            />
+          )
+        })
+      }
+      </div>
+      </MainComponentStyled>
     )
   }
 ;

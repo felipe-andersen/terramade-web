@@ -1,0 +1,8 @@
+
+type Query {
+    Users: [];
+}
+
+const resolvers = {
+    
+}
