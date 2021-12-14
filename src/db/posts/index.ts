@@ -10,8 +10,22 @@ export interface PostProps {
   reactionsAcount: string; // { reactions1: number,  reactions2: number,  reactions3: number,  reactions4: number,  reactions5: number, }
   title: string;
   content: string;
-  hasEdited: boolean
-  id?: string
+  listUsersWhoLiked?: [];
+  listUsersWhoShared?: [];
+  hasEdited: boolean;
+  id?: string;
+  local?: string;
+  views?: string;
+  sharedAcount?: number;
+  tags?: [];
+  complaint?: number;
+  reach?: {};
+  doNotRecommend?: number;
+  ImNotInterested?: number;
+  saved?: number;
+  impressions?:number;
+  statistic?: {}
+  
 };
 
 export const posts:PostProps[] = [

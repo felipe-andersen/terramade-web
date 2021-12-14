@@ -11,15 +11,10 @@ interface NotificationListModalProps {
 
 export function NotificationListModal():JSX.Element {
   return (
-   
-      <NotificationListModalStyled></NotificationListModalStyled>
-     
+    <NotificationListModalStyled>
 
 
 
-
-      
-  
-    )
-  
+    </NotificationListModalStyled>
+  )
 };

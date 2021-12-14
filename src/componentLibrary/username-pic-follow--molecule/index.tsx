@@ -51,12 +51,14 @@ export class FollowersUserNameProfileImageMolecule extends React.Component<Follo
  
   render():JSX.Element {
     return (
-      <div id="followers-userName-profileImage--molecule" className="followers-userName-profileImage--molecule">
-        <a href="" className="profileImage-link"><img alt="" className="profileImage" src={ this.props.profileImageID }></img></a>
-        <div className="container-usernameFollowers">
+      <div id="followers-userName-profileImage--container" className="followers-userName-profileImage--molecule">
+        <a href="" className="profileImageID">
+          <img alt="" className="profileImage" src={ this.props.profileImageID }></img>
+        </a>
+
+        <div className="usernameFollowers--container">
           <a href="" className="userName">{ this.props.userName }</a>
           <a href="" className="followers">{ this.props.followersAcount } { adapter.followers }</a>
-       
         </div>
       </div>
     )

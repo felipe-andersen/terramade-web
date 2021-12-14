@@ -3,7 +3,7 @@ import { UserList } from "../../../db/users";
 import { usePostList  } from '../../../globalContext/post';
 import { themes } from '../../../globalContext/theme';
 import { PostComponent, PostProps } from "../post";
-import { NotificationListModal } from "../notificationListModal"; 
+
 import styled from "styled-components";
 import { MainComponentStyled } from "./styles";
 
@@ -20,104 +20,139 @@ export function MainComponent():JSX.Element {
   return (
     <MainComponentStyled>
 
-      <div className="hightlight">
+      <div className="highlightedShorts">
+        <button className='previusBtn'></button>
 
-        <div className="short">
+        <div className="short--container">
+          <div className="short">
+         
+            <div className="picNameProfession-container">
 
-          <div className="storiePic--container">
-
-            <a className="storiePic container" href="">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            </a>
-          </div>
-
-          <div className="picNameProfession-container">
-
-            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            <div className="nameProfession--container">
-              <a href="" className="name">Daniel Sharezaed</a>
-              <a href="" className="">Design de Interiores</a>
+            
+              <div className="nameProfession--container">
+             
+                <a title={"Hoje tem live a noite no youtube"} href="" className="textContent name">Hoje tem live a noite no youtube. link aqui. aparece lá.</a>
+              </div>
             </div>
+                 
+            <div className="storiePic--container">
+              <a className="storiePic container" href="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+              </a>
+            </div>
+     
           </div>
+          <div title={"Daniel Sharezaed - Design de Interioes"} className="shortContentText"><a href='' className='publicNameOcupation'>Daniel Sharezaed - Design de Interioes</a></div>
         </div>
 
-        <div className="short">
+        <div className="short--container">
+          <div className="short">
+            <div className="picNameProfession-container">
 
-          <div className="storiePic--container">
-
-            <a className="storiePic container" href="">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            </a>
-          </div>
-          <div className="picNameProfession-container">
-
-            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            <div className="nameProfession--container">
-              <a href="" className="name">Daniel Sharezaed</a>
-              <a href="" className="">Design de Interiores</a>
+              <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+              <div className="nameProfession--container">
+                <a href="" className="name">Daniel Sharezaed </a>
+                <a href="" className="">Design de Interioes</a>
+              </div>
             </div>
+                 
+            <div className="storiePic--container">
+              <a className="storiePic container" href="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+              </a>
+            </div>
+     
           </div>
+          <div className="shortContentText">{"live hoje no youtube"}</div>
         </div>
 
-        <div className="short">
-          <div className="storiePic--container">
-            <a className="storiePic container" href="">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            </a>
-          </div>
-          <div className="picNameProfession-container">
-            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            <div className="nameProfession--container">
-              <a href="" className="name">Daniel Sharezaed</a>
-              <a href="" className="">Design de Interiores</a>
+       <div className="short--container">
+          <div className="short">
+            <div className="picNameProfession-container">
+
+              <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+              <div className="nameProfession--container">
+                <a href="" className="name">Daniel Sharezaed</a>
+                <a href="" className="">Design de Interiores</a>
+              </div>
             </div>
+                 
+            <div className="storiePic--container">
+              <a className="storiePic container" href="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+              </a>
+            </div>
+     
           </div>
+          <div className="shortContentText">{"live hoje no youtube"}</div>
         </div>
 
-        <div className="short">
-          <div className="storiePic--container">
-            <a className="storiePic container" href="">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            </a>
-          </div>
-          <div className="picNameProfession-container">
-            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            <div className="nameProfession--container">
-              <a href="" className="name">Daniel Sharezaed</a>
-              <a href="" className="">Design de Interiores</a>
+        <div className="short--container">
+
+          <div className="short">
+
+            <div className="picNameProfession-container">
+              <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+              <div className="nameProfession--container">
+                <a href="" className="name">Daniel Sharezaed</a>
+                <a href="" className="">Design de Interiores</a>
+              </div>
             </div>
+                 
+            <div className="storiePic--container">
+              <a className="storiePic container" href="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+              </a>
+            </div>
+
           </div>
+
+          <div className="shortContentText">{"live hoje no youtube"}</div>
+          
         </div>
 
-        <div className="short">
-          <div className="storiePic--container">
-            <a className="storiePic container" href="">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            </a>
-          </div>
-          <div className="picNameProfession-container">
-            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            <div className="nameProfession--container">
-              <a href="" className="name">Daniel Sharezaed</a>
-              <a href="" className="">Design de Interiores</a>
+        <div className="short--container">
+          <div className="short">
+            <div className="picNameProfession-container">
+
+              <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+              <div className="nameProfession--container">
+                <a href="" className="name">Daniel Sharezaed</a>
+                <a href="" className="">Design de Interiores</a>
+              </div>
             </div>
+                 
+            <div className="storiePic--container">
+              <a className="storiePic container" href="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+              </a>
+            </div>
+     
           </div>
+          <div className="shortContentText">{"live hoje no youtube"}</div>
         </div>
 
-        <div className="short">
-          <div className="storiePic--container">
-            <a className="storiePic container" href="">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            </a>
-          </div>
-          <div className="picNameProfession-container">
-            <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-            <div className="nameProfession--container">
-              <a href="" className="name">Daniel Sharezaed</a>
-              <a href="" className="">Design de Interiores</a>
+        <div className="short--container">
+          <div className="short">
+            <div className="picNameProfession-container">
+
+              <img className="professionalPic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+              <div className="nameProfession--container">
+                <a href="" className="name">Daniel Sharezaed</a>
+                <a href="" className="">Design de Interiores</a>
+              </div>
             </div>
+                 
+            <div className="storiePic--container">
+              <a className="storiePic container" href="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
+              </a>
+            </div>
+     
           </div>
+          <div className="shortContentText">{"live hoje no youtube"}</div>
         </div>
+        <button className='nextBtn'></button>
       </div>
 
       <div className="gridFeed">

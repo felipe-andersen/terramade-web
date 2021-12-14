@@ -51,7 +51,7 @@ export function GlobalPropertiesAndStylesProvider({children}:PropertiesAndStyles
 
 export const useGlobalPropertiesAndStyles = () => {
   const context = React.useContext(GlobalPropertiesAndStylesContext);
-  if (!context) console.log("await ...");
+  if (!context) console.log("await ..."); //appLoading
   const { globalPropertiesAndStyles, setGlobalPropertiesAndStyles } = context;
   return { globalPropertiesAndStyles, setGlobalPropertiesAndStyles }
 }

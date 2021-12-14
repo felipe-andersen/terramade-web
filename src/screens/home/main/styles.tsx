@@ -4,10 +4,14 @@ import styled from "styled-components";
 
 
 export const MainComponentStyled = styled.div`
-  margin: 81px 0 0 0;
+  margin: 15px 0 0 0;
+  box-sizing: border-box;
+  padding: 0 8px;
+  width: 100%;
+  background-color: white;
 
   .gridFeed {
-    width: 100%;  
+
     column-count: 5;
     column-gap: 10px;
     margin: 81px 0 0 0;
@@ -28,32 +32,74 @@ export const MainComponentStyled = styled.div`
     margin-top: none;
   }
 
-  .hightlight {
+  .highlightedShorts {
     display: flex; 
     width: 100%;
     height: max-content;
     justify-content: center;
+    align-items:center;
+
+    
+    .previusBtn, .nextBtn{
+      width: 50px;
+      height: 50px;
+      background-color: rgba(1,1,1,0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      outline: none;
+      border: none;
+
+    }
+
+
+
+
+
+  }
+  
+  .short--container {
+    width: 14vw; // +1350px | 1350px | 850px | 650px | 450px
+    height: 17vw; 
+
+
+
+
+
+  
+
+    margin: 0 8px 0 0px;
   }
 
   .short{ 
-    width: 14%;
+  
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 0px;
-    height: max-content;
-    overflow: hidden;
+ 
+    height: 210px; // +1350px | 1350px | 850px | 650px | 450px
+ 
+    background-color: black;
+    justify-content: flex-end;
+    border-radius: 9px;
   
-    justify-content: center;
+    padding: 9px 9px 0px 9px;
   }
 
   .storiePic--container {
-    height: 8vw;
-    width: 8vw;
+    height: 4vw;
+    width: 4vw;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid grey;
+  
+    margin: 9px 0 -2vw 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+ 
 
   .picNameProfession-container {
     display: flex; 
@@ -62,6 +108,10 @@ export const MainComponentStyled = styled.div`
     height: max-content;
  
     justify-content: center;
+  }
+
+  .videoCover {
+    
   }
 
   .professionalPic {
@@ -78,11 +128,28 @@ export const MainComponentStyled = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    > a {
+      font-size: 14px;
+      color: #dadada;
+    }
   }
 
   .name {
     font-size: 16px;
     font-weight: 600;
+  }
+
+  .shortContentText {
+    width: 100%;
+    height: 20px;
+    margin: 2.5vw 0 0 0;
+    overflow:hidden;
+    font-weight: 600;
+ 
+    text-align: center;
+
+  
   }
   
 `;

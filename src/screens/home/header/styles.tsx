@@ -185,12 +185,14 @@ textarea::placeholder {
 
 .modal-group {
   height: 87vh;
-  width: 20vw;
-  background-color: red;
-  display: flex;
+  width: 27vw;
+  background-color: white;
+  display: none;
   border-radius: 8px;
   position: absolute;
-  margin: 610px -78vw 0px 0px;
+  margin: 610px -67vw 0px 0px;
+  box-sizing: border-box;
+  padding: 8px 8px 8px 8px;
 }
 
 
@@ -221,9 +223,9 @@ textarea::placeholder {
     position: absolute;
     color: white;
     font-size: 13px;
-    height: 35px;
+    height: 30px;
     padding: 0px 10px;
-    background-color: rgb(39, 39, 39);
+    background-color: rgba(39, 39, 39, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,6 +234,28 @@ textarea::placeholder {
     margin: 100px 0px 0px 0px ;
     }    
 }
+
+/*
+.svg:hover {
+  .child {
+
+ 
+    color: white;
+    font-size: 13px;
+    height: 30px;
+    padding: 0px 10px;
+    background-color: rgba(39, 39, 39, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    margin: 100px 0px 0px 0px ;
+
+    }
+}
+
+*/ 
 
 .NotificationListModal:focus {
     background-color: rgb(97, 71, 71);

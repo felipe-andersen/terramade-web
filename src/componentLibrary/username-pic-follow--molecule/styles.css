@@ -1,6 +1,15 @@
-.profileImage-link {
-    width: 35px;
-    height: 35px;
+
+.followers-userName-profileImage--container {
+    width: 100%;
+    display: flex;
+ 
+    align-items: center;
+    background-color: yellow;
+}
+
+.profileImageID {
+    height: 2rem;
+    height: 2rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -12,16 +21,12 @@ a {
     text-decoration: none;
     color: black;
 }
-.followers-userName-profileImage--molecule {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
 
-.container-usernameFollowers {
+.usernameFollowers--container{
     display: flex;
     flex-direction: column;
     margin: 0 0 0px 8px;
+   
 }
 
 .userName {

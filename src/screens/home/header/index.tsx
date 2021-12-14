@@ -14,6 +14,7 @@ import { ExecSyncOptions } from "child_process";
 import { NotificationListModal } from "../notificationListModal";
 import { ClearCloseIcon } from "../../../iconLibrary/clear-close/index";
 import { defaultTheme } from "react-select";
+import { UserSettingsModal } from '../userSettingsModal';
 
 //-----------------------------------------------------------------------------------------------------
 
@@ -139,7 +140,11 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
         })
       }
 
-      <div className="modal-group"></div>
+      <div className="modal-group">
+        <UserSettingsModal/>
+
+
+      </div>
 
     </HeaderStyledComponent>
 

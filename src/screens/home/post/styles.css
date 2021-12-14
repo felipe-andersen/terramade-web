@@ -9,17 +9,18 @@ a {
     height: max-content;
     overflow: hidden;
     border-radius: 5px;
-    background-color: rgb(240, 229, 229);
-    margin: 0 10px 10px 10px;
-    background-color: rgb(240, 229, 229);
+
+
+    background-color: transparent;
     padding: none;
     break-inside: avoid;
+    
   
 }
 
 .postImg-Container {
     height: max-content;
-    background-color: rgb(240, 229, 229);
+    background-color: transparent;
     position: relative;
 }
 
@@ -37,7 +38,7 @@ a {
     opacity: 0;
     display: flex;
     position: absolute;
-    background-color: black;
+    
     margin: 0 0 0 0;
     background-color: rgb(240, 229, 229);
     padding: 0;
@@ -46,7 +47,7 @@ a {
 
 .containerh {
     padding:0px 12px 8px 14px ;
-    background-color: rgb(240, 229, 229);
+    background-color: rgb(255, 255, 255);
 }
 
 .Content {

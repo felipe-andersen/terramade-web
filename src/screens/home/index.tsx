@@ -4,8 +4,9 @@ import { MainComponent } from "./main";
 // import loadable from '@loadable/component' => SSR
 // www.terramadeproject.com/{ lang=local_ptBR }
 import * as Router from "react-router-dom";
+import { UserSettingsModal } from "./userSettingsModal";
 
-import { HomeComponentStyled } from "./styles"
+import { StyledHomeComponent } from "./styles"
 
 interface Props {
 
@@ -39,13 +40,23 @@ export class HomeComponent extends React.Component<Props, State, PropsAny> {
   render(){
     return  (
       
-      <HomeComponentStyled>
+      <StyledHomeComponent>
 
           <HeaderComponentFn/>
+          
+          <div className="main-section--container">
 
-          <MainComponent/>
+            <MainComponent/>
 
-      </HomeComponentStyled>
+            <div className="modalGroup">
+              <UserSettingsModal/>
+
+            </div>
+          </div>
+   
+       
+
+      </StyledHomeComponent>
     )
   }
 }
