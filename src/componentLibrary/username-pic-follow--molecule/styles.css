@@ -1,15 +1,14 @@
-
 .followers-userName-profileImage--container {
     width: 100%;
+    height: max-content;
     display: flex;
- 
     align-items: center;
     background-color: yellow;
 }
 
 .profileImageID {
-    height: 2rem;
-    height: 2rem;
+    width: 2.5vw;
+    height: 2.5vw;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -22,14 +21,13 @@ a {
     color: black;
 }
 
-.usernameFollowers--container{
+.usernameFollowers--container {
     display: flex;
+    width: 70%;
     flex-direction: column;
     margin: 0 0 0px 8px;
-   
 }
 
 .userName {
-    font-size: 16px;
     font-weight: 600;
 }

@@ -96,28 +96,23 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
         <div className="searchIcon--container">
           <SearchIcon/>
         </div>
-
         <input className="searchInput" id="searchInput" type="search" /*maxlength="10" readonly form_id=""*/ name="" placeholder={props.placeholderSelectedLanguage } onFocus={ resetAble } autoComplete="on"/>
-        
         <label htmlFor="resetInput" className="resetInputLabel" id="resetInputLabel">
           <ClearCloseIcon/>
           <input className="resetInput" id="resetInput" value="reset "type="reset" onClick={ () => {} }></input>
         </label>
       </form>
-
       <div className="KeyboardVoiceIcon">
         <KeyboardVoiceIcon/>
       </div>
-
       <div className="btns-header">
-        <button onClick={ () => {} } id="NotificationListModal" className="NotificationListModal">
+        <button onClick={ () => {} } id="NotificationListModal" className="NotificationListModal" title={"notification - sininho"}>
           <NotificationIcon />
         </button>
         <button onClick={ () => {} } className="msgBoxModal">
           <MessageIcon />
         </button>
       </div>
-
       <div className="pictureImage-moreAcountModal">
         <div className="pictureImage-div">
           <img alt="" src={ props.userPicture } className="pictureImage"/>
@@ -126,7 +121,6 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
           <ChevronIcon/>
         </button>
       </div>
-
       {    
         window.document.addEventListener("scroll", (e) => {
           let scroll = Header?.style.height;
@@ -139,13 +133,9 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
           }
         })
       }
-
       <div className="modal-group">
         <UserSettingsModal/>
-
-
       </div>
-
     </HeaderStyledComponent>
 
   )

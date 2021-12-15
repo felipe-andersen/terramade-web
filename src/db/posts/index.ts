@@ -58,13 +58,13 @@ export const posts:PostProps[] = [
     hasEdited: false
   },
   {
-  key: "546385g5gf6gf54gf4565465746",
-  postImageAlt: "imagem de qualquer",
-  postImageURL:"https://i.pinimg.com/736x/24/8a/da/248adab856d44dc0154336e0d0b024e3.jpg",
-  reactionsAcount: "78",
-  title: "Titulo de algima coisa",
-  content:"aguma coisa é aqui. deixe seu like",
-  hasEdited: false
+    key: "546385g5gf6gf54gf4565465746",
+    postImageAlt: "imagem de qualquer",
+    postImageURL:"https://i.pinimg.com/736x/24/8a/da/248adab856d44dc0154336e0d0b024e3.jpg",
+    reactionsAcount: "78",
+    title: "Titulo de algima coisa",
+    content:"aguma coisa é aqui. deixe seu like",
+    hasEdited: false
   },
   {
     key: "546385g5gf6gf54gf4565465746",

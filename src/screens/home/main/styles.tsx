@@ -2,7 +2,6 @@ import * as React from "react";
 
 import styled from "styled-components";
 
-
 export const MainComponentStyled = styled.div`
   margin: 15px 0 0 0;
   box-sizing: border-box;
@@ -11,9 +10,8 @@ export const MainComponentStyled = styled.div`
   background-color: white;
 
   .gridFeed {
-
     column-count: 5;
-    column-gap: 10px;
+    column-gap: 16px;
     margin: 81px 0 0 0;
     break-inside: avoid;
   }
@@ -39,8 +37,9 @@ export const MainComponentStyled = styled.div`
     justify-content: center;
     align-items:center;
 
-    
-    .previusBtn, .nextBtn{
+
+  
+    button.previusBtn, button.nextBtn{
       width: 50px;
       height: 50px;
       background-color: rgba(1,1,1,0.8);
@@ -50,41 +49,31 @@ export const MainComponentStyled = styled.div`
       border-radius: 50%;
       outline: none;
       border: none;
-
     }
-
-
-
-
-
   }
   
   .short--container {
-    width: 14vw; // +1350px | 1350px | 850px | 650px | 450px
-    height: 17vw; 
-
-
-
-
-
-  
-
-    margin: 0 8px 0 0px;
-  }
-
-  .short{ 
-  
+    width: 13vw; // +1350px | 1350px | 850px | 650px | 450px
     display: flex;
     flex-direction: column;
     align-items: center;
- 
-    height: 210px; // +1350px | 1350px | 850px | 650px | 450px
- 
-    background-color: black;
-    justify-content: flex-end;
-    border-radius: 9px;
-  
-    padding: 9px 9px 0px 9px;
+    margin: 0 8px 0 0px;
+
+    .short { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 210px; // +1350px | 1350px | 850px | 650px | 450px
+      background-color: black;
+      justify-content: flex-end;
+      border-radius: 9px;
+      overflow: hidden;
+      position: relative;
+
+      img.videoCover {
+        width: 100%;
+      }
+    }
   }
 
   .storiePic--container {
@@ -92,33 +81,38 @@ export const MainComponentStyled = styled.div`
     width: 4vw;
     border-radius: 50%;
     overflow: hidden;
-  
-    margin: 9px 0 -2vw 0;
+    margin: -2vw  0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1010;
   }
-
- 
 
   .picNameProfession-container {
-    display: flex; 
-    margin:8px 0 0 0;
     width: 100%;
-    height: max-content;
- 
-    justify-content: center;
+    height: 50%;
+    display: flex; 
+    align-items: flex-end;
+    position: absolute;
+    z-index: 1002;
+    background-color: transparent;
+    margin: 0 0 2vw 0;
+    box-sizing: border-box;
+    padding:   10px 10px  10px  10px ;
   }
 
-  .videoCover {
-    
+  .mask {
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to bottom, transparent, black);
+    position: absolute;
+    z-index: 1001;
   }
 
   .professionalPic {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    
     display: none;
   }
 
@@ -141,15 +135,20 @@ export const MainComponentStyled = styled.div`
   }
 
   .shortContentText {
-    width: 100%;
+    width: 70%;
     height: 20px;
     margin: 2.5vw 0 0 0;
     overflow:hidden;
     font-weight: 600;
- 
     text-align: center;
+  }
 
-  
+  .imgAcount {
+
+  }
+
+  .videoTime {
+
   }
   
 `;

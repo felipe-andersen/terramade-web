@@ -6,7 +6,6 @@ interface UserSettingsModalProps {
 
 };
 
-
 export function UserSettingsModal():JSX.Element {
   return (
     <StyledUserSettingsModal>
@@ -15,9 +14,7 @@ export function UserSettingsModal():JSX.Element {
   )
 };
 
-
 //-----------------------------------------------------------------------------
-
 
 interface ConfigModalProps {
   personalization: string;
@@ -39,15 +36,17 @@ export class ModalOptions extends React.Component {
       <StyledModalOptions>
         <button className="backBtn">
           <div className="icon-title--Contanier">
-            <div className="icon--Contanier"></div>{" icon"}
+            <div className="icon--Contanier"></div>
+            {" icon"}
           </div>
-          <div className="icon--Contanier backgroudColor"><ChevronIcon/></div>
+          <div className="icon--Contanier backgroudColor">
+            <ChevronIcon/>
+          </div>
         </button>
-          
-
         <button className="personalizationBtn">
           <div className="icon-title--Contanier">
-            <div className="icon--Contanier"></div>{"Personalizar"}
+            <div className="icon--Contanier"></div>
+            {"Personalizar"}
           </div>
           <div className="icon--Contanier backgroudColor"></div>
         </button>
@@ -62,18 +61,19 @@ export class ModalOptions extends React.Component {
 
         <button className="AcessibilidadeBtn">
           <div className="icon-title--Contanier">
-            <div className="icon--Contanier"></div>{"Acessibilidade"}
+            <div className="icon--Contanier"></div>
+            {"Acessibilidade"}
           </div>
           <div className="icon--Contanier backgroudColor"></div>
         </button>
 
         <button className="exitBtn">
           <div className="icon-title--Contanier">
-            <div className="icon--Contanier"></div>{"Sair"}
+            <div className="icon--Contanier"></div>
+            {"Sair"}
           </div>
           <div className="icon--Contanier backgroudColor"></div>
         </button>
-        
       </StyledModalOptions>
     )
   }
@@ -87,7 +87,6 @@ export class Personalization extends React.Component {
         <button className="">{"Idioma"}</button>
         <button className="">{"Modo Escuro on/off"}</button>
         <button className="">{"Modo Claro"}</button>
-        
       </div>
     )
   }
@@ -101,7 +100,6 @@ export class HelpSuport extends React.Component {
         <div className="">{"Idioma"}</div>
         <div className="">{"Mode dark on/off"}</div>
         <div className="">{"Mode light"}</div>
-        
       </div>
     )
   }
@@ -113,7 +111,6 @@ export class Acessibility extends React.Component {
       <div className="modal">
         <div className="">{"font size"}</div>
         <div className="">{"Keyboard"}</div>
-        
       </div>
     )
   }

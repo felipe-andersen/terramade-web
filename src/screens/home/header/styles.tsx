@@ -16,7 +16,7 @@ export const HeaderStyledComponent = styled.div`
     background-color: white;
     position: relative;
     position: fixed;
-    z-index: 99;
+    z-index: 2000;
     box-shadow: 0px 1px 4px rgba(180,180,180, 0.5);
     /*.headerComponent {
     width: 100%;
@@ -87,11 +87,21 @@ export const HeaderStyledComponent = styled.div`
 
 .searchForm {
     width: 33.7%;
-    height: 40px;
+    height: 45px;
     display:flex;
-    background-color: rgb(244, 244, 244);
+    background-color: rgba(220, 220, 220, 0.7);
     align-items: center;
     border-radius: 5px;
+
+    :hover {
+        background-color: rgba(220, 220, 220, 1);
+    }
+
+    :target {
+        border: 2px solid blue;
+    }
+
+   
 }
 
 
@@ -110,6 +120,8 @@ export const HeaderStyledComponent = styled.div`
     background-color: transparent;
 padding: 0 20px 0 50px;
 
+
+
 }
 .searchIcon--container {
     width: 50px;
@@ -120,6 +132,8 @@ padding: 0 20px 0 50px;
     justify-content: center;
     margin: 0 -50px 0 0px;
     z-index:10;
+
+     
 }
 
 .searchInput::placeholder {
@@ -231,7 +245,7 @@ textarea::placeholder {
     align-items: center;
 
     border-radius: 5px;
-    margin: 100px 0px 0px 0px ;
+    margin: 85px 0px 0px 0px ;
     }    
 }
 
@@ -293,6 +307,12 @@ title {
     align-items: center;
     justify-content: center;
     background-color: rgb(244, 244, 244);
+
+    :hover {
+    background-color: rgb(220, 220, 220, 0.8);
+}
+
+  
 }
 
 .msgBoxModal > div >svg {
@@ -300,9 +320,7 @@ title {
 
 }
 
-.msgBoxModal:hover {
-    background-color: rgb(220, 220, 220, 0.8);
-}
+
 
 .searchIcon--container > svg {
 margin: 5px 0 0 0;
