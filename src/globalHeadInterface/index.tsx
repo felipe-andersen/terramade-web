@@ -2,7 +2,6 @@ import * as React from "react";
 
 import ReactDOM from 'react-dom';
 
-
 let HeadHomeScreen:PageHeadProps = {
   title: "Terramade",
   description: "Social network for...",
@@ -43,6 +42,7 @@ export interface PageHeadProps {
     isInfinitePage?: boolean;
     toIndex?: boolean;
     passwordProtected?: boolean;
+    deviceType?: "smartphone" | "tablet" | "desktop" | "smartTV" | "smartWatch"
 }
 
 interface SEOfilters {

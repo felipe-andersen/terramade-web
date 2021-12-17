@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { Main, MainProps } from "./index";
-import { PostProps } from "../../../db/posts"
+import { PostProps } from "../../../storagesInterfaces/posts"
 import { language } from "../../../globalContext/language"
 
 

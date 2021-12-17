@@ -1,5 +1,5 @@
 import * as React from "react";
-import { featuredProfessionals, featuredProfessionalsProps } from "../../db/professionals"
+import { featuredProfessionals, featuredProfessionalsProps } from "../../storagesInterfaces/professionals"
 
 
 interface IChildren {

@@ -1,12 +1,13 @@
 import * as React from 'react';
-import { UserList } from "../../../db/users";
+import { UserList } from "../../../storagesInterfaces/users";
 import { usePostList  } from '../../../globalContext/post';
 import { themes } from '../../../globalContext/theme';
 import { PostComponent, PostProps } from "../post";
 import styled from "styled-components";
 import { MainComponentStyled } from "./styles";
+import * as Router from "react-router-dom";
 
-const myList = [1,2,3,4,5,6];
+const myList = [1,2,3];
 
 // Components que não podem ter seu estado alterado, precisam tomar cuidado com renderização dinamica
 
@@ -23,10 +24,12 @@ export function MainComponent():JSX.Element {
               <div className="short--container">
                 <div className="short">
                   <img className="videoCover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-                  <div className='mask'/>
+                  <Router.Link to="/nome-do-post" className="mask" >
+                   
+                  </Router.Link>      
                   <div className="picNameProfession-container">
                     <div className="nameProfession--container">
-                      <a title={"Hoje tem live a noite no youtube"} href="" className="textContent name">Hoje tem live a noite no youtube. link aqui. aparece lá.</a>
+                      <div  className="textContent name">Hoje tem live a noite no youtube. link aqui. aparece lá.</div>
                     </div>
                   </div>
                 </div>
@@ -57,7 +60,6 @@ export function MainComponent():JSX.Element {
               content={ post.content}
               key={ post.key }
               hasEdited={ post.hasEdited }
-               
               userName={ "João Neto"}
               profileImageID={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"}
               followersAcount={5}

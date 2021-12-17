@@ -69,7 +69,10 @@ export class PostComponent extends React.Component<PostProps> {
                 </div>
                 <div className="constructionDiaryAcount-container">
                   <div className="constructionDiaryAcountIcon--container"></div>
-                  <p className="constructionDiaryAcount">{"5"}</p>
+                  <p>
+                    <span className="constructionDiaryAcount text">{"dia"}</span><br></br>
+                    <span className="constructionDiaryAcount count">{"100"}</span>
+                  </p>
                 </div>
               </div>
               <button className="shareBtn">
@@ -85,7 +88,7 @@ export class PostComponent extends React.Component<PostProps> {
                 <div className="moreIcon--container">Contr</div>
               </button>
             </div>
-            <Router.Link to="/nome-do-post" className="postImg--link" >
+            <Router.Link to="/nome-do-post" className="postImg--link">
               <img className="postImg" alt={ this.props.postImageAlt } src={this.props.postImageURL }/>
             </Router.Link>
             <a className="btns-container">

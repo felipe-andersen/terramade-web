@@ -109,17 +109,32 @@ export const StyledPostComponent = styled.div`
 }
 
 .constructionDiaryAcount-container {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background-color: #1b1b1bcc; 
-    display: flex;
+    display: column;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
 
-    p {
-      color: white;
-      font-weight: 600;
+    > p {
+        text-align: center;
+        margin:  -1px 0 0 0;
+        
+        span {
+          color: white;
+          font-weight: 600;
+          text-align: center;
+          //line-height: 1;
+        }
+
+        span.text {
+            font-size: 11px;
+        }
+        
+        span.count {
+
+        }
     }
 }
 
@@ -171,11 +186,27 @@ export const StyledPostComponent = styled.div`
     } 
 }
 
-.postContent {
+  .postContent {
    
-}
+  }
 
-h2 {
+  h2 {
     font-size: 15px;
-}
+  }
+
+  @media (max-width: 1350px){
+
+  }
+
+  @media (max-width: 980px){
+
+  }
+
+  @media (max-width: 700px){
+
+  }
+
+  @media (max-width: 480px){
+
+  } 
 `;

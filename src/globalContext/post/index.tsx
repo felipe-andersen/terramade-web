@@ -1,5 +1,5 @@
 import * as React from "react";
-import { posts, PostProps } from "../../db/posts";
+import { posts, PostProps } from "../../storagesInterfaces/posts";
 
 export interface Child {
   children:React.ReactNode

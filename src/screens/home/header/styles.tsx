@@ -46,8 +46,8 @@ export const HeaderStyledComponent = styled.div`
 
 .pictureImage-div {
 
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     overflow: hidden;
     border-radius: 50%;
     
@@ -86,7 +86,7 @@ export const HeaderStyledComponent = styled.div`
 }
 
 .searchForm {
-    width: 33.7%;
+    width: 60%;
     height: 45px;
     display:flex;
     background-color: rgba(220, 220, 220, 0.7);

@@ -10,9 +10,8 @@ export const MainComponentStyled = styled.div`
   background-color: white;
 
   .gridFeed {
-    column-count: 5;
+    column-width: 236px;
     column-gap: 16px;
-    margin: 81px 0 0 0;
     break-inside: avoid;
   }
 
@@ -31,14 +30,16 @@ export const MainComponentStyled = styled.div`
   }
 
   .highlightedShorts {
+    box-sizing: border-box;
     display: flex; 
     width: 100%;
     height: max-content;
     justify-content: center;
     align-items:center;
-
-
-  
+    margin: 0px 0 25px 0;
+    padding: 0 15%;
+   
+   
     button.previusBtn, button.nextBtn{
       width: 50px;
       height: 50px;
@@ -53,7 +54,8 @@ export const MainComponentStyled = styled.div`
   }
   
   .short--container {
-    width: 13vw; // +1350px | 1350px | 850px | 650px | 450px
+    // +1350px | 1350px | 850px | 650px | 450px
+    width: 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,6 +65,7 @@ export const MainComponentStyled = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      //   width: 170px;
       height: 210px; // +1350px | 1350px | 850px | 650px | 450px
       background-color: black;
       justify-content: flex-end;
@@ -71,76 +74,150 @@ export const MainComponentStyled = styled.div`
       position: relative;
 
       img.videoCover {
+        height: 100%;
+     
+      }
+
+      .mask {
         width: 100%;
+        height: 100%;
+        background:linear-gradient(to bottom, transparent, black);
+        position: absolute;
+        z-index: 1001;
+      }
+
+      .mask {
+        width: 100%;
+        height: 100%;
+        background:linear-gradient(to bottom, rgba(1,1,1,0.3), rgba(1,1,1,0.8), black );
+        position: absolute;
+        z-index: 1001;
+      }
+
+      .picNameProfession-container {
+        width: 100%;
+        height: 50%;
+        display: flex; 
+        align-items: flex-end;
+        position: absolute;
+        z-index: 1002;
+        background-color: transparent;
+        margin: 0 0 2vw 0;
+        box-sizing: border-box;
+        padding:   10px 10px  10px  10px ;
+   
+        .nameProfession--container {
+          margin: 0 0 5px 0px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .name {
+            font-size: 14px;
+            color: #dadada;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            
+          }        
+        }
       }
     }
-  }
 
-  .storiePic--container {
-    height: 4vw;
-    width: 4vw;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: -2vw  0 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1010;
-  }
+    .storiePic--container {
+      height: 4vw;
+      width: 4vw;
+      border-radius: 50%;
+      overflow: hidden;  
+      margin: -2vw  0 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1010;
+      border: 2px solid white;
+    }
 
-  .picNameProfession-container {
-    width: 100%;
-    height: 50%;
-    display: flex; 
-    align-items: flex-end;
-    position: absolute;
-    z-index: 1002;
-    background-color: transparent;
-    margin: 0 0 2vw 0;
-    box-sizing: border-box;
-    padding:   10px 10px  10px  10px ;
+    .shortContentText {
+      width: 70%;
+      height: 20px;
+      overflow:hidden;
+      font-weight: 600;
+      text-align: center;
+
+      margin: 2px 0 0 0;
+    }
   }
 
   .mask {
-    width: 100%;
-    height: 100%;
-    background:linear-gradient(to bottom, transparent, black);
-    position: absolute;
-    z-index: 1001;
+        width: 100%;
+        height: 100%;
+        background:linear-gradient(to bottom, transparent, black);
+        position: absolute;
+        z-index: 1001;
+      }
+
+  .imgAcount {
+
   }
 
-  .professionalPic {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: none;
+  .videoTime {
+
   }
 
-  .nameProfession--container {
-    margin: 0 0 0 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  //-----------------------------------------------------------------------------------
+  @media (max-width: 1350px){
+    .gridFeed {
 
-    > a {
-      font-size: 14px;
-      color: #dadada;
+  }
+
+  .add-post-button {
+
+  }
+
+  .highlightedShorts {
+    padding: 0;
+
+    button.previusBtn, button.nextBtn{
+
     }
   }
+  
+  .short--container {
 
-  .name {
-    font-size: 16px;
-    font-weight: 600;
-  }
+    .short {
 
-  .shortContentText {
-    width: 70%;
-    height: 20px;
-    margin: 2.5vw 0 0 0;
-    overflow:hidden;
-    font-weight: 600;
-    text-align: center;
+
+      img.videoCover {
+     
+      }
+
+      .mask {
+
+      }
+
+      .mask {
+
+      }
+
+      .picNameProfession-container {
+   
+        .nameProfession--container {
+
+          .name {
+
+          }        
+        }
+      }
+    }
+
+    .storiePic--container {
+
+    }
+
+    .shortContentText {
+
+    }
   }
 
   .imgAcount {
@@ -150,5 +227,95 @@ export const MainComponentStyled = styled.div`
   .videoTime {
 
   }
+
+  }
+
+  //-------------------------------------------------------
   
+  @media (max-width: 980){
+
+  }
+
+  @media (max-width: 700px){
+   
+  }
+
+  // ------------------------------------------------------------------------------------------------
+
+  @media (max-width: 550px){
+    .gridFeed {
+      column-width: auto;
+      column-count: 2;
+      column-gap: 8px;
+  }
+
+  .add-post-button {
+
+  }
+
+  .highlightedShorts {
+    justify-content: flex-start;
+
+    button.previusBtn, button.nextBtn{
+      display: none;
+    }
+  }
+  
+  .short--container {
+    width: 100px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 8px 0 0px;
+
+    .short {
+      width: 100px; 
+      height: 170px; 
+
+      img.videoCover {
+     
+      }
+
+      .mask {
+
+      }
+
+      .mask {
+
+      }
+
+      .picNameProfession-container {
+   
+        .nameProfession--container {
+
+          .name {
+
+          }        
+        }
+      }
+    }
+
+    .storiePic--container {
+      height: 8vw;
+      width: 8vw;
+      margin: -4vw 0 0 0;
+    }
+
+    .shortContentText {
+
+    }
+  }
+
+  .imgAcount {
+
+  }
+
+  .videoTime {
+
+  }
+   
+  }
+
+  //------------------------------------------------------------------------------------------------
+ 
 `;
