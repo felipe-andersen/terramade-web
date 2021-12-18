@@ -18,6 +18,8 @@ export const HeaderStyledComponent = styled.div`
     position: fixed;
     z-index: 2000;
     box-shadow: 0px 1px 4px rgba(180,180,180, 0.5);
+    padding: 6px 0;
+    box-sizing: border-box;
     /*.headerComponent {
     width: 100%;
     height: 70px;
@@ -27,44 +29,48 @@ export const HeaderStyledComponent = styled.div`
     border: none;
     margin: -81px 0 0 0;
     background-color: white;
-
     position: fixed;
     z-index: 99;*/
-    
+  
 }
-
-
   .svgLogo {
     margin: 0 20px;
 }
 
-.pictureImage-moreAcountModal {
+.userSettingsModalBtns {
+    width: 70px;
+    height: 100%;
+overflow: hidden;
+border-radius: 9px;
+margin: 0 8px 0 0;
+border:none;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+  :hover {
+    background-color: rgb(220, 220, 220, 0.8);
+  }
+}
+
+.pictureImage--container {
     display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.pictureImage-div {
-
-    width: 24px;
-    height: 24px;
-    overflow: hidden;
-    border-radius: 50%;
-    
-    border: 10px solid rgba(245, 245, 245, 0);
-    background-color: transparent;
-}
-
-.pictureImage-div:hover {
-    background-color: rgb(213, 233, 255);
-}
-
-.pictureImage {
-    width: 38px;
-    height: 38px;
+justify-content: center;
+align-items: center;
+    width: 25px;
+    height: 25px;
     overflow: hidden;
     border-radius: 50%;
     border: none;
+    background-color: none;
+}
+
+
+
+.pictureImage {
+ 
+    height: 100%;
 }
 
 .moreAcountModal {
@@ -73,25 +79,27 @@ export const HeaderStyledComponent = styled.div`
     overflow: hidden;
     border-radius: 50%;
     margin: 0 0 0 0;
-    border: none;;
-    display: flex;
+    border: none;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: none;
 }
 
 .moreAcountModal:hover {
-   
     background-color: rgb(222, 228, 236);
 }
 
 .searchForm {
     width: 60%;
-    height: 45px;
+    height: 46px;
     display:flex;
-    background-color: rgba(220, 220, 220, 0.7);
+    background-color: rgba(231, 231, 231, 0.7);
     align-items: center;
-    border-radius: 5px;
+    justify-content: space-between;
+    border-radius: 23px;
+    //border: 3px solid black;
+
 
     :hover {
         background-color: rgba(220, 220, 220, 1);
@@ -99,30 +107,21 @@ export const HeaderStyledComponent = styled.div`
 
     :target {
         border: 2px solid blue;
-    }
-
+    }   
    
 }
 
-
-
-
-
-
-
 .searchInput {
-    width: 100%;
+    width: 80%;
     height: 100%;
     font-size: 16px;
     outline: none;
     border: none;
     color: black;
     background-color: transparent;
-padding: 0 20px 0 50px;
-
-
-
+    padding: 0 20px 0 50px;
 }
+
 .searchIcon--container {
     width: 50px;
     height: 50px;
@@ -132,8 +131,6 @@ padding: 0 20px 0 50px;
     justify-content: center;
     margin: 0 -50px 0 0px;
     z-index:10;
-
-     
 }
 
 .searchInput::placeholder {
@@ -182,7 +179,6 @@ textarea::placeholder {
     border-radius: 50%;
 }
 
-
 .resetInputLabel > svg {
     fill:#797979;
 }
@@ -193,8 +189,20 @@ textarea::placeholder {
     display: none;
 }
 
+.ImageSearchIcon-KeyboardVoiceIcon--container {
+    width: 11%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    margin:  0px 5px 0px 0px;
+}
+
 .btns-header {
     display: flex;
+    background-color: transparent;
+    height: 100%;
 }
 
 .modal-group {
@@ -209,25 +217,23 @@ textarea::placeholder {
   padding: 8px 8px 8px 8px;
 }
 
-
-
 .NotificationListModal {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 9px;
     margin: 0 8px 0 0;
     border:none;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(244, 244, 244);
+    background-color: transparent;
+  
 }
 
 .NotificationListModal > svg {
     fill: #797979;
 }
-
 
 .NotificationListModal:hover {
   
@@ -288,31 +294,21 @@ title {
     color: tomato;
 }
 
-
-
-
-
-
-
-
-
-
 .msgBoxModal {
-    width: 40px;
-    height: 40px;
+    width: 70px;
     overflow: hidden;
-    border-radius: 50%;
-    border: none;
+    border-radius: 9px;
+    margin: 0 8px 0 0;
+    border:none;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: rgb(244, 244, 244);
+    align-items: center;
+    background-color: transparent;
 
     :hover {
     background-color: rgb(220, 220, 220, 0.8);
 }
 
-  
 }
 
 .msgBoxModal > div >svg {
@@ -320,20 +316,29 @@ title {
 
 }
 
-
-
 .searchIcon--container > svg {
 margin: 5px 0 0 0;
 
 }
 
-.KeyboardVoiceIcon {
+.KeyboardVoiceIcon--container {
     width: 40px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    background-color: transparent;
+}
+
+.ImageSearchIcon--container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
 }
 
 .KeyboardVoiceIcon {
@@ -345,7 +350,7 @@ margin: 5px 0 0 0;
     border-radius: 50%;
     
     :hover {
-    background-color: blue;
+        background-color: transparent;
     animation: KeyboardVoiceIcon-Animation 1.7s 0s infinite normal none;
 
       svg {
@@ -377,7 +382,6 @@ margin: 5px 0 0 0;
     fill:#797979;
 }
 `;
-
 
 const toggle = () => {
   const element = document.getElementById( "NotificationListModal" );

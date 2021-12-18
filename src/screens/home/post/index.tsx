@@ -60,7 +60,9 @@ export class PostComponent extends React.Component<PostProps> {
   public render():JSX.Element {
     return (
         <StyledPostComponent>
-          <div className="postImg--Container">
+          <div className="postImg--container">
+            <img className="postImg" alt={ this.props.postImageAlt } src={this.props.postImageURL }/>
+            
             <div className="mask--container">
               <div className='imgAcount-constructionDiaryAcount--container'>
                 <div className="imgAcount-container">
@@ -75,6 +77,7 @@ export class PostComponent extends React.Component<PostProps> {
                   </p>
                 </div>
               </div>
+              
               <button className="shareBtn">
                 <div className="shareIcon--container"><ShareIcon/></div>
               </button>
@@ -88,9 +91,10 @@ export class PostComponent extends React.Component<PostProps> {
                 <div className="moreIcon--container">Contr</div>
               </button>
             </div>
-            <Router.Link to="/nome-do-post" className="postImg--link">
-              <img className="postImg" alt={ this.props.postImageAlt } src={this.props.postImageURL }/>
-            </Router.Link>
+          
+         
+           
+            {/* 
             <a className="btns-container">
               <div className="btns">
                 <a href=""><svg></svg></a>
@@ -103,20 +107,23 @@ export class PostComponent extends React.Component<PostProps> {
                 <a href=""><svg></svg></a>
               </div>
             </a>
+            */}
           </div>
-          <div className="containerh writenContentGroup">
-            <p>{ this.props.hasEdited }</p>
-            <a href="">
+         
+          <div className="writenContentGroup">
+           
+             <a href="">
               <h2 className="postTitle">{ this.props.title }</h2>
-            </a>
-            <a href="">
-              <p className="postContent">{this.props.content }</p>
+         
+              <p className="postContent">{ this.props.content }</p>
             </a>
             <FollowersUserNameProfileImageMolecule
               userName="Ricardo Albuquerque"
               profileImageID="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"
               followersAcount={65}
             />
+            
+            
             <div className=" reactionBtns">
               <button className="reaction" onClick={ () => {} }><svg></svg></button>
               <p className="reactionsAcount">{ this.props.reactionsAcount }</p>
@@ -126,7 +133,9 @@ export class PostComponent extends React.Component<PostProps> {
               <p className="reactionsAcount">{ this.props.reactionsAcount }</p>
               <button className="handleView" onClick={ () => {} }><svg></svg></button>
             </div>
+              
           </div>
+         
         </StyledPostComponent>
     )
   };

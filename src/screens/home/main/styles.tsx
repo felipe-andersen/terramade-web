@@ -13,6 +13,7 @@ export const MainComponentStyled = styled.div`
     column-width: 236px;
     column-gap: 16px;
     break-inside: avoid;
+    margin: 0;
   }
 
   .add-post-button {
@@ -130,12 +131,12 @@ export const MainComponentStyled = styled.div`
       width: 4vw;
       border-radius: 50%;
       overflow: hidden;  
-      margin: -2vw  0 0 0;
+      margin: -2.3vw  0 0 0;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 1010;
-      border: 2px solid white;
+      border: 0.3vw solid white;
     }
 
     .shortContentText {

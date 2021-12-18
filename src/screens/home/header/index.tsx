@@ -15,6 +15,7 @@ import { NotificationListModal } from "../notificationListModal";
 import { ClearCloseIcon } from "../../../iconLibrary/clear-close/index";
 import { defaultTheme } from "react-select";
 import { UserSettingsModal } from '../userSettingsModal';
+import { ImageSearchIcon } from "../../../iconLibrary/imageSearch";
 
 //-----------------------------------------------------------------------------------------------------
 
@@ -101,10 +102,16 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
           <ClearCloseIcon/>
           <input className="resetInput" id="resetInput" value="reset "type="reset" onClick={ () => {} }></input>
         </label>
+        <div className="ImageSearchIcon-KeyboardVoiceIcon--container">
+          <div className="KeyboardVoiceIcon--container">
+            <KeyboardVoiceIcon/>
+          </div>
+          <div className="ImageSearchIcon--container">
+            <ImageSearchIcon/>
+          </div>
+        </div>
       </form>
-      <div className="KeyboardVoiceIcon">
-        <KeyboardVoiceIcon/>
-      </div>
+
       <div className="btns-header">
         <button onClick={ () => {} } id="NotificationListModal" className="NotificationListModal" title={"notification - sininho"}>
           <NotificationIcon />
@@ -113,8 +120,8 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
           <MessageIcon />
         </button>
       </div>
-      <div className="pictureImage-moreAcountModal">
-        <div className="pictureImage-div">
+      <div className="userSettingsModalBtns">
+        <div className="pictureImage--container">
           <img alt="" src={ props.userPicture } className="pictureImage"/>
         </div>
         <button onClick={ () => {} } className="moreAcountModal">

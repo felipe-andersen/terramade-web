@@ -3,12 +3,14 @@ import styled from "styled-components";
 
 export const StyledPostComponent = styled.div`
     width: 100%;
+    height: max-content;
+
     //min-width: 100%;
     //max-heigth: 120px;
-    height: max-content;
+    
     background-color: transparent;
     border-radius: 5px;
-    //display: flex;
+    display: column;
     //flex-direction: inline-block;
     //justify-content: center;
     //align-items: center;
@@ -16,8 +18,8 @@ export const StyledPostComponent = styled.div`
     //box-shadow: 1px 1px 1px red;
     //box-sizing: border-box;
     padding: none;
-    // margin: 0;
-    overflow: hidden;
+    margin: 0;
+  
     break-inside: avoid;
     //wrap: no-wrap;
 
@@ -25,17 +27,26 @@ export const StyledPostComponent = styled.div`
     font-size: 14px;
     //text-align: center;
     //text-decoration: none;
-
+    overflow: hidden;
     a {
         text-decoration: none;
         color: black;
     }
 
-    .postImg--Container {
-        height: max-content
-        background-color: transparent;
+    .postImg--container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: red;
+        padding: 0;
         position: relative;
-
+        margin: 0;
+        overflow: hidden;
+     
+        
+        /*
         a.btns-container {
             width: 100%;
             height: 100%;
@@ -46,15 +57,18 @@ export const StyledPostComponent = styled.div`
             background-color: rgb(240, 229, 229);
             padding: 0;
         }
-
+*/
         .mask--container {
             width: 100%;
             height: 100%;
             position:absolute;
             background-color: transparent;
-            display: column;
+            display: flex;
             justify-content: space-between;
             align-items: space-between;
+            box-sizing: border-box;
+            margin: 0;
+            padding:0;
 
             :hover {
                 background-color: rgba(1,1,1,0.3);
@@ -74,10 +88,11 @@ export const StyledPostComponent = styled.div`
     }
 
     .postImg {
+    
+
         width: 100%;
-        height: none;
-        border-radius: 5px;
-        z-index: -1;
+        //z-index: -1;
+        margin: 0;
     }
 
     .imgAcount-constructionDiaryAcount--container {
@@ -151,18 +166,30 @@ export const StyledPostComponent = styled.div`
 }
 
 .writenContentGroup {
-    padding:0px 12px 8px 14px ;
-    background-color: rgb(255, 255, 255);
+    width:100%;
+    box-sizing: border-box;
+    padding:8px 0px 8px 0px;
+    background-color: transparent;
+    margin: -16px 0 0 0 ;
+
+    a {
+        p{
+            margin: -12px  0 8px 0;
+        }
+    }
 
     .reactionBtns {
+        height:20px;
+        background-color: transparent;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        margin: 40px 0 0 0 ;
+        margin: 8px 0 0 0 ;
+        box-sizing: border-box;
 
         button.reaction {
-            width: 35px;
-            height: 35px;
+            width: 20px;
+            height:  20px;
             border-radius: 50%;
             background-color: black;
             margin: 0 -4px 0px 5px;
@@ -177,6 +204,7 @@ export const StyledPostComponent = styled.div`
         }
 
         button.handleView {
+            display: none;
             width: 35px;
             height: 35px;
             border-radius: 50%;
