@@ -92,6 +92,8 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
   return (
     
     <HeaderStyledComponent id="HeaderStyledComponent">
+      <section className="header--container">
+
       <Router.Link to="/"className="svgLogo">LOGO</Router.Link>
       <form className="searchForm" id="searchForm">
         <div className="searchIcon--container">
@@ -143,9 +145,40 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
       <div className="modal-group">
         <UserSettingsModal/>
       </div>
+
+      </section>
+      <section className="keywords--container">
+        <span className="vazio"></span>
+        <div className="keywordsList"> 
+        <button className="keywords" style={{backgroundColor:"#9c8f00"}}>{"lavanderia"}</button>
+        <button className="keywords" title="decor" style={{backgroundColor:"rgba(255, 140, 100, 1)"}}>#decor</button>
+        <button className="keywords" style={{backgroundColor:"rgba(255, 102, 89, 1)"}}>{"louça"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(124, 106, 124, 1)"}}>{"pintura"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(162, 160, 168, 1)"}}>{"#cimento queimado"}</button>
+        <button className="keywords" style={{backgroundColor:"#9c8f00"}}>{"lavanderia"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(255, 140, 100, 1)"}}>{"#porcelanato"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(255, 102, 89, 1)"}}>{"DIY"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(124, 106, 124, 1)"}}>{"shingle"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(162, 160, 168, 1)"}}>{"#standby"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(124, 106, 124, 1)"}}>{"bar"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(162, 160, 168, 1)"}}>{"#arquiday"}</button>
+        <button className="keywords" style={{backgroundColor:"#9c8f00"}}>{"lavanderia"}</button>
+        </div>
+        <span className="elementovazio"></span>
+      </section>
     </HeaderStyledComponent>
 
   )
 };
 
+
+const keywordBackgroundColor = {
+  colorName:"#9c8f00",
+
+}
+
+
+
+
+//const hashtags = JSON.parse();
 

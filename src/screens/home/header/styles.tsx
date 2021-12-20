@@ -7,18 +7,18 @@ const notification = "Notificação";
 export const HeaderStyledComponent = styled.div`
 
     width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 0px solid #eeeeee;
+
+    display: column;
+    //justify-content: space-around;
+    //align-items: center;
+
     margin: -81px 0 0px 0;
-    background-color: white;
+
     position: relative;
     position: fixed;
     z-index: 2000;
     box-shadow: 0px 1px 4px rgba(180,180,180, 0.5);
-    padding: 6px 0;
+  
     box-sizing: border-box;
     /*.headerComponent {
     width: 100%;
@@ -31,6 +31,103 @@ export const HeaderStyledComponent = styled.div`
     background-color: white;
     position: fixed;
     z-index: 99;*/
+
+    .header--container {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 0px solid #eeeeee;
+  
+    background-color: white;
+    
+    padding: 6px 0;
+    box-sizing: border-box;
+
+    }
+
+    section.keywords--container {
+    width: 100%;
+    height: 40px;
+  
+    background-color: #fcfcfc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+
+    span.vazio {
+        width: 55px;
+        height: 100%;
+        background:linear-gradient(to right, white, white, white, rgba(255,255,255, 0.5), transparent);
+        margin: 0 0 0 0;
+        position: absolute;
+    }
+
+    .keywordsList {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    
+
+
+        /* Color Theme Swatches in Hex */
+.red-at-night-shepherds-delight-1-hex { color: #FFF587; }
+.red-at-night-shepherds-delight-2-hex { color: #FF8C64; }
+.red-at-night-shepherds-delight-3-hex { color: #FF665A; }
+.red-at-night-shepherds-delight-4-hex { color: #7D6B7D; }
+.red-at-night-shepherds-delight-5-hex { color: #A3A1A8; }
+
+/* Color Theme Swatches in RGBA */
+.red-at-night-shepherds-delight-1-rgba { color: rgba(255, 245, 134, 1); }
+.red-at-night-shepherds-delight-2-rgba { color: rgba(255, 140, 100, 1); }
+.red-at-night-shepherds-delight-3-rgba { color: rgba(255, 102, 89, 1); }
+.red-at-night-shepherds-delight-4-rgba { color: rgba(124, 106, 124, 1); }
+.red-at-night-shepherds-delight-5-rgba { color: rgba(162, 160, 168, 1); }
+
+/* Color Theme Swatches in HSLA */
+
+
+     
+
+    }
+   
+ 
+   
+
+      button.keywords {
+        justify-content:center;
+        display: flex;
+        align-items: center;
+      height: 28px;
+     padding: 0 8px 0 8px;
+      border: none;
+      background-color: #ff7171;
+      border-radius: 14px;
+      margin: 0 0px 12px 8px;
+      color: white;
+      font-weight: 600;
+      width: max-content;
+
+      .icon--container {
+          width: 26px.
+        height: 26px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+justify-content: center;
+align-items: center;
+
+      }
+
+
+      }
+      
+    }
+
+    
   
 }
   .svgLogo {
@@ -203,6 +300,8 @@ textarea::placeholder {
     display: flex;
     background-color: transparent;
     height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-group {
@@ -218,8 +317,8 @@ textarea::placeholder {
 }
 
 .NotificationListModal {
-    width: 70px;
-
+    width: 55px;
+    height: 46px;
     overflow: hidden;
     border-radius: 9px;
     margin: 0 8px 0 0;
@@ -228,6 +327,7 @@ textarea::placeholder {
     justify-content: center;
     align-items: center;
     background-color: transparent;
+    border-bottom: 2px solid grey;
   
 }
 
@@ -295,7 +395,8 @@ title {
 }
 
 .msgBoxModal {
-    width: 70px;
+    width: 55px;
+    height: 46px;
     overflow: hidden;
     border-radius: 9px;
     margin: 0 8px 0 0;
@@ -304,6 +405,7 @@ title {
     justify-content: center;
     align-items: center;
     background-color: transparent;
+    border-bottom: 2px solid grey;
 
     :hover {
     background-color: rgb(220, 220, 220, 0.8);
@@ -381,8 +483,11 @@ margin: 5px 0 0 0;
 .KeyboardVoiceIcon > svg {
     fill:#797979;
 }
+
+
 `;
 
 const toggle = () => {
   const element = document.getElementById( "NotificationListModal" );
 };
+

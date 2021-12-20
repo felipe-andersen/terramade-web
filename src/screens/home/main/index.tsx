@@ -16,6 +16,12 @@ export function MainComponent():JSX.Element {
   const FeedDependency =  [ postList, setPost ];
   return (
     <MainComponentStyled>
+     
+
+   
+     
+     
+
       <div className="highlightedShorts">
         <button className='previusBtn'></button>
         {
@@ -29,7 +35,7 @@ export function MainComponent():JSX.Element {
                   </Router.Link>      
                   <div className="picNameProfession-container">
                     <div className="nameProfession--container">
-                      <div  className="textContent name">Hoje tem live a noite no youtube. link aqui. aparece lá.</div>
+                      {/*<div  className="textContent name">Hoje tem live a noite no youtube. link aqui. aparece lá.</div>*/}
                     </div>
                   </div>
                 </div>
@@ -48,6 +54,7 @@ export function MainComponent():JSX.Element {
         <button className='nextBtn'></button>
       </div>
 
+   
       <div className="gridFeed">
       {
         postList.map( post => {

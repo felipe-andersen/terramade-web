@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const MainComponentStyled = styled.div`
   margin: 15px 0 0 0;
   box-sizing: border-box;
-  padding: 0 8px;
+  //padding: 0 28px;
   width: 100%;
   background-color: white;
 
@@ -14,6 +14,7 @@ export const MainComponentStyled = styled.div`
     column-gap: 16px;
     break-inside: avoid;
     margin: 0;
+    padding: 0 28px;
   }
 
   .add-post-button {
@@ -29,17 +30,36 @@ export const MainComponentStyled = styled.div`
     background-color: white;
     margin-top: none;
   }
+/*
+  .highlightedShorts--container {
+    width: 100%;
+    height: max-content;
+    display: column; 
+    justify-content: center;
+    align-items:center;
+
+    button.hiddenBtn {
+    width: 50px;
+      height: 18px;
+      background-color: rgba(1,1,1,0.8);
+      border: none;
+
+  }
+
+  }
+  
+*/
 
   .highlightedShorts {
     box-sizing: border-box;
     display: flex; 
-    width: 100%;
+    width: 100vw;
     height: max-content;
     justify-content: center;
     align-items:center;
-    margin: 0px 0 25px 0;
-    padding: 0 15%;
-   
+    margin: 14px 0 16px 0;
+    padding:  24px 15%;
+    background-color: rgba(1,1,1,0.8);
    
     button.previusBtn, button.nextBtn{
       width: 50px;
@@ -56,22 +76,24 @@ export const MainComponentStyled = styled.div`
   
   .short--container {
     // +1350px | 1350px | 850px | 650px | 450px
-    width: 170px;
+    width: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 8px 0 0px;
+    overflow: hidden;
+   
 
     .short { 
       display: flex;
       flex-direction: column;
       align-items: center;
       //   width: 170px;
-      height: 210px; // +1350px | 1350px | 850px | 650px | 450px
+      height: 170px; // +1350px | 1350px | 850px | 650px | 450px
       background-color: black;
       justify-content: flex-end;
-      border-radius: 9px;
-      overflow: hidden;
+      border-radius: 15px;
+     
       position: relative;
 
       img.videoCover {
@@ -119,7 +141,7 @@ export const MainComponentStyled = styled.div`
             color: #dadada;
             font-size: 16px;
             font-weight: 600;
-            cursor: pointer;
+           
             
           }        
         }
@@ -127,16 +149,16 @@ export const MainComponentStyled = styled.div`
     }
 
     .storiePic--container {
-      height: 4vw;
-      width: 4vw;
+      height: 3vw;
+      width: 3vw;
       border-radius: 50%;
       overflow: hidden;  
-      margin: -2.3vw  0 0 0;
+      margin: -1.7vw  0 0 0;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 1010;
-      border: 0.3vw solid white;
+      border: 0.2vw solid white;
     }
 
     .shortContentText {
@@ -165,6 +187,16 @@ export const MainComponentStyled = styled.div`
   .videoTime {
 
   }
+
+  .
+.keywords--container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    background-color: red;
+}
 
   //-----------------------------------------------------------------------------------
   @media (max-width: 1350px){

@@ -9,7 +9,7 @@ export const StyledPostComponent = styled.div`
     //max-heigth: 120px;
     
     background-color: transparent;
-    border-radius: 5px;
+
     display: column;
     //flex-direction: inline-block;
     //justify-content: center;
@@ -18,7 +18,7 @@ export const StyledPostComponent = styled.div`
     //box-shadow: 1px 1px 1px red;
     //box-sizing: border-box;
     padding: none;
-    margin: 0;
+    margin: 0 0 10px 0;
   
     break-inside: avoid;
     //wrap: no-wrap;
@@ -69,17 +69,22 @@ export const StyledPostComponent = styled.div`
             box-sizing: border-box;
             margin: 0;
             padding:0;
+            border-radius: 20px;
 
             :hover {
                 background-color: rgba(1,1,1,0.3);
+                
+                button.shareBtn, button.moreBtn {
+                    display: flex;
+                }
             }
 
             button.shareBtn, button.moreBtn {
-                width: 35px;
-                height: 35px;
-                background-color: white;;
+                width: 28px;
+                height: 28px;
+                background-color: white;
                 border-radius: 50%;
-                display: flex;
+                display: none;
                 justify-content: center;
                 align-items: center;
                 border: none;
@@ -93,12 +98,54 @@ export const StyledPostComponent = styled.div`
         width: 100%;
         //z-index: -1;
         margin: 0;
+        border-radius: 20px;
     }
 
     .imgAcount-constructionDiaryAcount--container {
         display: flex;
         justify-content: space-between;
         padding: 8px 8px;
+    }
+
+    .ballonIcon > svg {
+        transform: scale(50%);
+        /* Copy this @keyframes block to your CSS*/
+        fill: red;
+        animation: ballonIconAnimation 6s ease 0s infinite normal none;
+        
+        @keyframes ballonIconAnimation {
+        0.0%{
+        transform: translate(0,20px);
+        }
+        35.7%{
+        transform: translate(0,-80px);
+        }
+        99.4%{
+        }
+   }
+
+
+/* Add the animation: property to whichever element you want to animate */
+#elementToAnimate{
+    animation: yourAnimation 6s ease 0s infinite normal none;
+}/* Copy this @keyframes block to your CSS*/
+@keyframes yourAnimation {
+    0.0%{
+        transform: translate(0,20px);
+    }
+    35.7%{
+        transform: translate(0,-20px);
+    }
+    99.4%{
+    }
+}
+
+
+/* Add the animation: property to whichever element you want to animate */
+#elementToAnimate{
+    animation: yourAnimation 6s ease 0s infinite normal none;
+}
+
     }
 
 
@@ -112,6 +159,7 @@ export const StyledPostComponent = styled.div`
     align-items: center;
     border-radius: 12px;
     padding: 0px 4px ;
+    border-radius: 5px;
 }
 
 .imgAcount {
@@ -170,11 +218,14 @@ export const StyledPostComponent = styled.div`
     box-sizing: border-box;
     padding:8px 0px 8px 0px;
     background-color: transparent;
-    margin: -16px 0 0 0 ;
+    margin: -16px 0 0px 0 ;
 
-    a {
+  
+
+    a.{
+ 
         p{
-            margin: -12px  0 8px 0;
+            margin: -12px  0 0px 0;
         }
     }
 
@@ -184,7 +235,7 @@ export const StyledPostComponent = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        margin: 8px 0 0 0 ;
+        margin: 2px 0 0 0 ;
         box-sizing: border-box;
 
         button.reaction {
@@ -219,7 +270,7 @@ export const StyledPostComponent = styled.div`
   }
 
   h2 {
-    font-size: 15px;
+    font-size: 13.5px;
   }
 
   @media (max-width: 1350px){

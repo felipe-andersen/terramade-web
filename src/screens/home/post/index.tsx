@@ -8,6 +8,7 @@ import { FollowersUserNameProfileImageMolecule } from "../../../componentLibrary
 import { PhotoCollectionsIcon } from '../../../iconLibrary/photoCollections';
 import { MoreIcon } from '../../../iconLibrary/moreIcon';
 import { ShareIcon } from '../../../iconLibrary/share';
+import { BaloonIcon } from '../../../iconLibrary/baloon';
 
 // Adapter
 let Adapter = {};
@@ -61,7 +62,7 @@ export class PostComponent extends React.Component<PostProps> {
     return (
         <StyledPostComponent>
           <div className="postImg--container">
-            <img className="postImg" alt={ this.props.postImageAlt } src={this.props.postImageURL }/>
+            <img className="postImg" alt={ this.props.postImageAlt } src={ this.props.postImageURL }/>
             
             <div className="mask--container">
               <div className='imgAcount-constructionDiaryAcount--container'>
@@ -77,7 +78,6 @@ export class PostComponent extends React.Component<PostProps> {
                   </p>
                 </div>
               </div>
-              
               <button className="shareBtn">
                 <div className="shareIcon--container"><ShareIcon/></div>
               </button>
@@ -90,6 +90,7 @@ export class PostComponent extends React.Component<PostProps> {
               <button className="moreBtn">
                 <div className="moreIcon--container">Contr</div>
               </button>
+              <div className='ballonIcon'><BaloonIcon/></div>
             </div>
           
          
@@ -112,7 +113,7 @@ export class PostComponent extends React.Component<PostProps> {
          
           <div className="writenContentGroup">
            
-             <a href="">
+             <a className="">
               <h2 className="postTitle">{ this.props.title }</h2>
          
               <p className="postContent">{ this.props.content }</p>
