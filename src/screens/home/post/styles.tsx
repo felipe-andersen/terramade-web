@@ -107,21 +107,13 @@ export const StyledPostComponent = styled.div`
         padding: 8px 8px;
     }
 
-    .ballonIcon > svg {
-        transform: scale(50%);
-        /* Copy this @keyframes block to your CSS*/
-        fill: red;
-        animation: ballonIconAnimation 6s ease 0s infinite normal none;
+    .baloon > svg {
+        transform: scale(40%);
         
-        @keyframes ballonIconAnimation {
-        0.0%{
-        transform: translate(0,20px);
-        }
-        35.7%{
-        transform: translate(0,-80px);
-        }
-        99.4%{
-        }
+        g > path {
+            fill: rgba(35,35,35,0.8);
+        }
+       
    }
 
 
@@ -171,7 +163,7 @@ export const StyledPostComponent = styled.div`
     transform: scale(80%);
 }
 
-.constructionDiaryAcount-container {
+.constructionDiaryAcount--container {
     width: 40px;
     height: 40px;
     background-color: #1b1b1bcc; 
@@ -219,13 +211,19 @@ export const StyledPostComponent = styled.div`
     padding:8px 0px 8px 0px;
     background-color: transparent;
     margin: -16px 0 0px 0 ;
-
+ 
   
 
     a.{
- 
+        white-space: nowrap;                  
+        overflow: hidden;
+        text-overflow: ellipsis;
+        h2 {
+            margin: none;
+        }
+
         p{
-            margin: -12px  0 0px 0;
+            margin: none;
         }
     }
 
@@ -242,16 +240,19 @@ export const StyledPostComponent = styled.div`
             width: 20px;
             height:  20px;
             border-radius: 50%;
-            background-color: black;
+            background-color: #cccccc;
             margin: 0 -4px 0px 5px;
+            border: none;
         }
 
         p.reactionsAcount {
             width: max-content;
-            height: max-content;
+            font-size: 10px;
+            font-weight: 600;
+            color: white;
             border-radius: 10px;
             background-color: rgb(255, 0, 0);
-            padding: 0 2px;
+            padding: 0px 4px;
         }
 
         button.handleView {

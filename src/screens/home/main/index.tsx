@@ -13,7 +13,7 @@ const myList = [1,2,3];
 
 export function MainComponent():JSX.Element {
   const { postList, setPost } = usePostList();
-  const FeedDependency =  [ postList, setPost ];
+ 
   return (
     <MainComponentStyled>
      

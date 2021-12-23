@@ -115,11 +115,11 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
       </form>
 
       <div className="btns-header">
-        <button onClick={ () => {} } id="NotificationListModal" className="NotificationListModal" title={"notification - sininho"}>
-          <NotificationIcon />
+        <button onClick={ () => {} } id="NotificationListModal" className="NotificationListModal" title={"Notificação - sininho"}>
+          <NotificationIcon /><div className="info">{"Notificação"}</div>
         </button>
         <button onClick={ () => {} } className="msgBoxModal">
-          <MessageIcon />
+          <input type="checkbox" className="msgBoxModal_" id="msgBoxModal"/><MessageIcon />
         </button>
       </div>
       <div className="userSettingsModalBtns">
@@ -148,7 +148,7 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
 
       </section>
       <section className="keywords--container">
-        <span className="vazio"></span>
+        <span className="previewBtn"></span>
         <div className="keywordsList"> 
         <button className="keywords" style={{backgroundColor:"#9c8f00"}}>{"lavanderia"}</button>
         <button className="keywords" title="decor" style={{backgroundColor:"rgba(255, 140, 100, 1)"}}>#decor</button>
@@ -163,8 +163,13 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
         <button className="keywords" style={{backgroundColor:"rgba(124, 106, 124, 1)"}}>{"bar"}</button>
         <button className="keywords" style={{backgroundColor:"rgba(162, 160, 168, 1)"}}>{"#arquiday"}</button>
         <button className="keywords" style={{backgroundColor:"#9c8f00"}}>{"lavanderia"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(124, 106, 124, 1)"}}>{"shingle"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(162, 160, 168, 1)"}}>{"#standby"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(124, 106, 124, 1)"}}>{"bar"}</button>
+        <button className="keywords" style={{backgroundColor:"rgba(162, 160, 168, 1)"}}>{"#arquiday"}</button>
+        <button className="keywords" style={{backgroundColor:"#9c8f00"}}>{"lavanderia"}</button>
         </div>
-        <span className="elementovazio"></span>
+        <span className="nextBtn"><ImageSearchIcon/></span>
       </section>
     </HeaderStyledComponent>
 

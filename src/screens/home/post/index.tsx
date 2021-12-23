@@ -61,6 +61,10 @@ export class PostComponent extends React.Component<PostProps> {
   public render():JSX.Element {
     return (
         <StyledPostComponent>
+           <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
           <div className="postImg--container">
             <img className="postImg" alt={ this.props.postImageAlt } src={ this.props.postImageURL }/>
             
@@ -70,13 +74,15 @@ export class PostComponent extends React.Component<PostProps> {
                   <div className="PhotoCollectionsIcon--container"><PhotoCollectionsIcon/></div>
                   <p className="imgAcount">{"5"}</p>
                 </div>
-                <div className="constructionDiaryAcount-container">
-                  <div className="constructionDiaryAcountIcon--container"></div>
+                <div className="constructionDiaryAcount--container">
+                    <div className="constructionDiaryAcountIcon--container"></div>
+              
                   <p>
                     <span className="constructionDiaryAcount text">{"dia"}</span><br></br>
                     <span className="constructionDiaryAcount count">{"100"}</span>
                   </p>
-                </div>
+                 
+                </div>   
               </div>
               <button className="shareBtn">
                 <div className="shareIcon--container"><ShareIcon/></div>
@@ -90,7 +96,7 @@ export class PostComponent extends React.Component<PostProps> {
               <button className="moreBtn">
                 <div className="moreIcon--container">Contr</div>
               </button>
-              <div className='ballonIcon'><BaloonIcon/></div>
+              <div className='baloon animate__animated animate__bounce'><BaloonIcon/></div>
             </div>
           
          

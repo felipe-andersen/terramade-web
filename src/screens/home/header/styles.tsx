@@ -49,28 +49,53 @@ export const HeaderStyledComponent = styled.div`
 
     section.keywords--container {
     width: 100%;
-    height: 40px;
-  
-    background-color: #fcfcfc;
+    height: 60px;
+    background-color: white;
+ 
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     position: relative;
-
-    span.vazio {
+  
+    span.previewBtn {
         width: 55px;
         height: 100%;
-        background:linear-gradient(to right, white, white, white, rgba(255,255,255, 0.5), transparent);
+        background:linear-gradient(to right, white, white, white, white, white, white,rgba(255,255,255, 0.5), transparent);
         margin: 0 0 0 0;
         position: absolute;
     }
+
+    span.nextBtn {
+        width: 55px;
+        height: 100%;
+  
+        background:linear-gradient(to right, transparent, rgba(255,255,255, 0.5), white, white, white, white, white, white);
+              
+
+        margin: 0 0 0 calc(100% - 55px);
+        position: absolute;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+    > svg {
+        display: none;
+    }
+      
+    }
+
 
     .keywordsList {
         display: flex;
         width: 100%;
         height: 100%;
-    
+   
+        
+    display: flex;
+    justify-content:  center;
+    align-items: center;
 
 
         /* Color Theme Swatches in Hex */
@@ -98,7 +123,7 @@ export const HeaderStyledComponent = styled.div`
    
 
       button.keywords {
-        justify-content:center;
+       
         display: flex;
         align-items: center;
       height: 28px;
@@ -106,10 +131,15 @@ export const HeaderStyledComponent = styled.div`
       border: none;
       background-color: #ff7171;
       border-radius: 14px;
-      margin: 0 0px 12px 8px;
+      margin: 0 0px 0px 8px;
       color: white;
       font-weight: 600;
-      width: max-content;
+      max-width: 130px;
+
+      text-overflow: ellipsis;
+      white-space: nowrap; 
+    text-overflow: ellipsis;
+  
 
       .icon--container {
           width: 26px.
@@ -319,7 +349,7 @@ textarea::placeholder {
 .NotificationListModal {
     width: 55px;
     height: 46px;
-    overflow: hidden;
+
     border-radius: 9px;
     margin: 0 8px 0 0;
     border:none;
@@ -327,7 +357,9 @@ textarea::placeholder {
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    border-bottom: 2px solid grey;
+    //border-bottom: 2px solid grey;
+    position: relative;
+   
   
 }
 
@@ -336,27 +368,38 @@ textarea::placeholder {
 }
 
 .NotificationListModal:hover {
-  
-    background-color: rgb(220, 220, 220, 0.8);
-    :after {
-    content: "notification";
-    position: absolute;
-    color: white;
-    font-size: 13px;
-    height: 30px;
-    padding: 0px 10px;
-    background-color: rgba(39, 39, 39, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    border-radius: 5px;
-    margin: 85px 0px 0px 0px ;
-    }    
+    background-color: rgb(220, 220, 220, 0.8);
+    .info {
+        display: flex;
+    }
+  
 }
 
+
+
+  
+  
+  .info {
+
+  position: absolute;
+  color: white;
+  font-size: 13px;
+  height: 28px;
+  padding: 0px 10px;
+  background-color: rgba(39, 39, 39, 1);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 85px 0px 0px 0px ;
+  z-index: 30000;
+  }    
+
+
 /*
-.svg:hover {
+svg:hover {
   .child {
 
  
@@ -405,11 +448,14 @@ title {
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    border-bottom: 2px solid grey;
+    //border-bottom: 2px solid grey;
+    .msgBoxModal_ {
+      display: none;
+    }
 
     :hover {
-    background-color: rgb(220, 220, 220, 0.8);
-}
+      background-color: rgb(220, 220, 220, 0.8);
+    }
 
 }
 
@@ -483,6 +529,16 @@ margin: 5px 0 0 0;
 .KeyboardVoiceIcon > svg {
     fill:#797979;
 }
+
+
+  @media (max-width: 480px){
+    .header--container {
+        display: none;
+        height: 1px;
+        overflow: hidden;
+     
+  } 
+
 
 
 `;

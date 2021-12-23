@@ -44,7 +44,6 @@ content: "My fist content",
 hasEdited: false
 };
 
-
 const [myPost, setMyPost] = React.useState(initialValuePost)
 
   function onChange( event: any ){
@@ -76,8 +75,6 @@ const [myPost, setMyPost] = React.useState(initialValuePost)
   function OnSubmit( event: any ) {
     event.preventDefault();
     console.log("Submited ...")
-
- 
     console.log("Saved !!!");
 
     postList.map(post => {
@@ -90,23 +87,19 @@ const [myPost, setMyPost] = React.useState(initialValuePost)
     <div className="main">
       <div className="component-form">
         <form className="form">
-       
           <div className="uploads-publish--group">
             <div className="uploadCards">
             <div key={1} className="pic--container">
               <img className="postImgUploaded" id="postImgUploaded" src={ link }/>
               <input id="discardImage" type="button" onClick={ () => {} }/>
             </div>
-
             <label className="stylizedLblIptDiscardImg" htmlFor="discardImage">
               <ChevronIcon/>
             </label>
-
             <div key={2} className="pic--container">
               <img className="postImgUploaded" id="postImgUploaded" src={ link }/>
               <input id="discardImage" type="button" onClick={ () => {} }/>
             </div>
-
             <label className="stylizedLblIptDiscardImg" htmlFor="discardImage">
               <ChevronIcon/>
             </label>
@@ -125,9 +118,7 @@ const [myPost, setMyPost] = React.useState(initialValuePost)
           </div>
           <div className="line"></div>
           <div className="form-div">
-           
             <div className="TitleContent">
-        
               <div className="imputTitle-container">
                 <input className="imputTitle" id="imputTitle" name="Title" type="text" aria-label={ props.ariaLabelTitle } placeholder={ props.ariaLabelTitle } onChange={ onChange } required/>
               </div>
@@ -142,10 +133,6 @@ const [myPost, setMyPost] = React.useState(initialValuePost)
             <label htmlFor="">Check-in/label</label><input type="image"/>
           </div>
         </form>
-   
-  
-
-
       </div>
     </div>
   )

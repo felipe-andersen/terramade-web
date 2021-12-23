@@ -44,7 +44,7 @@ export const posts:PostProps[] = [
     postImageAlt: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",
     postImageURL: "https://s2.glbimg.com/wZ2YslEPcqRdqCo74JqlcfggE_Q=/512x320/smart/e.glbimg.com/og/ed/f/original/2016/04/25/sala-de-jantar-com-adega-assinado-por-gloria-copello--para-a-mostra-decora-lider---rio-2016-2.jpg",
     reactionsAcount: "26",
-    title: "Pintura de casa",
+    title: "Pintura de casajsfkdjfkdjfkdjfkdjfkdfjdkkgujkdfkjjgkfkjfgfgfgfgfg",
     content:"prepare a lata de tinta adicionando o reagente..",
     hasEdited: false
   },

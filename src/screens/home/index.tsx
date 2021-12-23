@@ -48,14 +48,14 @@ export class HomeComponent extends React.Component<Props, State, PropsAny> {
 
             <MainComponent/>
 
+            <label htmlFor="msgBoxModal" className='msgBoxModalLabel'>BTN</label>
+
             <div className="modalGroup">
               <UserSettingsModal/>
-
             </div>
+
           </div>
    
-       
-
       </StyledHomeComponent>
     )
   }

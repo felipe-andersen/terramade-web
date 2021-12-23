@@ -6,20 +6,12 @@ export const StyledUserSettingsModal = styled.div`
   width: 100%;
   height: 100%;
   background-color: transparent;
- 
-
-
-
 `;
 
 export const StyledModalOptions =  styled.div`
   width: 100%;
   height: 100%;
   background-color: transparent;
-
-
-
-
 
   .backBtn, .personalizationBtn, .suportBtn, .AcessibilidadeBtn, .exitBtn {
     width: 100%;
@@ -29,7 +21,6 @@ export const StyledModalOptions =  styled.div`
     align-items: center;
     justify-content: space-between;
     margin: 8px 0 8px 0;
-
     margin: 8px 0 8px 0;
     box-sizing: border-box;
     padding: 0 8px;
@@ -39,6 +30,7 @@ export const StyledModalOptions =  styled.div`
     outline: none;
     border: none;
     border-radius: 9px;
+
     :hover {
       background-color: #f5f5f5;
 
@@ -46,8 +38,8 @@ export const StyledModalOptions =  styled.div`
   }
 
   .icon-title--Contanier {
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
   }
 
   .icon--Contanier {
@@ -64,14 +56,8 @@ export const StyledModalOptions =  styled.div`
   .backgroudColor {
     background-color: transparent;
     
-
-  & > svg {
+    & > svg {
       transform: rotate(270deg)
+    }
   }
-
-  }
-  
-
-  
-  
 `;

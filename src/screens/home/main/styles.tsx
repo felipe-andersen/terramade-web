@@ -57,8 +57,8 @@ export const MainComponentStyled = styled.div`
     height: max-content;
     justify-content: center;
     align-items:center;
-    margin: 14px 0 16px 0;
-    padding:  24px 15%;
+    margin: 25px 0 16px 0;
+    padding:  35px 15%;
     background-color: rgba(1,1,1,0.8);
    
     button.previusBtn, button.nextBtn{

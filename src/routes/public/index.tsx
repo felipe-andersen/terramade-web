@@ -8,7 +8,7 @@ import { FeaturedProfessionalsProvider } from "../../globalContext/featuredProfe
 import { ERR_404Template } from "../../screens/ERR_404";
 
 
-export function MyRoutes() {
+export function PublicRoutes() {
   return (
 
     <FeaturedProfessionalsProvider>
@@ -18,8 +18,6 @@ export function MyRoutes() {
         <Routes>
 
           <Route path="/" element={ <HomeComponent /> }/>
-
-          <Route path="/createpost" element={ <PostAdd /> }/>
 
           <Route path="/nome-do-post" element={ <PostView /> }/>
 
