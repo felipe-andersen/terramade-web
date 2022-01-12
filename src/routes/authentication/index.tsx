@@ -1,9 +1,9 @@
 import React from 'react';
-import { ERR_404Template } from "../../screens/ERR_404";
+import { ERR_404Template } from "../../screens/statusCode/ERR_404--template";
 import { LoginComponent } from "../../screens/login";
 import {  PostListProvider } from "../../globalContext/post";
 import { FeaturedProfessionalsProvider } from "../../globalContext/featuredProfessionals";
-import { Routes, Route} from "react-router-dom";
+import { Route } from "react-router-dom";
 
 export function AuthenticationRoutes() {
   return (
@@ -12,11 +12,7 @@ export function AuthenticationRoutes() {
 
       <PostListProvider>
 
-        <Routes>
-
           <Route path="/" element={ <LoginComponent /> }/>
-
-        </Routes>
 
       </PostListProvider>
 

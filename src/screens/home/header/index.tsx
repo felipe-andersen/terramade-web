@@ -95,32 +95,43 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
       <section className="header--container">
 
       <Router.Link to="/"className="svgLogo">LOGO</Router.Link>
-      <form className="searchForm" id="searchForm">
-        <div className="searchIcon--container">
-          <SearchIcon/>
-        </div>
-        <input className="searchInput" id="searchInput" type="search" /*maxlength="10" readonly form_id=""*/ name="" placeholder={props.placeholderSelectedLanguage } onFocus={ resetAble } autoComplete="on"/>
-        <label htmlFor="resetInput" className="resetInputLabel" id="resetInputLabel">
-          <ClearCloseIcon/>
-          <input className="resetInput" id="resetInput" value="reset "type="reset" onClick={ () => {} }></input>
+      <form title={"Faça uma busca usando comando de voz, caracteres e imagem."} className="searchForm" id="searchForm">
+        <i className="searchIcon--container">
+            <SearchIcon/>
+        </i>
+        <label htmlFor="searchInput" className="searchInputLabel" id="searchInputLabel">
+
+          <input className="searchInput" id="searchInput" type="search" /*maxlength="10" readonly form_id=""*/ name="" placeholder={props.placeholderSelectedLanguage } onFocus={ resetAble } autoComplete="on"/>
+          <label htmlFor="resetInput" className="resetInputLabel" id="resetInputLabel">
+            <ClearCloseIcon/>
+            <input className="resetInput" id="resetInput" value="reset "type="reset" onClick={ () => {} }></input>
+          </label>
         </label>
-        <div className="ImageSearchIcon-KeyboardVoiceIcon--container">
-          <div className="KeyboardVoiceIcon--container">
-            <KeyboardVoiceIcon/>
-          </div>
-          <div className="ImageSearchIcon--container">
-            <ImageSearchIcon/>
-          </div>
-        </div>
+       
+
+        <section className="ImageSearchIcon-KeyboardVoiceIcon--container">
+          <label htmlFor="keyboardVoice" className="keyboardVoiceLabel" id="keyboardVoiceLabel">
+            <i className="KeyboardVoiceIcon--container">
+              <KeyboardVoiceIcon/>
+            </i>
+           {/*<input className="keyboardVoice" id="keyboardVoice" onClick={ () => {} }/>*/}
+          </label>
+          <label htmlFor="imputUpload" className="imputUploadLabel" id="imputUploadLabel">
+            <i className="ImageSearchIcon--container">
+              <ImageSearchIcon/>
+            </i>
+            <input className="imputUpload" id="imputUpload" type="file" name="Image"  accept="image/png, image/jpeg, image/jpg" multiple />
+          </label>
+        </section>
       </form>
 
       <div className="btns-header">
         <button onClick={ () => {} } id="NotificationListModal" className="NotificationListModal" title={"Notificação - sininho"}>
           <NotificationIcon /><div className="info">{"Notificação"}</div>
         </button>
-        <button onClick={ () => {} } className="msgBoxModal">
+        <div onClick={ () => {} } className="msgBoxModal">
           <input type="checkbox" className="msgBoxModal_" id="msgBoxModal"/><MessageIcon />
-        </button>
+        </div>
       </div>
       <div className="userSettingsModalBtns">
         <div className="pictureImage--container">

@@ -1,11 +1,14 @@
 import React from 'react';
-import { HomeComponent } from "../../screens/home";
+import { HomeTemplate } from "../../screens/home";
 import { PostAdd } from "../../screens/postAdd/index";
 import { PostView } from "../../screens/postView/index";
-import { Routes, Route} from "react-router-dom";
+import { Route } from "react-router-dom";
 import {  PostListProvider } from "../../globalContext/post";
 import { FeaturedProfessionalsProvider } from "../../globalContext/featuredProfessionals";
-import { ERR_404Template } from "../../screens/ERR_404";
+import { ERR_404Template } from "../../screens/statusCode/ERR_404--template";
+import { SplashComponent } from "../../screens/splash/index";
+
+
 
 
 export function PublicRoutes() {
@@ -15,9 +18,7 @@ export function PublicRoutes() {
 
       <PostListProvider>
 
-        <Routes>
-
-          <Route path="/" element={ <HomeComponent /> }/>
+          <Route path="feed" element={ <HomeTemplate /> }/>
 
           <Route path="/nome-do-post" element={ <PostView /> }/>
 
@@ -29,7 +30,7 @@ export function PublicRoutes() {
 
           <Route path="/ERR_404" element={ <ERR_404Template /> }/>
 
-        </Routes>
+          <Route path="/loading" element={ <SplashComponent /> }/>
 
       </PostListProvider>
 

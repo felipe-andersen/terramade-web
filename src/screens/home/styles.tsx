@@ -2,9 +2,16 @@ import * as React from "react";
 import styled from "styled-components";
 
 export const StyledHomeComponent = styled.div`
+  
 
-  .main-section--container {
+  header {
+    width: 100%;
+  }
+  main {
   margin: 81px 0 0 0;
+  width: 100%;
+
+  overflow:hidden;
   display: flex;
 }
 

@@ -34,31 +34,22 @@ const MainComponent = import("./main").then(main => {
 */
 
 
-export class HomeComponent extends React.Component<Props, State, PropsAny> {
-
-  
-  render(){
-    return  (
-      
-      <StyledHomeComponent>
-
+export const HomeTemplate: React.FC = (): JSX.Element => {
+  return  (
+    <StyledHomeComponent>
+        <header>
           <HeaderComponentFn/>
-          
-          <div className="main-section--container">
-
-            <MainComponent/>
-
-            <label htmlFor="msgBoxModal" className='msgBoxModalLabel'>BTN</label>
-
-            <div className="modalGroup">
-              <UserSettingsModal/>
-            </div>
-
+        </header>
+        <main>
+          <MainComponent/>
+          {/*<label htmlFor="msgBoxModal" className='msgBoxModalLabel'>BTN</label>*/}
+          <div className="modalGroup">
+            <UserSettingsModal/>
           </div>
-   
-      </StyledHomeComponent>
-    )
-  }
+        </main>
+    </StyledHomeComponent>
+  )
 }
+
 
 

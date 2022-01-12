@@ -6,6 +6,7 @@ import { GlobalStyle } from "./globalStyles";
 import * as Styled from "styled-components";
 import { usePersistedState } from "./hooks/usePersitedState";
 import { GlobalPropertiesAndStylesProvider, useGlobalPropertiesAndStyles }  from "./globalContext/globalTheme";
+import { AllRoutes } from './routes';
 
 
 function App() {
@@ -19,9 +20,7 @@ function App() {
 
         <GlobalStyle/>
 
-        <PublicRoutes/>
-
-        {/*<AuthenticationRoutes/>3*/}
+        <AllRoutes/>
 
       </Styled.ThemeProvider>
 

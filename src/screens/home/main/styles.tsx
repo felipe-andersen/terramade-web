@@ -30,6 +30,7 @@ export const MainComponentStyled = styled.div`
     background-color: white;
     margin-top: none;
   }
+
 /*
   .highlightedShorts--container {
     width: 100%;
@@ -39,15 +40,12 @@ export const MainComponentStyled = styled.div`
     align-items:center;
 
     button.hiddenBtn {
-    width: 50px;
+      width: 50px
       height: 18px;
       background-color: rgba(1,1,1,0.8);
       border: none;
-
+    }
   }
-
-  }
-  
 */
 
   .highlightedShorts {

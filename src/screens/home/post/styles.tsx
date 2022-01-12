@@ -2,81 +2,91 @@ import * as React from "react"
 import styled from "styled-components";
 
 export const StyledPostComponent = styled.div`
+  width: 100%;
+  height: max-content;
+  //min-width: 100%;
+  //max-heigth: 120px;
+  background-color: transparent;
+  display: column;
+  //flex-direction: inline-block;
+  //justify-content: center;
+  //align-items: center;
+  //border: 1px solid red;
+  //box-shadow: 1px 1px 1px red;
+  //box-sizing: border-box;
+  padding: none;
+  margin: 0 0 10px 0;
+  break-inside: avoid;
+  //wrap: no-wrap;
+  //font-family: none;
+  font-size: 14px;
+  //text-align: center;
+  //text-decoration: none;
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .postImg--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: max-content;
-
-    //min-width: 100%;
-    //max-heigth: 120px;
-    
-    background-color: transparent;
-
-    display: column;
-    //flex-direction: inline-block;
-    //justify-content: center;
-    //align-items: center;
-    //border: 1px solid red;
-    //box-shadow: 1px 1px 1px red;
-    //box-sizing: border-box;
-    padding: none;
-    margin: 0 0 10px 0;
-  
-    break-inside: avoid;
-    //wrap: no-wrap;
-
-    //font-family: none;
-    font-size: 14px;
-    //text-align: center;
-    //text-decoration: none;
+    box-sizing: border-box;
+    background-color: red;
+    padding: 0;
+    position: relative;
+    margin: 0;
     overflow: hidden;
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .postImg--container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        box-sizing: border-box;
-        background-color: red;
-        padding: 0;
-        position: relative;
-        margin: 0;
-        overflow: hidden;
-     
         
-        /*
-        a.btns-container {
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            display: flex;
-            position: absolute;
-            margin: 0 0 0 0;
-            background-color: rgb(240, 229, 229);
-            padding: 0;
-        }
-*/
-        .mask--container {
-            width: 100%;
-            height: 100%;
-            position:absolute;
-            background-color: transparent;
-            display: flex;
-            justify-content: space-between;
-            align-items: space-between;
-            box-sizing: border-box;
-            margin: 0;
-            padding:0;
-            border-radius: 20px;
+    /*
+    a.btns-container {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      display: flex;
+      position: absolute;
+      margin: 0 0 0 0;
+      background-color: rgb(240, 229, 229);
+      padding: 0;
+    }
+    */
+    .mask--container {
+      width: 100%;
+      height: 100%;
+      position:absolute;
+      background-color: transparent;
+      display: column;
+      justify-content: space-between;
+      align-items: space-between;
+      box-sizing: border-box;
+      margin: 0;
+      padding:0;
+      border-radius: 20px;
 
             :hover {
                 background-color: rgba(1,1,1,0.3);
+
+                
+                .postBtn {
+                  
+                  height: 35px;
+                  background-color: rgba(200,200,200,0);
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  box-sizing: border-box;
+                  margin: calc(100% + 58px) 0 0 0;
+
+                }
+              
                 
                 button.shareBtn, button.moreBtn {
                     display: flex;
                 }
+              }
             }
 
             button.shareBtn, button.moreBtn {
@@ -93,8 +103,6 @@ export const StyledPostComponent = styled.div`
     }
 
     .postImg {
-    
-
         width: 100%;
         //z-index: -1;
         margin: 0;
@@ -102,9 +110,14 @@ export const StyledPostComponent = styled.div`
     }
 
     .imgAcount-constructionDiaryAcount--container {
+        width: 100%;
+        height: 35px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 8px 8px;
+        box-sizing: border-box;
+        //background-color: white;
     }
 
     .baloon > svg {
@@ -208,9 +221,11 @@ export const StyledPostComponent = styled.div`
 .writenContentGroup {
     width:100%;
     box-sizing: border-box;
-    padding:8px 0px 8px 0px;
-    background-color: transparent;
-    margin: -16px 0 0px 0 ;
+    padding:0px 8px 0px 8px;
+    //background-color: red;
+    margin: -8px 0 0px 0 ;
+
+    box-sizing: border-box;
  
   
 
@@ -251,8 +266,12 @@ export const StyledPostComponent = styled.div`
             font-weight: 600;
             color: white;
             border-radius: 10px;
-            background-color: rgb(255, 0, 0);
+            background-color: rgb(255, 0, 0,0.3);
             padding: 0px 4px;
+
+            :hover {
+              background-color: rgb(255, 0, 0,1);
+            }
         }
 
         button.handleView {

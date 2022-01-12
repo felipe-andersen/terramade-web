@@ -4,21 +4,22 @@ import styled from "styled-components";
 const notification = "Notificação";
 
 
+
+
 export const HeaderStyledComponent = styled.div`
-
+  
+  :root{
+  --fontsize: 12px;
+  }
     width: 100%;
-
     display: column;
     //justify-content: space-around;
     //align-items: center;
-
-    margin: -81px 0 0px 0;
-
+    margin: -81px 0 0px;
     position: relative;
     position: fixed;
     z-index: 2000;
-    box-shadow: 0px 1px 4px rgba(180,180,180, 0.5);
-  
+    box-shadow: 0px 1px 4px rgba(180,180,180, 0.5)
     box-sizing: border-box;
     /*.headerComponent {
     width: 100%;
@@ -39,9 +40,7 @@ export const HeaderStyledComponent = styled.div`
     justify-content: space-around;
     align-items: center;
     border: 0px solid #eeeeee;
-  
     background-color: white;
-    
     padding: 6px 0;
     box-sizing: border-box;
 
@@ -49,7 +48,7 @@ export const HeaderStyledComponent = styled.div`
 
     section.keywords--container {
     width: 100%;
-    height: 60px;
+    height: 56px;
     background-color: white;
  
     display: flex;
@@ -87,74 +86,64 @@ export const HeaderStyledComponent = styled.div`
     }
 
 
-    .keywordsList {
-        display: flex;
-        width: 100%;
-        height: 100%;
-   
-        
+  .keywordsList {
+    display: flex;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content:  center;
     align-items: center;
 
-
-        /* Color Theme Swatches in Hex */
+/*
+Color Theme Swatches in Hex 
 .red-at-night-shepherds-delight-1-hex { color: #FFF587; }
 .red-at-night-shepherds-delight-2-hex { color: #FF8C64; }
 .red-at-night-shepherds-delight-3-hex { color: #FF665A; }
 .red-at-night-shepherds-delight-4-hex { color: #7D6B7D; }
 .red-at-night-shepherds-delight-5-hex { color: #A3A1A8; }
-
-/* Color Theme Swatches in RGBA */
+ Color Theme Swatches in RGBA 
 .red-at-night-shepherds-delight-1-rgba { color: rgba(255, 245, 134, 1); }
 .red-at-night-shepherds-delight-2-rgba { color: rgba(255, 140, 100, 1); }
 .red-at-night-shepherds-delight-3-rgba { color: rgba(255, 102, 89, 1); }
 .red-at-night-shepherds-delight-4-rgba { color: rgba(124, 106, 124, 1); }
 .red-at-night-shepherds-delight-5-rgba { color: rgba(162, 160, 168, 1); }
-
-/* Color Theme Swatches in HSLA */
-
-
-     
-
+Color Theme Swatches in HSLA 
+*/
     }
    
- 
-   
+    button.keywords {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 8px 0 8px;
+    border: none;
 
-      button.keywords {
-       
-        display: flex;
-        align-items: center;
-      height: 28px;
-     padding: 0 8px 0 8px;
-      border: none;
-      background-color: #ff7171;
-      border-radius: 14px;
-      margin: 0 0px 0px 8px;
-      color: white;
-      font-weight: 600;
-      max-width: 130px;
-
-      text-overflow: ellipsis;
-      white-space: nowrap; 
+    border-radius: 50px;
+    margin: 0 0px 0px 12px;
+    color: white;
+    font-weight: 400;
+    max-width: 130px;
     text-overflow: ellipsis;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    font-size: 15px;
+
+
+      :hover {
+        opacity: 0.7;
+      }
   
 
-      .icon--container {
+        .icon--container {
           width: 26px.
-        height: 26px;
-        border-radius: 50%;
-        background-color: white;
-        display: flex;
-justify-content: center;
-align-items: center;
-
+          height: 26px;
+          border-radius: 50%;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
-
-
-      }
-      
     }
 
     
@@ -221,20 +210,58 @@ align-items: center;
     width: 60%;
     height: 46px;
     display:flex;
-    background-color: rgba(231, 231, 231, 0.7);
+    background-color: rgba(250, 250, 250,1);
     align-items: center;
     justify-content: space-between;
     border-radius: 23px;
     //border: 3px solid black;
+    overflow: hidden;
 
 
     :hover {
-        background-color: rgba(220, 220, 220, 1);
+     
     }
 
     :target {
-        border: 2px solid blue;
+        //border: 2px solid blue;
     }   
+
+    .searchInputLabel {
+        width: 100%;
+        height: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f3f3f3;
+        :hover {
+            background-color: #eeeeee;
+        }
+
+
+    }
+
+
+
+      .searchInput {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    color: black;
+    background-color: transparent;
+    padding: 0 20px 0 50px;
+
+
+
+
+ 
+
+      }
+    }
+
+
+    
    
 }
 
@@ -300,7 +327,7 @@ textarea::placeholder {
     height: 40px;
     margin: 0 0 0 -40px;
     background-color: transparent;
-    display:none;
+    display:flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -317,13 +344,15 @@ textarea::placeholder {
 }
 
 .ImageSearchIcon-KeyboardVoiceIcon--container {
-    width: 11%;
+    width: 92px;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    margin:  0px 5px 0px 0px;
+
+    border-left: 1px solid #e2e2e2;
+
 }
 
 .btns-header {
@@ -347,16 +376,16 @@ textarea::placeholder {
 }
 
 .NotificationListModal {
-    width: 55px;
+    width: 46px;
     height: 46px;
 
-    border-radius: 9px;
+    border-radius: 50px;
     margin: 0 8px 0 0;
     border:none;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
+    background-color: rgb(250, 250, 250);
     //border-bottom: 2px solid grey;
     position: relative;
    
@@ -364,12 +393,12 @@ textarea::placeholder {
 }
 
 .NotificationListModal > svg {
-    fill: #797979;
+    fill: black;
 }
 
 .NotificationListModal:hover {
 
-    background-color: rgb(220, 220, 220, 0.8);
+    background-color: #eeeeee;
     .info {
         display: flex;
     }
@@ -460,7 +489,7 @@ title {
 }
 
 .msgBoxModal > div >svg {
-    fill: #797979;
+    fill: black;
 
 }
 
@@ -469,25 +498,25 @@ margin: 5px 0 0 0;
 
 }
 
-.KeyboardVoiceIcon--container {
-    width: 40px;
-    height: 40px;
+.keyboardVoiceLabel, .imputUploadLabel {
+    width: 46px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+
+    :hover {
+        background-color: #eeeeee;
+    }
+}
+
+.KeyboardVoiceIcon--container {
+
+ 
     background-color: transparent;
 }
 
-.ImageSearchIcon--container {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: transparent;
-}
+
 
 .KeyboardVoiceIcon {
     width: 40px;
@@ -527,7 +556,7 @@ margin: 5px 0 0 0;
 }
 
 .KeyboardVoiceIcon > svg {
-    fill:#797979;
+    fill: black;
 }
 
 

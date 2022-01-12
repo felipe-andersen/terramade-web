@@ -74,29 +74,29 @@ export class PostComponent extends React.Component<PostProps> {
                   <div className="PhotoCollectionsIcon--container"><PhotoCollectionsIcon/></div>
                   <p className="imgAcount">{"5"}</p>
                 </div>
-                <div className="constructionDiaryAcount--container">
-                    <div className="constructionDiaryAcountIcon--container"></div>
-              
+                <div className="constructionDiaryAcount--container" style={{display: "none"}}>
+                  <div className="constructionDiaryAcountIcon--container"></div>
                   <p>
                     <span className="constructionDiaryAcount text">{"dia"}</span><br></br>
                     <span className="constructionDiaryAcount count">{"100"}</span>
                   </p>
-                 
                 </div>   
               </div>
-              <button className="shareBtn">
-                <div className="shareIcon--container"><ShareIcon/></div>
-              </button>
-              <button className="moreBtn">
-                <div className="moreIcon--container"><MoreIcon/></div>
-              </button>
-              <button className="moreBtn">
-                <div className="moreIcon--container">S.local</div>
-              </button>
-              <button className="moreBtn">
-                <div className="moreIcon--container">Contr</div>
-              </button>
-              <div className='baloon animate__animated animate__bounce'><BaloonIcon/></div>
+              <div className="postBtn">
+                <button className="shareBtn">
+                  <div className="shareIcon--container"><ShareIcon/></div>
+                </button>
+                <button className="moreBtn">
+                  <div className="moreIcon--container"><MoreIcon/></div>
+                </button>
+                <button className="moreBtn" style={{display: "none"}}>
+                  <div className="moreIcon--container">S.local</div>
+                </button>
+                <button className="moreBtn" style={{display: "none"}}>
+                  <div className="moreIcon--container">Contr</div>
+                </button>
+                <div className='baloon animate__animated animate__bounce'><BaloonIcon/></div>
+              </div>
             </div>
           
          
@@ -139,6 +139,7 @@ export class PostComponent extends React.Component<PostProps> {
               <button className="reaction" onClick={ () => {} }><svg></svg></button>
               <p className="reactionsAcount">{ this.props.reactionsAcount }</p>
               <button className="handleView" onClick={ () => {} }><svg></svg></button>
+              <p style={{color:"rgba(60,60,60)"}}>1,7k</p>
             </div>
               
           </div>
