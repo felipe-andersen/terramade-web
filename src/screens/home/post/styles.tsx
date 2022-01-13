@@ -35,7 +35,7 @@ export const StyledPostComponent = styled.div`
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    background-color: red;
+
     padding: 0;
     position: relative;
     margin: 0;
@@ -222,7 +222,7 @@ export const StyledPostComponent = styled.div`
     width:100%;
     box-sizing: border-box;
     padding:0px 8px 0px 8px;
-    //background-color: red;
+
     margin: -8px 0 0px 0 ;
 
     box-sizing: border-box;

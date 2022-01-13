@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { placeholderSelectedLanguage } from "./languageConfig";
+import { placeholderSelectedLanguage } from "./idiomOptions";
 import * as Router from "react-router-dom";
 import * as Styled from "styled-components"
 import { HeaderStyledComponent } from "./styles";
@@ -127,11 +127,12 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
 
       <div className="btns-header">
         <button onClick={ () => {} } id="NotificationListModal" className="NotificationListModal" title={"Notificação - sininho"}>
-          <NotificationIcon /><div className="info">{"Notificação"}</div>
+          <NotificationIcon />
+          <div className="info">{"Notificação"}</div>
         </button>
-        <div onClick={ () => {} } className="msgBoxModal">
-          <input type="checkbox" className="msgBoxModal_" id="msgBoxModal"/><MessageIcon />
-        </div>
+        <button onClick={ () => {} } className="msgBoxModal">
+         <MessageIcon />
+        </button>
       </div>
       <div className="userSettingsModalBtns">
         <div className="pictureImage--container">

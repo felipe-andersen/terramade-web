@@ -17,10 +17,14 @@ export function AllRoutes() {
       <PostListProvider>
 
         <Routes>
+
+        <Route path="" element={ <HomeTemplate/> }/>
+
+          <Route path="/" element={ <HomeTemplate/> }/>
             
           <Route path="/login" element={ <LoginComponent/> }/>
 
-          <><Route path="/feed" element={ <HomeTemplate/> }/></>
+          <Route path="/feed" element={ <HomeTemplate/> }/>
 
           <Route path="/nome-do-post" element={ <PostView/> }/>
 
