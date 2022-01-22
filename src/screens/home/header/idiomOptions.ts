@@ -1,7 +1,7 @@
 import React from "react";
 import { language } from "../../../globalContext/language";
 
-let translate = "ptBR_default"; // let translate:HeaderProps = {};
+let translate = "language"; // let translate:HeaderProps = {};
 
 switch ( language ) {
   case "ptBR":
@@ -10,7 +10,7 @@ switch ( language ) {
   case "esES":
     translate =  "Haz una búsqueda";
       break;
-  case "enUSA":
+  case "enUS":
     translate =  "Do a search";
       break;
 };

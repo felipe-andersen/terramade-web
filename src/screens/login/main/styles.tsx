@@ -385,5 +385,14 @@ export const StyledMainComponent = styled.div`
 
     }
   }
+  
+  .postADD {
+    width: 50px;   
+    height: 50px;
+    display: flex;
+    background-color: #bd3d3d;
+    align-items: center;
+    border: none;
+  }
 
 `;

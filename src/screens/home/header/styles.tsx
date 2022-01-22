@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const notification = "Notificação";
+import { useAllPropriertiesHeader } from "./g";
 
 
 
@@ -12,7 +12,7 @@ export const HeaderStyledComponent = styled.div`
     display: column;
     //justify-content: space-around;
     //align-items: center;
-    margin: -81px 0 0px;
+    margin: -81px 0  0px  0px;
     position: relative;
     position: fixed;
     z-index: 2000;
@@ -26,21 +26,38 @@ export const HeaderStyledComponent = styled.div`
     align-items: center;
     border: none;
     margin: -81px 0 0 0;
-    background-color: white;
+    background-color: blue;
     position: fixed;
     z-index: 99;*/
-
+    border-bottom: 1px solid rgb(236, 236, 236);
+    background-color: white;
     .header--container {
       width: 100%;
       height: 70px;
       display: flex;
       justify-content: space-around;
-      align-items: center;
+      
       border: 0px solid #eeeeee;
-      background-color: white;
-      padding: 6px 0;
+
+      position: relative;
       box-sizing: border-box;
     }
+
+  .info {
+    position: absolute;
+    color: white;
+    font-size: 13px;
+    height: 28px;
+    padding: 0px 10px;
+    background-color: rgba(39, 39, 39, 1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 85px 0px 0px 0px ;
+    z-index: 100000;
+  } 
 
     .keywords--container {
       width: 100%;
@@ -74,7 +91,6 @@ export const HeaderStyledComponent = styled.div`
         display: none;
         }
       }
-
 
       .keywordsList {
         display: flex;
@@ -118,7 +134,12 @@ export const HeaderStyledComponent = styled.div`
     }
 
   .svgLogo {
+    width:70px;
+    height: 100%;
     margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .userSettingsModalBtns {
@@ -170,24 +191,32 @@ export const HeaderStyledComponent = styled.div`
     background-color: rgb(222, 228, 236);
   }
 
-  .searchForm {
+  .form {
     width: 60%;
-    height: 50px;
+  
+    /*height: 100vh;
+    display: flex;
+
+    justify-content: flex-start;
+    background-color: #310f01;
+    position: fixed;
+    z-index: 65665656;*/
+  
+  }
+
+  .inputGroup {
+    width: 60%;
+    height: 56px;
     display:flex;
     background-color: rgba(250, 250, 250,1);
     align-items: center;
     justify-content: space-between;
-    border-radius: 23px;
+    border-radius: 50px;
     //border: 3px solid black;
-    overflow: hidden;
+   position: relative;
+    position: fixed;
+    z-index: 65665656;
 
-    :hover {
-     
-    }
-
-    :target {
-        //border: 2px solid blue;
-    }   
 
     .searchInputLabel {
         width: 100%;
@@ -320,7 +349,7 @@ export const HeaderStyledComponent = styled.div`
     padding: 8px 8px 8px 8px;
   }
 
-  .NotificationListModal, .msgBoxModal {
+  .NotificationListModalBtn, .msgBoxModalBtn {
     width: 46px;
     height: 46px;
     border-radius: 50px;
@@ -367,7 +396,8 @@ export const HeaderStyledComponent = styled.div`
     border: 1px solid white;
     border-radius: 5px;
     margin: 85px 0px 0px 0px ;
-    z-index: 30000;
+    z-index: 100000;
+    white-space: nowrap;
   }    
 
 
@@ -414,7 +444,12 @@ export const HeaderStyledComponent = styled.div`
     align-items: center;
 
     :hover {
-        background-color: #eeeeee;
+      background-color: #eeeeee;
+
+      .info {
+        display: flex;
+
+      }
     }
 }
 

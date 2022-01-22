@@ -3,14 +3,97 @@ import * as React from "react";
 import styled from "styled-components";
 
 export const MainComponentStyled = styled.div`
-  margin: 15px 0 0 0;
+  margin: -10px 0 0 0;
   box-sizing: border-box;
-  //padding: 0 28px;
+  padding: 0;
   width: 100%;
   background-color: white;
 
+  
+  .hashtagsList--container {
+      width: 100%;
+      height: 56px;
+      background-color: white;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      position: relative;
+      margin: 0;
+      background-color: white;
+      position: fixed;
+      z-index: 1050;
+  
+      .previewBtn {
+        width: 55px;
+        height: 100%;
+        background:linear-gradient(to right, white, white, white, white, white, white,rgba(255,255,255, 0.5), transparent);
+        margin: 0 0 0 0;
+        position: absolute;
+      }
+
+      .nextBtn {
+        width: 55px;
+        height: 100%;
+        background:linear-gradient(to right, transparent, rgba(255,255,255, 0.5), white, white, white, white, white, white);
+        margin: 0 0 0 calc(100% - 55px);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+      > svg {
+        display: none;
+        }
+      }
+
+      .hashtagsList {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content:  center;
+        align-items: center;
+        margin: 0;
+      }
+   
+      .keywords {
+        display: flex;
+        align-items: center;
+        height: 32px;
+        padding: 0 8px 0 8px;
+        border: none;
+        border-radius: 50px;
+        margin: 0 0px 0px 12px;
+        color: white;
+        font-weight: 400;
+        max-width: 130px;
+        text-overflow: ellipsis;
+        white-space: nowrap; 
+        text-overflow: ellipsis;
+        font-size: 15px;
+        
+
+        :hover {
+          opacity: 0.7;
+        }
+  
+        .icon--container {
+          width: 26px.
+          height: 26px;
+          border-radius: 50%;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+ 
+
   .gridFeed {
-    column-width: 236px;
+    justify-content: center;
+    column-width: 240px;
     column-gap: 16px;
     break-inside: avoid;
     margin: 0;
@@ -51,18 +134,18 @@ export const MainComponentStyled = styled.div`
   .highlightedShorts {
     box-sizing: border-box;
     display: flex; 
-    width: 100vw;
+    width: 100%;
     height: max-content;
-    justify-content: center;
+    justify-content: flex-start;
     align-items:center;
-    margin: 25px 0 16px 0;
-    padding:  35px 15%;
-    background-color: rgba(1,1,1,0.8);
+    margin: 15px 0 16px 0;
+    padding:  60px 25px 40px 25px;
+    background-color: rgba(1,1,1,0.9);
    
     button.previusBtn, button.nextBtn{
       width: 50px;
       height: 50px;
-      background-color: rgba(1,1,1,0.8);
+      background-color: #000000;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -74,45 +157,43 @@ export const MainComponentStyled = styled.div`
   
   .short--container {
     // +1350px | 1350px | 850px | 650px | 450px
-    width: 100px;
+    width: 160px;
+  
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 8px 0 0px;
-    overflow: hidden;
+    margin: 0 16px 0 0px;
+
    
 
     .short { 
+
       display: flex;
       flex-direction: column;
       align-items: center;
-      //   width: 170px;
+      width: 160px;
       height: 170px; // +1350px | 1350px | 850px | 650px | 450px
-      background-color: black;
-      justify-content: flex-end;
+    
+      justify-content: center;
       border-radius: 15px;
      
       position: relative;
 
+      background-color: blue;
+      overflow: hidden;
       img.videoCover {
-        height: 100%;
+        width: 100%; //or height: 
      
       }
 
       .mask {
         width: 100%;
         height: 100%;
-        background:linear-gradient(to bottom, transparent, black);
-        position: absolute;
-        z-index: 1001;
-      }
 
-      .mask {
-        width: 100%;
-        height: 100%;
-        background:linear-gradient(to bottom, rgba(1,1,1,0.3), rgba(1,1,1,0.8), black );
+        background-color: rgba(1,1,1, 1)
         position: absolute;
         z-index: 1001;
+        
       }
 
       .picNameProfession-container {
@@ -147,16 +228,16 @@ export const MainComponentStyled = styled.div`
     }
 
     .storiePic--container {
-      height: 3vw;
-      width: 3vw;
+      height: 40px;
+      width: 40px;
       border-radius: 50%;
       overflow: hidden;  
-      margin: -1.7vw  0 0 0;
+      margin: -23px  0 0 0;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 1010;
-      border: 0.2vw solid white;
+      border: 2px solid white;
     }
 
     .shortContentText {
@@ -170,13 +251,6 @@ export const MainComponentStyled = styled.div`
     }
   }
 
-  .mask {
-        width: 100%;
-        height: 100%;
-        background:linear-gradient(to bottom, transparent, black);
-        position: absolute;
-        z-index: 1001;
-      }
 
   .imgAcount {
 
@@ -186,16 +260,26 @@ export const MainComponentStyled = styled.div`
 
   }
 
-  .
-.keywords--container {
+  .keywords--container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
     height: 35px;
     background-color: red;
-}
+  }
+  
+  .postADD {
+    width: 60px;   
+    height: 60px;
+    display: flex;
+    background-color: #bd3d3d;
+    align-items: center;
+    border: none;
+    border-radius: 500px;
+    margin: 90vh 0 0 64vw;
 
+  }
   //-----------------------------------------------------------------------------------
   @media (max-width: 1350px){
     .gridFeed {
@@ -207,7 +291,7 @@ export const MainComponentStyled = styled.div`
   }
 
   .highlightedShorts {
-    padding: 0;
+
 
     button.previusBtn, button.nextBtn{
 
@@ -268,7 +352,14 @@ export const MainComponentStyled = styled.div`
   }
 
   @media (max-width: 700px){
-   
+    .highlightedShorts {
+    justify-content: flex-start;
+    padding:  8px 16px 16px 8px;
+    align-items:center;
+    button.previusBtn, button.nextBtn{
+      display: none;
+    }
+  }
   }
 
   // ------------------------------------------------------------------------------------------------
@@ -277,32 +368,22 @@ export const MainComponentStyled = styled.div`
     .gridFeed {
       column-width: auto;
       column-count: 2;
-      column-gap: 8px;
+      column-gap: 5px;
+      padding: 0 3px;
   }
 
   .add-post-button {
 
   }
 
-  .highlightedShorts {
-    justify-content: flex-start;
 
-    button.previusBtn, button.nextBtn{
-      display: none;
-    }
-  }
   
   .short--container {
-    width: 100px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 8px 0 0px;
+  
+
 
     .short {
-      width: 100px; 
-      height: 170px; 
-
+  
       img.videoCover {
      
       }
@@ -326,11 +407,7 @@ export const MainComponentStyled = styled.div`
       }
     }
 
-    .storiePic--container {
-      height: 8vw;
-      width: 8vw;
-      margin: -4vw 0 0 0;
-    }
+  
 
     .shortContentText {
 

@@ -38,6 +38,7 @@ export class MainComponent extends React.Component<SignScreenProps>{
               <p className="logo">W</p>
               </div>
               <h1>Bem vindo ao Wemade! <br/>Entre com sua conta.</h1>
+           
             <div className="alert--container red">
               <p>{"Digite um email válido"}</p>
               <InfoIcon/>
@@ -45,10 +46,15 @@ export class MainComponent extends React.Component<SignScreenProps>{
             <div className="form-socialAuht--container">
 
             <form className="signInLogIn" >
-              <label htmlFor="inputEmail">
+              <label title={"Entre com seu email"} htmlFor="inputEmail">
                 <div className="label-EmailValidateInfo--container" >
                   <span className="emailLabel">{"Email"}</span>
-                  <span className="invalidEmail">{"inválido"}<CheckIcon/></span>
+                  <span className="invalidEmail">
+              
+                    <i>
+                      <CheckIcon/>
+                    </i>
+                 </span>
                 </div>
                 <div className="inputEmail--container">
                   <input type="email" id="inputEmail" className="inputEmail" placeholder={ adapter.emailPlaceholder } aria-label={ adapter.SignInEmailInputLabelText } />

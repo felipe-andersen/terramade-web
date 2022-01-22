@@ -1,26 +1,53 @@
 import * as React from 'react';
 import { UserList } from "../../../storagesInterfaces/users";
 import { usePostList  } from '../../../globalContext/post';
-import { themes } from '../../../globalContext/theme';
 import { PostComponent, PostProps } from "../post";
 import styled from "styled-components";
 import { MainComponentStyled } from "./styles";
 import * as Router from "react-router-dom";
-
-const myList = [1,2,3];
+import { ImageSearchIcon } from '../../../iconLibrary/imageSearch';
+import { hashtagsList } from "./h";
+const myList = [1,2,3,4,5,6,7,8,9,10];
 
 // Components que não podem ter seu estado alterado, precisam tomar cuidado com renderização dinamica
-
+const hashtagsProvider = hashtagsList;
 export function MainComponent():JSX.Element {
   const { postList, setPost } = usePostList();
- 
   return (
     <MainComponentStyled>
-     
-
-   
-     
-     
+      <section className="hashtagsList--container">
+        <span className="previewBtn"></span>
+        <div className="hashtagsList"> 
+        {
+          hashtagsProvider.map( i => {
+            return (
+              <button title="" className="keywords" style={{backgroundColor:"rgba(255, 102, 89, 1)"}}>{"louça"}</button>
+            )
+          })
+        }
+          <button className="keywords" style={{backgroundColor:"#9c8f00"}}>{"lavanderia"}</button>
+          <button className="keywords" title="decor" style={{backgroundColor:"rgba(255, 140, 100, 1)"}}>
+            <i>#decor</i>
+          </button>
+          <button className="keywords" style={{backgroundColor:"rgba(255, 102, 89, 1)"}}>{"louça"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(124, 106, 124, 1)"}}>{"pintura"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(162, 160, 168, 1)"}}>{"#cimento queimado"}</button>
+          <button className="keywords" style={{backgroundColor:"#9c8f00"}}>{"lavanderia"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(255, 140, 100, 1)"}}>{"#porcelanato"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(255, 102, 89, 1)"}}>{"DIY"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(124, 106, 124, 1)"}}>{"shingle"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(162, 160, 168, 1)"}}>{"#standby"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(124, 106, 124, 1)"}}>{"bar"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(162, 160, 168, 1)"}}>{"#arquiday"}</button>
+          <button className="keywords" style={{backgroundColor:"#9c8f00"}}>{"lavanderia"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(124, 106, 124, 1)"}}>{"shingle"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(162, 160, 168, 1)"}}>{"#standby"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(124, 106, 124, 1)"}}>{"bar"}</button>
+          <button className="keywords" style={{backgroundColor:"rgba(162, 160, 168, 1)"}}>{"#arquiday"}</button>
+          <button className="keywords" style={{backgroundColor:"#9c8f00"}}>{"lavanderia"}</button>
+        </div>
+        <span className="nextBtn"><ImageSearchIcon/></span>
+      </section>
 
       <div className="highlightedShorts">
         <button className='previusBtn'></button>
@@ -53,8 +80,6 @@ export function MainComponent():JSX.Element {
         }
         <button className='nextBtn'></button>
       </div>
-
-   
       <div className="gridFeed">
       {
         postList.map( post => {
@@ -77,6 +102,9 @@ export function MainComponent():JSX.Element {
         })
       }
       </div>
+      <button className="postADD" id="" onClick={ () => {} }>
+
+      </button>
       </MainComponentStyled>
     )
   }

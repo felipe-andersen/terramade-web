@@ -1,11 +1,14 @@
-import React from "react";
+import * as React from "react";
 import { MainComponent } from "./main";
+import { StyledLoginComponent } from "./styles";
 
 
-export const LoginComponent = ():JSX.Element => {
+export const LoginComponent:React.FC = ():JSX.Element => {
   return (
-    <>
-      <MainComponent/>
-    </>
+    <StyledLoginComponent>
+      <main>
+        <MainComponent/>
+      </main>
+    </StyledLoginComponent>
   )
 }

@@ -5,48 +5,29 @@ import { MainComponent } from "./main";
 // www.terramadeproject.com/{ lang=local_ptBR }
 import * as Router from "react-router-dom";
 import { UserSettingsModal } from "./userSettingsModal";
-
 import { StyledHomeComponent } from "./styles"
-
-interface Props {
-
-}
-
-interface State {
-  dfdfdfd: React.ComponentClass<Props1, State1>
-}
-
-interface PropsAny {
-
-}
-
-interface Props1 {
-
-}
-
-interface State1 {
-
-}
-/*
-const MainComponent = import("./main").then(main => {
-  main.MainComponent
-});
-*/
-
+import { AllPropriertiesProvider } from '../../globalContext/globalTheme/g';
 
 export const HomeTemplate: React.FC = (): JSX.Element => {
   return  (
     <StyledHomeComponent>
+
         <header>
-          <HeaderComponentFn/>
+            <HeaderComponentFn/>
         </header>
-        <main>
-          <MainComponent/>
-          {/*<label htmlFor="msgBoxModal" className='msgBoxModalLabel'>BTN</label>*/}
-          <div className="modalGroup">
-            <UserSettingsModal/>
-          </div>
-        </main>
+        <div className="main-aside">
+          <main>
+            <MainComponent/>
+          </main>
+          <AllPropriertiesProvider>
+          <aside className="aside" >
+            <div className="modalGroup" id="modalGroup" >
+              <UserSettingsModal/>
+            </div>
+          </aside>
+          </AllPropriertiesProvider>
+        </div>
+
     </StyledHomeComponent>
   )
 }

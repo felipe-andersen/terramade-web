@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { language } from "../../globalContext/language";
 
-let translate = "ptBR_default"; 
+let translate = "language"; 
 
 switch ( language ) {
   case "ptBR":
@@ -11,7 +11,7 @@ switch ( language ) {
   case "esES":
     translate =  "seguidores";
       break;
-  case "enUSA":
+  case "enUS":
     translate =  "followers";
       break;
 };

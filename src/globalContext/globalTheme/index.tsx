@@ -1,36 +1,38 @@
 import * as React from "react";
-import dark from "../theme/dark";
-import light from "../theme/light";
-import styled, { DefaultTheme,  } from "styled-components";
+import dark from "../mode/dark";
+import light from "../mode/light";
+import { DefaultTheme  } from "styled-components";
 
 
 
 
 export interface IStatusGlobalPropertiesAndStyles {
-  globalPropertiesAndStyles: IglobalPropertiesAndStyles;
-  setGlobalPropertiesAndStyles?: React.Dispatch<React.SetStateAction<IglobalPropertiesAndStyles>>
+  globalThemes: MyThemes;
+  setGlobalThemes: React.Dispatch<React.SetStateAction<MyThemes>>;
 }
 
-export interface IglobalPropertiesAndStyles {
-  language: string;
+export interface MyThemes {
+  language: string,
   homeScreen: {
-    headerPropertiesAndStyles: {
-    resetInputLabel: string,
-    notificationBtnTitle: string
+    headerPropertiesAndStyles: { 
+      resetInputLabel: string,
+      notificationBtnTitle: string,
+      ModalDisplay: string,
     }
   }
-}
+};
 
 interface PropertiesAndStylesProviderProps {
   children: React.ReactNode
 };
 
-export const myThemes:IglobalPropertiesAndStyles = {
-  language: "pt-br",
+export const myThemes:MyThemes = {
+  language: "ptBR",
   homeScreen: {
     headerPropertiesAndStyles: {
       resetInputLabel: "none",
-      notificationBtnTitle: "Notificação"
+      notificationBtnTitle: "Notificação",
+      ModalDisplay: "none",
     }
   }
 };
@@ -39,10 +41,10 @@ const GlobalPropertiesAndStylesContext = React.createContext<IStatusGlobalProper
 
 export function GlobalPropertiesAndStylesProvider({children}:PropertiesAndStylesProviderProps) {
 
-  const [globalPropertiesAndStyles, setGlobalPropertiesAndStyles] = React.useState(myThemes);
+  const [globalThemes, setGlobalThemes] = React.useState<MyThemes>(myThemes);
   
   return (
-  <GlobalPropertiesAndStylesContext.Provider value={{globalPropertiesAndStyles, setGlobalPropertiesAndStyles}}>
+  <GlobalPropertiesAndStylesContext.Provider value={{globalThemes, setGlobalThemes}}>
     {children}
   </GlobalPropertiesAndStylesContext.Provider>
   )
@@ -52,6 +54,6 @@ export function GlobalPropertiesAndStylesProvider({children}:PropertiesAndStyles
 export const useGlobalPropertiesAndStyles = () => {
   const context = React.useContext(GlobalPropertiesAndStylesContext);
   if (!context) console.log("await ..."); //appLoading
-  const { globalPropertiesAndStyles, setGlobalPropertiesAndStyles } = context;
-  return { globalPropertiesAndStyles, setGlobalPropertiesAndStyles }
+  const {globalThemes, setGlobalThemes} = context;
+  return {globalThemes, setGlobalThemes}
 }

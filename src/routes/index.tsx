@@ -18,13 +18,13 @@ export function AllRoutes() {
 
         <Routes>
 
-        <Route path="" element={ <HomeTemplate/> }/>
+          <Route path="" element={ <HomeTemplate/> }/>
 
           <Route path="/" element={ <HomeTemplate/> }/>
-            
-          <Route path="/login" element={ <LoginComponent/> }/>
 
           <Route path="/feed" element={ <HomeTemplate/> }/>
+            
+          <Route path="/logIn" element={ <LoginComponent/> }/>
 
           <Route path="/nome-do-post" element={ <PostView/> }/>
 

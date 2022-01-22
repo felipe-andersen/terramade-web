@@ -2,7 +2,8 @@ import * as React from "react"
 import styled from "styled-components";
 
 export const StyledPostComponent = styled.div`
-  width: 100%;
+  max-width: 245px;
+  min-width: 230px;
   height: max-content;
   //min-width: 100%;
   //max-heigth: 120px;
@@ -223,13 +224,13 @@ export const StyledPostComponent = styled.div`
     box-sizing: border-box;
     padding:0px 8px 0px 8px;
 
-    margin: -8px 0 0px 0 ;
+    margin: -8px 0 0 0 ;
 
     box-sizing: border-box;
  
   
 
-    a.{
+    a{
         white-space: nowrap;                  
         overflow: hidden;
         text-overflow: ellipsis;
@@ -238,7 +239,7 @@ export const StyledPostComponent = styled.div`
         }
 
         p{
-            margin: none;
+            margin: -8px 0 0 0;
         }
     }
 
@@ -256,7 +257,7 @@ export const StyledPostComponent = styled.div`
             height:  20px;
             border-radius: 50%;
             background-color: #cccccc;
-            margin: 0 -4px 0px 5px;
+            margin: 0 2px 0 0;
             border: none;
         }
 

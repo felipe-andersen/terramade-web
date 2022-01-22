@@ -61,14 +61,14 @@ export class PostComponent extends React.Component<PostProps> {
   public render():JSX.Element {
     return (
         <StyledPostComponent>
-           <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          />
           <div className="postImg--container">
             <img className="postImg" alt={ this.props.postImageAlt } src={ this.props.postImageURL }/>
             
-            <div className="mask--container">
+            <Router.Link to="/nome-do-post" className="mask--container">
               <div className='imgAcount-constructionDiaryAcount--container'>
                 <div className="imgAcount-container">
                   <div className="PhotoCollectionsIcon--container"><PhotoCollectionsIcon/></div>
@@ -97,7 +97,7 @@ export class PostComponent extends React.Component<PostProps> {
                 </button>
                 <div className='baloon animate__animated animate__bounce'><BaloonIcon/></div>
               </div>
-            </div>
+            </Router.Link>
           
          
            
@@ -118,10 +118,8 @@ export class PostComponent extends React.Component<PostProps> {
           </div>
          
           <div className="writenContentGroup">
-           
-             <a className="">
+            <a className="">
               <h2 className="postTitle">{ this.props.title }</h2>
-         
               <p className="postContent">{ this.props.content }</p>
             </a>
             <FollowersUserNameProfileImageMolecule
@@ -133,12 +131,12 @@ export class PostComponent extends React.Component<PostProps> {
             
             <div className=" reactionBtns">
               <button className="reaction" onClick={ () => {} }><svg></svg></button>
-              <p className="reactionsAcount">{ this.props.reactionsAcount }</p>
+             
               <button className="reaction" onClick={ () => {} }><svg></svg></button>
-              <p className="reactionsAcount">{ this.props.reactionsAcount }</p>
+             
               <button className="reaction" onClick={ () => {} }><svg></svg></button>
-              <p className="reactionsAcount">{ this.props.reactionsAcount }</p>
-              <button className="handleView" onClick={ () => {} }><svg></svg></button>
+           
+              {/*<button className="handleView" onClick={ () => {} }><svg></svg></button>*/}
               <p style={{color:"rgba(60,60,60)"}}>1,7k</p>
             </div>
               

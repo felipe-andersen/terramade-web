@@ -1,6 +1,6 @@
 import * as React from "react";
-import dark from "../../globalContext/theme/dark";
-import light from "../../globalContext/theme/light";
+import dark from "../../globalContext/mode/dark";
+import light from "../../globalContext/mode/light";
 
 
 export default {

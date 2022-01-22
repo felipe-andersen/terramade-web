@@ -2,16 +2,20 @@ import React from "react";
 import { MainPostView } from "./main";
 import { MainComponent } from "../../screens/home/main"
 import { HeaderComponentFn } from "../home/header";
-const FrameworkComponent = React.Component;
+import { StyledPostViewComponent } from "./styles";
 
-export class PostView extends FrameworkComponent {
-  render(){
-    return (
-      <div>
-        <HeaderComponentFn/>
+
+export const PostView:React.FC = (): JSX.Element => {
+  return (
+    <StyledPostViewComponent>
+      <header></header>
+      <HeaderComponentFn/>
+      <main>
         <MainPostView></MainPostView>
+      </main>
+      <section>
         <MainComponent />
-      </div>
-    )
-  }
+      </section>
+    </StyledPostViewComponent>
+  )
 };

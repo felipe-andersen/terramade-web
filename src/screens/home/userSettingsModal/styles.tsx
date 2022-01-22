@@ -13,7 +13,7 @@ export const StyledModalOptions =  styled.div`
   height: 100%;
   background-color: transparent;
 
-  .backBtn, .personalizationBtn, .suportBtn, .AcessibilidadeBtn, .exitBtn {
+  .backBtn, .customizationBtn, .suportBtn, .AcessibilidadeBtn, .exitBtn {
     width: 100%;
     height: 45px;
     background-color: transparent;

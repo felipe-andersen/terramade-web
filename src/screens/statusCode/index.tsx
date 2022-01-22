@@ -2,13 +2,14 @@
 import React from "react";
 import {} from "../../iconLibrary/chevronIcon";
 import { ERR_404Template } from "./ERR_404--template";
+import { StatusCodeStyledComponent } from "./styles";
 
-export function StatusCodeTamplate():JSX.Element {
+export const StatusCodeTamplate:React.FC = ():JSX.Element => {
   return (
-    <>
-
-      <ERR_404Template/>
-
-    </>
+    <StatusCodeStyledComponent>
+      <main>
+        <ERR_404Template/>
+      </main>
+    </StatusCodeStyledComponent>
   )
 }

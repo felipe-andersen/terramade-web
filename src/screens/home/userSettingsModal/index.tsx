@@ -1,6 +1,7 @@
 import React from "react";
 import { StyledUserSettingsModal, StyledModalOptions } from "./styles"; 
 import { ChevronIcon } from "../../../iconLibrary/chevronIcon";
+import * as Router from "react-router-dom";
 
 interface UserSettingsModalProps {
 
@@ -43,10 +44,19 @@ export class ModalOptions extends React.Component {
             <ChevronIcon/>
           </div>
         </button>
-        <button className="personalizationBtn">
+        <button className="backBtn">
           <div className="icon-title--Contanier">
             <div className="icon--Contanier"></div>
-            {"Personalizar"}
+            {" About the account"}
+          </div>
+          <div className="icon--Contanier backgroudColor">
+            <ChevronIcon/>
+          </div>
+        </button>
+        <button className="customizationBtn">
+          <div className="icon-title--Contanier">
+            <div className="icon--Contanier"></div>
+            {"Customize"}
           </div>
           <div className="icon--Contanier backgroudColor"></div>
         </button>
@@ -54,7 +64,7 @@ export class ModalOptions extends React.Component {
         <button className="suportBtn">
           <div className="icon-title--Contanier">
             <div className="icon--Contanier"></div>
-            {"Ajuda e Suporte"}
+            {"Help and support"}
           </div>
           <div className="icon--Contanier backgroudColor"></div>
         </button>
@@ -62,7 +72,7 @@ export class ModalOptions extends React.Component {
         <button className="AcessibilidadeBtn">
           <div className="icon-title--Contanier">
             <div className="icon--Contanier"></div>
-            {"Acessibilidade"}
+            {"Acessibility"}
           </div>
           <div className="icon--Contanier backgroudColor"></div>
         </button>
@@ -70,7 +80,8 @@ export class ModalOptions extends React.Component {
         <button className="exitBtn">
           <div className="icon-title--Contanier">
             <div className="icon--Contanier"></div>
-            {"Sair"}
+            <Router.Link to="/logIn" className="mask" >{"Exit"}</Router.Link>
+         
           </div>
           <div className="icon--Contanier backgroudColor"></div>
         </button>
