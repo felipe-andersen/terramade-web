@@ -7,11 +7,18 @@ import { MainComponentStyled } from "./styles";
 import * as Router from "react-router-dom";
 import { ImageSearchIcon } from '../../../iconLibrary/imageSearch';
 import { hashtagsList } from "./h";
-const myList = [1,2,3,4,5,6,7,8,9,10];
+import { HighlightedShortsProfessionals } from '../highlighted-shorts-professionals-modal';
 
 // Components que não podem ter seu estado alterado, precisam tomar cuidado com renderização dinamica
+
+interface IMainComponent {
+  hideShowChildElement: string;
+}
+
+
 const hashtagsProvider = hashtagsList;
-export function MainComponent():JSX.Element {
+
+export function MainComponent({hideShowChildElement}:IMainComponent):JSX.Element {
   const { postList, setPost } = usePostList();
   return (
     <MainComponentStyled>
@@ -48,38 +55,7 @@ export function MainComponent():JSX.Element {
         </div>
         <span className="nextBtn"><ImageSearchIcon/></span>
       </section>
-
-      <div className="highlightedShorts">
-        <button className='previusBtn'></button>
-        {
-          myList.map( i => {
-            return (
-              <div className="short--container">
-                <div className="short">
-                  <img className="videoCover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-                  <Router.Link to="/nome-do-post" className="mask" >
-                   
-                  </Router.Link>      
-                  <div className="picNameProfession-container">
-                    <div className="nameProfession--container">
-                      {/*<div  className="textContent name">Hoje tem live a noite no youtube. link aqui. aparece lá.</div>*/}
-                    </div>
-                  </div>
-                </div>
-                <div className="storiePic--container">
-                  <a className="storiePic container" href="">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"/>
-                  </a>
-                </div>
-                <div title={"Daniel Sharezaed - Design de Interioes"} className="shortContentText">
-                  <a href='' className='publicNameOcupation'>Daniel Sharezaed - Design de Interioes</a>
-                </div>
-              </div>
-            )
-          })
-        }
-        <button className='nextBtn'></button>
-      </div>
+      <HighlightedShortsProfessionals display={hideShowChildElement}/>
       <div className="gridFeed">
       {
         postList.map( post => {

@@ -60,3 +60,4 @@ const felipe = new PostCreate({
   content: "",
   hasEdited: false,
 });
+console.log(felipe)

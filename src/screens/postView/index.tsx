@@ -1,7 +1,7 @@
 import React from "react";
 import { MainPostView } from "./main";
 import { MainComponent } from "../../screens/home/main"
-import { HeaderComponentFn } from "../home/header";
+import  HeaderComponentFn  from "../home/header";
 import { StyledPostViewComponent } from "./styles";
 
 
@@ -14,8 +14,9 @@ export const PostView:React.FC = (): JSX.Element => {
         <MainPostView></MainPostView>
       </main>
       <section>
-        <MainComponent />
+        <MainComponent hideShowChildElement="none"/>
       </section>
     </StyledPostViewComponent>
   )
+  console.log("Welcome Wemade! \n ")
 };

@@ -5,41 +5,30 @@ import { AuthenticationRoutes } from "./routes/authentication";
 import { GlobalStyle } from "./globalStyles";
 import * as Styled from "styled-components";
 import { usePersistedState } from "./hooks/usePersitedState";
-import { myThemes, GlobalPropertiesAndStylesProvider, MyThemes }  from "./globalContext/globalTheme";
+
 import { AllRoutes } from './routes';
+import { Provider } from 'react-redux';
 
-export interface IStatusGlobalPropertiesAndStyles {
-  state: MyThemes;
-  setState: React.Dispatch<React.SetStateAction<MyThemes>>;
-}
-
-const GlobalContextPropertiesAndStyles = React.createContext<IStatusGlobalPropertiesAndStyles>({} as IStatusGlobalPropertiesAndStyles );
+import { store } from './state';
 
 function App() {
-
- const [state, setState] = React.useState(myThemes)
-
   return (
-    <GlobalContextPropertiesAndStyles.Provider value={{state, setState}}>
+    <Provider store={store}>
+ 
   
-      <Styled.ThemeProvider theme={ state}>
+     {/* <Styled.ThemeProvider theme={ store.subscribe(homeReducer)}>*/}
 
         <GlobalStyle/>
 
         <AllRoutes/>
 
-      </Styled.ThemeProvider>
+      {/* </Styled.ThemeProvider>*/}
 
-    </GlobalContextPropertiesAndStyles.Provider>
-  );
+   
+    </Provider>
+  )
 };
 
 export default App;
 
 
-export const useGlobalPropertiesAndStyles = () => {
-  const context = React.useContext(GlobalContextPropertiesAndStyles);
-  if (!context) console.log("await ..."); //appLoading
-  const {state, setState} = context;
-  return {state, setState}
-}

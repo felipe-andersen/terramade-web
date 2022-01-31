@@ -1,5 +1,5 @@
 import React from 'react';
-import { HomeTemplate } from "../../screens/home";
+import  HomeTemplate  from "../../screens/home";
 import { PostAdd } from "../../screens/postAdd/index";
 import { PostView } from "../../screens/postView/index";
 import { Route } from "react-router-dom";

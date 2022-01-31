@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
-
-import { useAllPropriertiesHeader } from "./g";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../state";
 
 
 
@@ -193,7 +193,7 @@ export const HeaderStyledComponent = styled.div`
 
   .form {
     width: 60%;
-  
+    border: none;
     /*height: 100vh;
     display: flex;
 

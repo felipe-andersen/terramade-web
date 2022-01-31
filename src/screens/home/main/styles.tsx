@@ -140,12 +140,12 @@ export const MainComponentStyled = styled.div`
     align-items:center;
     margin: 15px 0 16px 0;
     padding:  60px 25px 40px 25px;
-    background-color: rgba(1,1,1,0.9);
+    background-color: #1a1a1a;
    
     button.previusBtn, button.nextBtn{
       width: 50px;
       height: 50px;
-      background-color: #000000;
+      background-color: #161616;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -163,7 +163,8 @@ export const MainComponentStyled = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 0 16px 0 0px;
-
+    background-color: #353535e4;
+    border-radius: 15px;
    
 
     .short { 
@@ -242,13 +243,21 @@ export const MainComponentStyled = styled.div`
 
     .shortContentText {
       width: 70%;
-      height: 20px;
+
       overflow:hidden;
       font-weight: 600;
       text-align: center;
-
+      padding: 0 0 8px 0;
       margin: 2px 0 0 0;
+
+      a {
+        color: white;
+        font-weight: 400;
+        font-size: 13px;
+      }
     }
+
+
   }
 
 

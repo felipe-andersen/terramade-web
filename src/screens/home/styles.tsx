@@ -1,7 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import { useAllProprierties } from "../../globalContext/globalTheme/g";
-
 
 export const StyledHomeComponent = styled.div`
 
@@ -26,7 +24,7 @@ export const StyledHomeComponent = styled.div`
     height: 90vh;  // 100vh - 70px;
     width: 30%;
     background-color: rgb(255, 255, 255);
-    display: ${props => props.theme.homeScreen.headerPropertiesAndStyles.ModalDisplay};
+    display:none;
   }
 
   .modalGroup {

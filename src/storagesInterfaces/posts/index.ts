@@ -82,6 +82,6 @@ export const posts:PostProps[] = [
     reactionsAcount: "26",
     title: "Pintura de casa",
     content:"prepare a lata de tinta adicionando o reagente..",
-    hasEdited: false
+    hasEdited: false,
   }
 ];

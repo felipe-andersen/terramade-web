@@ -10,19 +10,18 @@ import { NotificationIcon } from "../../../iconLibrary/notificationIcon";
 import { MessageIcon } from "../../../iconLibrary/messageIcon";
 import styled from "styled-components";
 import { KeyboardVoiceIcon } from "../../../iconLibrary/keyboardVoiceIcon";
-import { ExecSyncOptions } from "child_process";
 import { NotificationListModal } from "../notificationListModal";
 import { ClearCloseIcon } from "../../../iconLibrary/clear-close/index";
 import { defaultTheme } from "react-select";
 import { UserSettingsModal } from '../userSettingsModal';
 import { ImageSearchIcon } from "../../../iconLibrary/imageSearch";
 //import { useGlobalPropertiesAndStyles } from "../../../globalContext/globalTheme";
-import { useAllPropriertiesHeader } from "./g";
-import { useGlobalPropertiesAndStyles } from "../../../App";
-
+import {  } from "./features";
+import {useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../state";
+import { ActionsHomePropertiesAndStyles } from "../../../state/screens/home/homePropertiesAndStyles/actions";
+import { State } from "react-native-gesture-handler";
 //-----------------------------------------------------------------------------------------------------
-
-
 
 export const userPicture = "http://www.terramade.com/carlosalbuquerque/picture";
 
@@ -36,8 +35,7 @@ interface HeaderComponentProps {
   userPicture?: string;
 };
 
-
-export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:HeaderComponentProps):JSX.Element {
+function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:HeaderComponentProps):JSX.Element {
 
   const hendle = () => {
     window.addEventListener('scroll', () => {
@@ -86,14 +84,48 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
       //React.useContext(Styled.ThemeContext)
     }
   };
+
+  const homeState = useSelector((state: RootState) => state);
+  const homeSetState = useDispatch();
+
+  const form = window.document.getElementById("form");
+  const searchInput = window.document.getElementById("searchInput");
+
+  searchInput?.addEventListener('focus', function(){
+    homeSetState(ActionsHomePropertiesAndStyles(
+      {
+        language: 'enUS',
+        home: {
+          header: { 
+            form: {
+              styles: {
+                border: homeState.homeReducer.home.header.form.styles.border == "none" ? "2px solid blue" : "2px solid blue",
+              },
+              resetInputLabel: "none",
+            },
+            notificationBtnTitle: "Notification",
+            ModalDisplay: homeState.homeReducer.home.header.ModalDisplay == "none"? "flex" : "none",
+          }
+        }
+      }
+    ));
+  });
+
+  searchInput?.addEventListener('focusout', function(){
+    let border = form?.style.border
+    border = "none";
+  });
   
-  const { state, setState } = useGlobalPropertiesAndStyles();
+
+
+
 
   return (
     <HeaderStyledComponent id="HeaderStyledComponent">
       <section className="header--container">
       <Router.Link to="/"className="svgLogo">LOGO</Router.Link>
-      <form autoComplete="off" className="form" id="form" title={"Search using voice command, characters or image."}>
+    
+      <form style={{border: `${homeState.homeReducer.home.header.form.styles.border}`}} autoComplete="off" className="form" id="form" title={"Search using voice command, characters or image."}>
         <section  className="inputGroup" id="inputGroup">
         <i className="searchIcon--container">
             <SearchIcon/>
@@ -124,19 +156,23 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
         </section>
       </form>
       <div className="btns-header">
-        <button onClick={ () => ShowHideModal()/*() =>
-        setState(
-          {
-            language: "ptBR",
-            homeScreen: {
-              headerPropertiesAndStyles: {
-                resetInputLabel: "none",
-                notificationBtnTitle: "Notificação",
-                ModalDisplay: state.homeScreen.headerPropertiesAndStyles.ModalDisplay == "none"? "flex" : "none",
-              }
-            }
+        <button onClick={ () => homeSetState(ActionsHomePropertiesAndStyles(
+      {
+        language: 'enUS',
+        home: {
+          header: { 
+            form: {
+              styles: {
+                border: "none",
+              },
+              resetInputLabel: "none",
+            },
+            notificationBtnTitle: "Notification",
+            ModalDisplay: homeState.homeReducer.home.header.ModalDisplay == "none"? "flex" : "none",
           }
-        )*/} id="NotificationListModalBtn" className="NotificationListModalBtn" title={"Notification - bell"}>
+        }
+      }
+    ))} id="NotificationListModalBtn" className="NotificationListModalBtn" title={"Notification - bell"}>
           <NotificationIcon />
           <div className="info">{"Notification"}</div>
         </button>
@@ -167,37 +203,9 @@ export function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:Head
         <UserSettingsModal/>
       </div>
       </section>
-    
     </HeaderStyledComponent>
-
-  )
-
-
-  
-  function ShowHideModal():void {
-    setState( 
-      {
-        language: "ptBR",
-        homeScreen: {
-          headerPropertiesAndStyles: {
-            resetInputLabel: "none",
-            notificationBtnTitle: "Notificação",
-            ModalDisplay: state.homeScreen.headerPropertiesAndStyles.ModalDisplay == "none"? "flex" : "none",
-          }
-        }
-      }
-    )
-  }
+  );
 };
 
+export default HeaderComponentFn;
 
-const keywordBackgroundColor = {
-  colorName:"#9c8f00",
-
-}
-
-
-
-
-
-//const hashtags = JSON.parse();

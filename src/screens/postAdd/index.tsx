@@ -1,6 +1,6 @@
 import React from "react";
 // br.terramadeproject.com/create-post
-import { HeaderComponentFn } from '../../screens/home/header/index';
+import  HeaderComponentFn  from '../../screens/home/header/index';
 import { Main } from "./main";
 import { StyledPostADDComponent } from "./styles";
 

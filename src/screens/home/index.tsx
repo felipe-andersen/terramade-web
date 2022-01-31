@@ -1,36 +1,42 @@
 import React, { lazy } from 'react';
-import { HeaderComponentFn } from './header';
+import  HeaderComponentFn  from './header';
 import { MainComponent } from "./main";
 // import loadable from '@loadable/component' => SSR
-// www.terramadeproject.com/{ lang=local_ptBR }
+// www.wemade.com/{ lang=local_ptBR }
 import * as Router from "react-router-dom";
 import { UserSettingsModal } from "./userSettingsModal";
-import { StyledHomeComponent } from "./styles"
-import { AllPropriertiesProvider } from '../../globalContext/globalTheme/g';
+import { StyledHomeComponent } from "./styles";
+import {connect} from "react-redux";
+import {Provider}  from "react-redux";
+import {} from "react-scroll";
 
-export const HomeTemplate: React.FC = (): JSX.Element => {
+interface IHomeTemplate {
+
+};
+
+const HomeTemplate: React.FC = (): JSX.Element => {
+  interface Props extends IHomeTemplate {
+ 
+  };
+
   return  (
     <StyledHomeComponent>
-
         <header>
-            <HeaderComponentFn/>
+          <HeaderComponentFn/>
         </header>
         <div className="main-aside">
           <main>
-            <MainComponent/>
+            <MainComponent hideShowChildElement='flex'/>
           </main>
-          <AllPropriertiesProvider>
           <aside className="aside" >
             <div className="modalGroup" id="modalGroup" >
               <UserSettingsModal/>
             </div>
           </aside>
-          </AllPropriertiesProvider>
         </div>
-
     </StyledHomeComponent>
   )
-}
+  console.log("Welcome Wemade! \n ")
+};
 
-
-
+export default HomeTemplate;
