@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
-import { PublicRoutes } from "./routes/public";
-import { AuthenticationRoutes } from "./routes/authentication";
+
+import { PublicRoutes } from "./TemplateRoutes/public";
+import { AuthenticationRoutes } from "./TemplateRoutes/authentication";
 import { GlobalStyle } from "./globalStyles";
 import * as Styled from "styled-components";
 import { usePersistedState } from "./hooks/usePersitedState";
 
-import { AllRoutes } from './routes';
+import { AllRoutes } from './TemplateRoutes';
 import { Provider } from 'react-redux';
 
 import { store } from './state';

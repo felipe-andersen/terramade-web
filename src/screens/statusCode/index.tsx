@@ -1,6 +1,6 @@
 
 import React from "react";
-import {} from "../../iconLibrary/chevronIcon";
+import {} from "../../libs/icons/chevronIcon";
 import { ERR_404Template } from "./ERR_404--template";
 import { StatusCodeStyledComponent } from "./styles";
 

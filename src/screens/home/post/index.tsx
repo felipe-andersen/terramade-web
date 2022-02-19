@@ -4,11 +4,11 @@ import { StyledPostComponent } from "./styles"
 
 // import { userName, profileImageID, followersNumber } from "./languageOptions";
 
-import { FollowersUserNameProfileImageMolecule } from "../../../componentLibrary/username-pic-follow--molecule";
-import { PhotoCollectionsIcon } from '../../../iconLibrary/photoCollections';
-import { MoreIcon } from '../../../iconLibrary/moreIcon';
-import { ShareIcon } from '../../../iconLibrary/share';
-import { BaloonIcon } from '../../../iconLibrary/baloon';
+import { FollowersUserNameProfileImageMolecule } from "../../../libs/components/username-pic-follow--molecule";
+import { PhotoCollectionsIcon } from '../../../libs/icons/photoCollections';
+import { MoreIcon } from '../../../libs/icons/moreIcon';
+import { ShareIcon } from '../../../libs/icons/share';
+import { BaloonIcon } from '../../../libs/icons/baloon';
 
 // Adapter
 let Adapter = {};
@@ -40,7 +40,7 @@ interface PostState {
 };
 */
 
-const FollowersUserNameProfileImageMolecul = import("../../../componentLibrary/molecules").then( molecule => molecule.FollowersUserNameProfileImageMolecule);
+const FollowersUserNameProfileImageMolecul = import("../../../libs/components/molecules").then( molecule => molecule.FollowersUserNameProfileImageMolecule);
 
 export class PostComponent extends React.Component<PostProps> {
   state = {
@@ -127,7 +127,6 @@ export class PostComponent extends React.Component<PostProps> {
               profileImageID="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqaT2Oiya_y5o9fXqGoHEA1QPY13P22dTiEQ&usqp=CAU"
               followersAcount={65}
             />
-            
             
             <div className=" reactionBtns">
               <button className="reaction" onClick={ () => {} }><svg></svg></button>

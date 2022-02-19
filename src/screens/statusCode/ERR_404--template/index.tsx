@@ -1,6 +1,6 @@
 
 import React from "react";
-import {} from "../../../iconLibrary/chevronIcon";
+import {} from "../../../libs/icons/chevronIcon";
 import { StyledStatusCode404Component } from "./styles";
 
 

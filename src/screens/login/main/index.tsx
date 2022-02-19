@@ -1,14 +1,14 @@
 import * as React from "react";
 import * as Router from "react-router-dom";
-import { VisibilityEyeIcon } from "../../../iconLibrary/visibity-eye";
-import { InfoIcon } from "../../../iconLibrary/info";
+import { VisibilityEyeIcon } from "../../../libs/icons/visibity-eye";
+import { InfoIcon } from "../../../libs/icons/info";
 import { KitTranslate } from "../languageConfig";
 import { StyledMainComponent } from "./styles";
-import { VisibilityEyeOffIcon } from "../../../iconLibrary/visibilityOff-eye";
-import { ClearCloseIcon } from "../../../iconLibrary/clear-close";
-import { CheckIcon } from "../../../iconLibrary/check";
-import { GoogleIcon } from "../../../iconLibrary/Google";
-import { EastIcon } from "../../../iconLibrary/east";
+import { VisibilityEyeOffIcon } from "../../../libs/icons/visibilityOff-eye";
+import { ClearCloseIcon } from "../../../libs/icons/clear-close";
+import { CheckIcon } from "../../../libs/icons/check";
+import { GoogleIcon } from "../../../libs/icons/Google";
+import { EastIcon } from "../../../libs/icons/east";
 
 let adapter:SignScreenProps = {
   emailPlaceholder: KitTranslate.emailPlaceholder.help_ptBR,

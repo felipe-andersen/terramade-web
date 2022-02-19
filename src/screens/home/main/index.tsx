@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { UserList } from "../../../storagesInterfaces/users";
+import { UserList } from "../../../assets/dataSet/users";
 import { usePostList  } from '../../../globalContext/post';
 import { PostComponent, PostProps } from "../post";
 import styled from "styled-components";
 import { MainComponentStyled } from "./styles";
 import * as Router from "react-router-dom";
-import { ImageSearchIcon } from '../../../iconLibrary/imageSearch';
+import { ImageSearchIcon } from '../../../libs/icons/imageSearch';
 import { hashtagsList } from "./h";
 import { HighlightedShortsProfessionals } from '../highlighted-shorts-professionals-modal';
 

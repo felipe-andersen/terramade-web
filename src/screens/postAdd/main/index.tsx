@@ -3,8 +3,8 @@ import "./styles.css";
 import { KitTranslate } from "./languageConfig";
 import { PostCreate } from "../../../globalContext/post";
 import { usePostList } from "../../../globalContext/post";
-import { FollowersUserNameProfileImageMolecule  } from "../../../componentLibrary/username-pic-follow--molecule";
-import { ChevronIcon } from "../../../iconLibrary/chevronIcon";
+import { FollowersUserNameProfileImageMolecule  } from "../../../libs/components/username-pic-follow--molecule";
+import { ChevronIcon } from "../../../libs/icons/chevronIcon";
 import * as Router from "react-router-dom";
 
 

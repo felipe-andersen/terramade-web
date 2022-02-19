@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledUserSettingsModal, StyledModalOptions } from "./styles"; 
-import { ChevronIcon } from "../../../iconLibrary/chevronIcon";
+import { ChevronIcon } from "../../../libs/icons/chevronIcon";
 import * as Router from "react-router-dom";
 
 interface UserSettingsModalProps {

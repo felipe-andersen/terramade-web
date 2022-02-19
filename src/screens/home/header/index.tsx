@@ -4,22 +4,22 @@ import { placeholderSelectedLanguage } from "./idiomOptions";
 import * as Router from "react-router-dom";
 import * as Styled from "styled-components"
 import { HeaderStyledComponent } from "./styles";
-import { SearchIcon } from "../../../iconLibrary/searchIcon";
-import { ChevronIcon } from "../../../iconLibrary/chevronIcon";
-import { NotificationIcon } from "../../../iconLibrary/notificationIcon";
-import { MessageIcon } from "../../../iconLibrary/messageIcon";
+import { SearchIcon } from "../../../libs/icons/searchIcon";
+import { ChevronIcon } from "../../../libs/icons/chevronIcon";
+import { NotificationIcon } from "../../../libs/icons/notificationIcon";
+import { MessageIcon } from "../../../libs/icons/messageIcon";
 import styled from "styled-components";
-import { KeyboardVoiceIcon } from "../../../iconLibrary/keyboardVoiceIcon";
+import { KeyboardVoiceIcon } from "../../../libs/icons/keyboardVoiceIcon";
 import { NotificationListModal } from "../notificationListModal";
-import { ClearCloseIcon } from "../../../iconLibrary/clear-close/index";
+import { ClearCloseIcon } from "../../../libs/icons/clear-close/index";
 import { defaultTheme } from "react-select";
 import { UserSettingsModal } from '../userSettingsModal';
-import { ImageSearchIcon } from "../../../iconLibrary/imageSearch";
+import { ImageSearchIcon } from "../../../libs/icons/imageSearch";
 //import { useGlobalPropertiesAndStyles } from "../../../globalContext/globalTheme";
 import {  } from "./features";
 import {useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../state";
-import { ActionsHomePropertiesAndStyles } from "../../../state/screens/home/homePropertiesAndStyles/actions";
+import { ActionsHomePropertiesAndStyles } from "../../../state/templates/home/controllers/actions";
 import { State } from "react-native-gesture-handler";
 //-----------------------------------------------------------------------------------------------------
 
@@ -116,15 +116,11 @@ function HeaderComponentFn({placeholderSelectedLanguage,userPicture}:HeaderCompo
     border = "none";
   });
   
-
-
-
-
   return (
     <HeaderStyledComponent id="HeaderStyledComponent">
       <section className="header--container">
       <Router.Link to="/"className="svgLogo">LOGO</Router.Link>
-    
+      {}
       <form style={{border: `${homeState.homeReducer.home.header.form.styles.border}`}} autoComplete="off" className="form" id="form" title={"Search using voice command, characters or image."}>
         <section  className="inputGroup" id="inputGroup">
         <i className="searchIcon--container">

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { combineReducers, createStore } from "redux";
-import { homePropertiesAndStylesReducer } from './screens/home/homePropertiesAndStyles/reducer';
-import { IGlobalState } from './interfaces';
+import { homePropertiesAndStylesReducer } from './templates/home/controllers/reducer';
+import { IGlobalState } from './schemes';
 
 
 export const Reducers = combineReducers(

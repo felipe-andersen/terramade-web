@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { FollowersUserNameProfileImageMolecule } from "../../../componentLibrary/molecules";
+import { FollowersUserNameProfileImageMolecule } from "../../../libs/components/molecules";
 
 import { PostProps } from "../../home/post";
 import * as Router from "react-router-dom";
