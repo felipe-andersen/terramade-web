@@ -3,16 +3,16 @@
 
 ### Framework
 
-* <a href="" title="Site oficial"> Nodejs. </a> 
+* <a href="" title="Site oficial do Nodejs"> Nodejs. </a> 
 
 ### Biblioteca UI
 
-*  <a href=""> React </a>
+*  <a href=""  title="Site oficial do React"> React </a>
 
 ### Gerenciamento de estado
 
-*  <a href=""> Redux </a>
+*  <a href=""  title="Site oficial Redux"> Redux </a>
 
 ### Linguagem de consulta de API
 
-*  <a href=""> Graphql </a>
+*  <a href=""  title="Site oficial do Graphql"> Graphql </a>
