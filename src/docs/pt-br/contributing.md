@@ -1,3 +1,7 @@
+<p align="right">Portuguese (Brazil) | <a href="">English</a></p>
+
+<!--<p>docs > pt-br > contribuindo</p>-->
+
 # Contribuindo com o projeto
 
 ## Conhecendo o app
