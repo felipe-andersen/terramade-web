@@ -16,6 +16,8 @@
 
 ➜   <a href="https://github.com/felipe-andersen/terramade-react#readme"> &nbsp; &nbsp; Leia sobre a licensa</a>
 
+➜   <a href="https://github.com/felipe-andersen/terramade-react#readme"> &nbsp; &nbsp; Começando</a>
+
 ## Tópicos
 
 * <a href="https://github.com/felipe-andersen/terramade-react#readme"> _Readme_ </a>
