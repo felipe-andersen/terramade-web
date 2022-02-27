@@ -45,4 +45,4 @@
 <br/>
 <br/>
 
-<p>Direitos Reservados. Por <a href="">Felipe Andersen.</a></p>
+<p>Feito com  ❤️ Por <a href="">Felipe Andersen.</a> Direitos Reservados</p>
