@@ -1,4 +1,4 @@
-<p align="right">Portuguese (Brazil) <a></p>
+<p align="right">Portuguese (Brazil) | <a href="">English</a></p>
 <p>Current version: 1.1.1</p>
 
 
@@ -27,3 +27,22 @@
 <p>Contrate profissionais para seu projeto e colabore com outros</p><img align="left" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPc29eNA3ynJ_tfpLNf8Z0pQdSAXaSql3o-gY9j35vbCbxPZ6trmsk6mRVjYGKeX-7oo0&usqp=CAU"/>
 
 <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+<p align="center"><a href="">Website</a> &#160; &#160; &#183; &#160; &#160; <a href="">Documentação</a></p>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<p>Direitos Reservados. Por <a href="">Felipe Andersen.</a></p>
