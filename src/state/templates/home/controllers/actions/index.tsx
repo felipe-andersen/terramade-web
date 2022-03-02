@@ -1,6 +1,6 @@
 import * as React from "react";
 import {Dispatch} from "redux";
-import { IHomePropertiesAndStyles } from "../..";
+import { ProtocolControllers } from "../..";
 
 export enum ActionsCatalog {
   SET_HOME_TEMPLATE = "SET_HOME_TEMPLATE",
@@ -9,10 +9,10 @@ export enum ActionsCatalog {
 
 export interface IActionsHomePropertiesAndStyles {
   type: ActionsCatalog.SET_HOME_TEMPLATE,
-  payload: IHomePropertiesAndStyles
+  payload: ProtocolControllers
 };
 
-export const ActionsHomePropertiesAndStyles = (homePropertiesAndStyles:IHomePropertiesAndStyles ) => {
+export const ActionsHomePropertiesAndStyles = (homePropertiesAndStyles:ProtocolControllers ) => {
   return{
     type: ActionsCatalog.SET_HOME_TEMPLATE,
     payload: homePropertiesAndStyles

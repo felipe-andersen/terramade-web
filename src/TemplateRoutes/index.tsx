@@ -10,6 +10,7 @@ import { LoginComponent } from "../screens/login";
 import { SplashComponent } from "../screens/splash/index";
 
 export function AllRoutes() {
+
   return (
 
     <FeaturedProfessionalsProvider>

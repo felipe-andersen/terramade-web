@@ -1,18 +1,38 @@
 import * as React from "react";
-import { IHomePropertiesAndStyles } from "../templates/home";
+import { ProtocolControllers } from "../templates/home";
 
 export interface IGlobalState {
-  screens: IScreensGlobalState
+  screens: ProtocolStateTransferScreens
 };
 
-export interface IScreensGlobalState {
+export interface ProtocolStateTransferScreens {
   home:{
     dataFeeder: {};
-    homePropertiesAndStyles:IHomePropertiesAndStyles
+    controllers:ProtocolControllers
     };
-  logIn:{
-    dataFeeder: {};
-    homePropertiesAndStyles:IHomePropertiesAndStyles
-  }
 };
+
+const State: IGlobalState = {
+  screens: {
+    home: {
+      dataFeeder: {},
+      controllers: {
+        language: "ptBR",
+        home: {
+          header: { 
+            form: {
+              styles: {
+                border: "none",
+              },
+              resetInputLabel: "none",
+            },
+            notificationBtnTitle: "Notification",
+            ModalDisplay: "none",
+          }
+        }
+      }
+    }
+  }
+}
+  
   

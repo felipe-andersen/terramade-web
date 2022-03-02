@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export interface IHomePropertiesAndStyles {
+export interface ProtocolControllers {
   language: string,
   home: {
     header: { 

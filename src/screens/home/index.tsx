@@ -6,18 +6,43 @@ import { MainComponent } from "./main";
 import * as Router from "react-router-dom";
 import { UserSettingsModal } from "./userSettingsModal";
 import { StyledHomeComponent } from "./styles";
-import {connect} from "react-redux";
+import {connect, useSelector} from "react-redux";
 import {Provider}  from "react-redux";
 import {} from "react-scroll";
+import { IGlobalState } from '../../state/schemes';
+import { RootState } from '../../state';
 
 interface IHomeTemplate {
 
 };
 
 const HomeTemplate: React.FC = (): JSX.Element => {
-  interface Props extends IHomeTemplate {
+
+  const state = useSelector((state: RootState) => state)
  
-  };
+  const State: IGlobalState = {
+  screens: {
+    home: {
+      dataFeeder: {},
+      controllers: {
+        language: state.homeReducer.language,
+        home: {
+          header: { 
+            form: {
+              styles: {
+                border: state.homeReducer.home.header.form.styles.border,
+              },
+              resetInputLabel: state.homeReducer.home.header.form.resetInputLabel,
+            },
+            notificationBtnTitle: state.homeReducer.home.header.notificationBtnTitle,
+            ModalDisplay: state.homeReducer.home.header.ModalDisplay,
+          }
+        }
+      }
+    }
+  }
+ };
+  
 
   return  (
     <StyledHomeComponent>

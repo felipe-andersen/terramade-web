@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { IHomePropertiesAndStyles } from '../..';
+import { ProtocolControllers } from '../..';
 import { ActionsCatalog } from '../actions';
 import { IActionsHomePropertiesAndStyles } from '../actions';
 
-const INITIAL_STATE:IHomePropertiesAndStyles = {
+const INITIAL_STATE:ProtocolControllers = {
     language: "enUS",
     home: {
       header: { 

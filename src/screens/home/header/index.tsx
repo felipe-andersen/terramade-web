@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import { placeholderSelectedLanguage } from "./idiomOptions";
 import * as Router from "react-router-dom";
 import * as Styled from "styled-components"
