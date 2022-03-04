@@ -4,7 +4,7 @@
 <!--<p align="center"><img src="https://img.shields.io/github/languages/code-size/felipe-pazam/Projeto-Terramade?color=yellow&logo=terramade&style=flat-square">
 <img src="https://img.shields.io/github/license/felipe-pazam/Projeto-Terramade?style=flat-square"></p>-->
 
-<p align="right">Portuguese, Brazil | <a href="https://github.com/felipe-pazam/Projeto-Terramade/edit/main/Readme.md">English</a></p>
+<p align="right">Portuguese, Brazil | <a href="https://github.com/felipe-andersen/felipe-andersen/blob/main/404.md">English</a></p>
 
 # Terramade - Web
 
