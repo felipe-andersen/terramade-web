@@ -3,7 +3,7 @@
 
 ### Framework
 
-* <a href="" title="Site oficial do Nodejs"> Nodejs. </a> Framework javascript baseado no Browser Chrome, fornece API's prontas para o código nativo. Contém recursos úteis para facilitar o desenvolvimento, como por exemplo desacoplar trechos de códigos.
+* <a href="" title="Site oficial do Nodejs"> Nodejs. </a> _Framework_ Javascript baseado no Browser Chrome, fornece _API's_ prontas para o código nativo. Contém recursos úteis para facilitar o desenvolvimento, como por exemplo desacoplar trechos de códigos.
 
 ### Construtor UI
 
@@ -15,4 +15,4 @@
 
 ### Linguagem de consulta de API
 
-*  <a href=""  title="Site oficial do Graphql"> Graphql. </a> Linguagem de consulta query.
+*  <a href=""  title="Site oficial do Graphql"> Graphql. </a> Linguagem de consulta _query_.
