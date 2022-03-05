@@ -6,19 +6,19 @@
 
 ## Conhecendo o app
 
-➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Leia sobre a proposta da aplicação</a>
+➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Proposta da aplicação</a>
 
-➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Consulte o protótipo no Figma</a>
+➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Protótipo UI</a>
 
-➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Leia sobre a regra de negócio</a>
+➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Regra de negócio</a>
 
-➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Leia sobre versionamento no repositório </a>
+➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Versionamento no repositório </a>
 
-➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Leia sobre padrões de projeto </a>
+➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Design Pattern </a>
 
-➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Leia o código de conduta</a>
+➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Código de conduta</a>
 
-➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Leia sobre a licensa</a>
+➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Licensa</a>
 
 ➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Começando</a>
 
