@@ -7,7 +7,7 @@
 
 <br/>
 
-<p align="center"><a href="">Website</a> &#160; &#160; &#183; &#160; &#160; <a href="">Documentação</a></p>
+<p align="center"><a href="https://github.com/felipe-andersen/felipe-andersen/blob/main/404.md">Install</a> &#160; &#160; &#183; &#160; &#160;<a href="http://terramade1.herokuapp.com/">Website</a> &#160; &#160; &#183; &#160; &#160; <a href="https://github.com/felipe-andersen/terramade-web">Documentação</a></p>
 
 <br/>
 
@@ -38,11 +38,13 @@
 <br/>
 <br/>
 
-<p align="center"><a href="">Website</a> &#160; &#160; &#183; &#160; &#160; <a href="">Documentação</a></p>
+<p align="center"><a href="https://github.com/felipe-andersen/felipe-andersen/blob/main/404.md">Install</a> &#160; &#160; &#183; &#160; &#160;<a href="http://terramade1.herokuapp.com/">Website</a> &#160; &#160; &#183; &#160; &#160; <a href="https://github.com/felipe-andersen/terramade-web">Documentação</a></p>
 
 <br/>
 <br/>
 <br/>
 <br/>
 
-<p>Feito com  ❤️ Por <a href="">Felipe Andersen.</a> Direitos Reservados</p>
+<p>Feito com  ❤️ por <a href="https://github.com/felipe-andersen">Felipe Andersen.</a> 
+ 
+Direitos Reservados - <a href="">LICENÇA</a></p>
