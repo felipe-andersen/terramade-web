@@ -10,7 +10,7 @@
 
 ## Sobre
 
-Habitações irregulares causam bilhões em prejuízos para contas públicas, geram problemas urbanísticos e sociais gravíssimos. ( <a href="https://github.com/felipe-andersen/terramade-p/blob/main/propostas-de-solucao.md">Veja as propostas de solução<a> )
+Habitações irregulares causam bilhões em prejuízos para contas públicas, geram problemas urbanísticos e sociais gravíssimos. ( <a href="https://github.com/felipe-andersen/terramade-web/blob/master/src/docs/pt-br/presentation.md">Apresentação<a> )
 
 <!--
 ## Principais formas de monetização
@@ -24,6 +24,3 @@ Fornecer ferramentas para o usuário planejar a compra de imóveis, administrar 
   * <a href="https://github.com/felipe-andersen/terramade-web/blob/master/src/docs/pt-br/contributing.md"> Contribuindo com o projeto </a>
   
    * <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> Documentação </a>
-
-  
-  Feito com :heart:  By Felipe Andersen
