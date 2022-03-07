@@ -18,7 +18,7 @@ SUMMARY
 
 ## Requisitos
 
-Para baixar o repósitório é necessário ter o Nodejs (na versão 14 ou mais recente) instalado no sistema operacional. Baixe a cli do Git para baixar e gerenciar repositórios localmente. 
+Para baixar o repósitório é necessário ter o Nodejs  (na versão 14 ou mais recente) instalado no sistema operacional. Baixe a <i>cli</i> do Git para baixar e gerenciar repositórios localmente. 
 
 * Nodejs e NPM
 
