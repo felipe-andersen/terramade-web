@@ -9,7 +9,7 @@
 
 <a href="" title="Site oficial do Apoloclient"> Apoloclient. </a>
 
-### Funções de medlleware
+### Funções de midlleware
 
 
 ### Construtor UI
@@ -31,10 +31,13 @@
 
 <a href=""  title="Site oficial do Styled-component"> Styled-component. </a> 
 
+*  jest-styled-components
+
 
 ### Linguagem de consulta de API
 
 <a href=""  title="Site oficial do Graphql"> Graphql. </a> Linguagem de consulta _query_.
+
 
 ### Testes
 
