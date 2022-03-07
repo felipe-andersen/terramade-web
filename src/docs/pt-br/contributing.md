@@ -18,7 +18,7 @@
 
 ➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Código de conduta</a>
 
-➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Licensa</a>
+➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Licença</a>
 
 ➜   <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> &nbsp; &nbsp; Começando</a>
 
