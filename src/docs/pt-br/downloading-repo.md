@@ -1,3 +1,6 @@
+<p align="right">Portuguese, Brazil | <a href="https://github.com/felipe-andersen/felipe-andersen/blob/main/404.md">English</a></p>
+
+Versão: 
 
 # Baixando o repositório
 
