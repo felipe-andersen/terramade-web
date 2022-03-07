@@ -31,6 +31,8 @@ $ git clone [repo-URL]
 ```
 ## Baixando as dependências 
 
+Entre na pasta do repositório e baixe as dependências.
+
 ```
 $ npm install 
 ```
