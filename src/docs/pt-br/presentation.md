@@ -7,7 +7,7 @@
 
 <br/>
 
-<p align="center"><a href="https://github.com/felipe-andersen/felipe-andersen/blob/main/404.md">Baixar</a> &#160; &#160; &#183; &#160; &#160;<a href="http://terramade1.herokuapp.com/">Website</a> &#160; &#160; &#183; &#160; &#160; <a href="https://github.com/felipe-andersen/terramade-web">Documentação</a></p>
+<p align="center"><a href="https://github.com/felipe-andersen/felipe-andersen/blob/main/404.md">Baixar</a> &#183; <a href="http://terramade1.herokuapp.com/">Website</a> &#183; <a href="https://github.com/felipe-andersen/terramade-web">Documentação</a></p>
 
 <br/>
 
@@ -38,7 +38,7 @@
 <br/>
 <br/>
 
-<p align="center"><a href="https://github.com/felipe-andersen/felipe-andersen/blob/main/404.md">Baixar</a> &#160; &#160; &#183; &#160; &#160;<a href="http://terramade1.herokuapp.com/">Website</a> &#160; &#160; &#183; &#160; &#160; <a href="https://github.com/felipe-andersen/terramade-web">Documentação</a></p>
+<p align="center"><a href="https://github.com/felipe-andersen/felipe-andersen/blob/main/404.md">Baixar</a> &#183; <a href="http://terramade1.herokuapp.com/">Website</a> &#183; <a href="https://github.com/felipe-andersen/terramade-web">Documentação</a></p>
 
 <br/>
 <br/>
