@@ -4,7 +4,8 @@
 <summary>
 SUMMARY
 </summary>
-  
+</details>
+
 ### Tópicos
 
 * Instalação
