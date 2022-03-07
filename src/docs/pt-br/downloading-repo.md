@@ -44,6 +44,8 @@ $ npm install
 $ npm start
 ```
 
+Possíveis erros: Incompatibilidade de versões de dependências.
+
 
 ### Tópicos
 
