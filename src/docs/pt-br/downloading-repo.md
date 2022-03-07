@@ -49,7 +49,7 @@ Possíveis erros: Incompatibilidade de versões de dependências.
 
 ### Tópicos
 
-* [Instalação](https://github.com/felipe-andersen/terramade-web/blob/master/src/docs/pt-br/introduction.md)
+* [Introdução](https://github.com/felipe-andersen/terramade-web/blob/master/src/docs/pt-br/introduction.md)
 
 * Instalação
 
