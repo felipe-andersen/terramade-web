@@ -23,4 +23,4 @@ Fornecer ferramentas para o usuário planejar a compra de imóveis, administrar 
   
   * <a href="https://github.com/felipe-andersen/terramade-web/blob/master/src/docs/pt-br/contributing.md"> Contribuindo com o projeto </a>
   
-   * <a href="https://github.com/felipe-andersen/terramade-web/tree/master/src/docs/pt-br"> Documentação </a>
+   * <a href="https://github.com/felipe-andersen/terramade-web/blob/master/src/docs/pt-br/documentation.md"> Documentação </a>
