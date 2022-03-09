@@ -72,7 +72,7 @@ Possíveis erros: Incompatibilidade de versões de dependências.
 </br>
 </br>
 
-| previus                          |                               next     |
+| previous                         |                               next     |
 |----------------------------------|----------------------------------------|
 | <a href=""> Conhecendo o app</a> | <a href=""> Rodando os testes </a></p> | 
 
