@@ -71,4 +71,8 @@ Possíveis erros: Incompatibilidade de versões de dependências.
 </br>
 </br>
 </br>
-<p align="center"><a href=""> Conhecendo o app</a> · <a href="">Rodando os testes </a></p>
+
+| previus                          |                               next     |
+|----------------------------------|----------------------------------------|
+| <a href=""> Conhecendo o app</a> | <a href=""> Rodando os testes </a></p> | 
+
