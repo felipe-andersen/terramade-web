@@ -14,6 +14,7 @@ Versão:
 
 ### Funções de midlleware
 
+### Cache Redis
 
 ### Construtor UI
 
