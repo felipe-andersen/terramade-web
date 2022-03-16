@@ -21,6 +21,7 @@ Versão:
 
 *  react-router-dom 
 
+<!--
 ### Gerenciamento de estado
 
 <a href=""  title="Site oficial Redux"> Redux. </a> Uma poderosa biblioteca minimalista para gerenciamento global do estado da aplicação.
@@ -29,6 +30,8 @@ Versão:
 * reselect
 * immer
 * rxjs
+
+-->
 
 ### CSS-in-JS
 
