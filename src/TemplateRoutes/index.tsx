@@ -1,33 +1,30 @@
 import React from 'react';
-import  HomeTemplate from "../screens/home";
-import { PostAdd } from "../screens/postAdd/index";
-import { PostView } from "../screens/postView/index";
+import  {HomeTemplate} from "../templates/home";
+import { PostAdd } from "../templates/postAdd/index";
+import { PostView } from "../templates/postView/index";
 import { Routes, Route} from "react-router-dom";
-import {  PostListProvider } from "../globalContext/post";
-import { FeaturedProfessionalsProvider } from "../globalContext/featuredProfessionals";
-import { StatusCodeTamplate } from "../screens/statusCode";
-import { LoginComponent } from "../screens/login";
-import { SplashComponent } from "../screens/splash/index";
+import { FeaturedProfessionalsProvider } from "../context/featuredProfessionals";
+import { StatusCodeTamplate } from "../templates/statusCode";
+import { LoginComponent } from "../templates/login";
+import { SplashComponent } from "../templates/splash/index";
+
 
 export function AllRoutes() {
-
+ 
   return (
 
-    <FeaturedProfessionalsProvider>
-
-      <PostListProvider>
-
         <Routes>
-
+          
           <Route path="" element={ <HomeTemplate/> }/>
-
+  
+        {/* 
           <Route path="/" element={ <HomeTemplate/> }/>
 
           <Route path="/feed" element={ <HomeTemplate/> }/>
             
           <Route path="/logIn" element={ <LoginComponent/> }/>
 
-          <Route path="/nome-do-post" element={ <PostView/> }/>
+          <Route path="/somePost" element={ <PostView/> }/>
 
           <Route path="/postedit" element={ <PostAdd/> }/>
 
@@ -36,12 +33,7 @@ export function AllRoutes() {
           <Route path="/status_code" element={ <StatusCodeTamplate/> }/>
 
           <Route path="/loading" element={ <SplashComponent /> }/>
-
+        */}
         </Routes>
-
-      </PostListProvider>
-
-    </FeaturedProfessionalsProvider>
-
   );
 }

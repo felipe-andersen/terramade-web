@@ -1,6 +1,6 @@
 import * as React from "react";
 import Express, {Request} from "express";
-import { PostProps } from "../../../../assets/dataSet/posts";
+import { PostProtocol } from "../../../../assets/dataSet/posts";
 
 
 export const app = Express()

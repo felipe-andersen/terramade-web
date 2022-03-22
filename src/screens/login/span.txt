@@ -1,9 +1,0 @@
-validar o usuário depois do envento focus
-
-mensagem de erro com requisitos ou alertando erros ();
-
-senha fraca, senha repetida, senha 123 invalida, requisitos de senha, senha simples ou dificil
-
-outras formas de autenticação
-
-tempo de expiração

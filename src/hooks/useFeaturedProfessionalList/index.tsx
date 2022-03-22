@@ -1,5 +1,5 @@
-import * as React from "react";
-import { FeaturedProfessionalsContext } from "../../globalContext/featuredProfessionals";
+import * as React from "react";/*
+import { FeaturedProfessionalsContext } from "../../context/featuredProfessionals";
 
 
 
@@ -11,4 +11,4 @@ const useFeaturedProfessionalList = () => {
 }
 
 export default useFeaturedProfessionalList();
-
+*/

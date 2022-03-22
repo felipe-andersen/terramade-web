@@ -1,7 +1,8 @@
 import * as React from "react";
 
-export interface PostProps {
+export interface PostProtocol {
   key: string;
+  profileImageID?: string;
   postImageAlt: string;
   postImageURL:string;
   reactionsAcount: string; // { reactions1: number,  reactions2: number,  reactions3: number,  reactions4: number,  reactions5: number, }
@@ -22,9 +23,13 @@ export interface PostProps {
   saved?: number;
   impressions?:number;
   statistic?: {}
+  userName?: string
+  followerCounter?: number
+  state?:string
+  city?:string
 };
 
-export const posts:PostProps[] = [
+export const posts:PostProtocol[] = [
   {
     key: "546385g5gf6gf54gf4565465746",
     postImageAlt: "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/imagem-em-lente-convexa.jpg",

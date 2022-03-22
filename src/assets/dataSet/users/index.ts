@@ -1,5 +1,5 @@
 import * as React from "react";
-import { UserProps } from "../../../globalContext/user";
+import { UserProps } from "../../../context/user";
 
 export const UserList:UserProps[] = [
   {
@@ -8,7 +8,7 @@ export const UserList:UserProps[] = [
   followersAcount: 65,
   userName: "Jonh",
   profileImageID: "nfgdkfgd",
-  language: "en-USA",
+  languagePreference: "en-USA",
   state: "Whashignton",
   city: "DC"
   },
@@ -18,7 +18,7 @@ export const UserList:UserProps[] = [
     followersAcount: 255,
     userName: "Brayan",
     profileImageID: "nfgdkfgd",
-    language: "en-USA",
+    languagePreference: "en-USA",
     state: "NY",
     city: "DC"
   },
@@ -28,7 +28,7 @@ export const UserList:UserProps[] = [
   followersAcount: 14,
   userName: "Richard",
   profileImageID: "nfgdkfgd",
-  language: "en-USA",
+  languagePreference: "en-USA",
   state: "JPN",
   city: "DC"
   },

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { language } from "../../../globalContext/language";
+import { language } from "../../../context/language";
 
 let translate = "language"; 
 
