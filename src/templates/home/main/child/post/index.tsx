@@ -9,15 +9,20 @@ import { BaloonIcon } from '../../../../../libs/icons/baloon';
 import { JsxFlags } from 'typescript';
 import { PostProtocol } from '../../../../../assets/dataSet/posts';
 
-interface PostComponentProtocol {
-    post: PostProtocol
-    childComponent?: Object
-}
 
 
-export const PostComponent = ({post}:PostComponentProtocol):JSX.Element => {
+export interface PostComponentProtocol {
+  data: PostComponentPropsProtocol
+};
+
+interface PostComponentPropsProtocol {
+  post: PostProtocol
+
+};
+
+export const PostComponent = (PostComponentProps:PostComponentProtocol):JSX.Element => {
   
-  const [ThisPost, setThisPost] = React.useState<PostProtocol>(post); 
+  const [post, setPost] = React.useState(PostComponentProps.data.post); 
 
   return (
         <StyledPostComponent>

@@ -47,7 +47,7 @@ export class ModalOptions extends React.Component {
         <button className="backBtn">
           <div className="icon-title--Contanier">
             <div className="icon--Contanier"></div>
-            {" About the account"}
+            {"About the account"}
           </div>
           <div className="icon--Contanier backgroudColor">
             <ChevronIcon/>

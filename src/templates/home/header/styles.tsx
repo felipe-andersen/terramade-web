@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import styled from "styled-components";
 
 
@@ -15,7 +15,7 @@ export const HeaderStyledComponent = styled.div`
     position: relative;
     position: fixed;
     z-index: 2000;
-    box-shadow: 0px 1px 4px rgba(180,180,180, 0.5)
+    box-shadow: 0px 1px 4px rgba(180,180,180, 0.5);
     box-sizing: border-box;
     /*.headerComponent {
     width: 100%;
@@ -30,14 +30,13 @@ export const HeaderStyledComponent = styled.div`
     z-index: 99;*/
     border-bottom: 1px solid rgb(236, 236, 236);
     background-color: white;
+
     .header--container {
       width: 100%;
       height: 70px;
       display: flex;
       justify-content: space-around;
-      
       border: 0px solid #eeeeee;
-
       position: relative;
       box-sizing: border-box;
     }
@@ -233,7 +232,7 @@ export const HeaderStyledComponent = styled.div`
       height: 100%;
       font-size: 16px;
       outline: none;
-      //border: ${props => props.theme.screens.home.controllers});
+      //border: nonee;
       color: black;
       background-color: transparent;
       padding: 0 20px 0 50px;
@@ -301,7 +300,7 @@ export const HeaderStyledComponent = styled.div`
     height: 40px;
     margin: 0 0 0 -40px;
     background-color: transparent;
-    display: "none"//${props => props.theme.screens.home.controllers.home.header.form.resetInputLabel};
+    display: "none";
     justify-content: center;
     align-items: center;
     border-radius: 50%;
