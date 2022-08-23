@@ -85,6 +85,13 @@ export const HeaderComponent = (props:HeaderProtocol): JSX.Element => {
       <div className="modal-group">
         {/*<UserSettingsModal/>*/}
       </div>
+        
+        {
+          /*
+          * plantas arquitetonicas 2d (arquivo padrão ... e pdf para baixar com visualizador), plantas 3d, planilhas, galeria,
+          docs, contratos, programas, financiamentos, seguros, calendário
+          */
+        }
       </section>
     </HeaderStyledComponent>
   );
